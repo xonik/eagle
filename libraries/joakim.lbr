@@ -27683,7 +27683,7 @@ NS is without screw holes</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="RN097N">
+<deviceset name="RN097N" prefix="RV" uservalue="yes">
 <description>RN097N, single carbon potentiometer, 9 mm, 15mm shaft</description>
 <gates>
 <gate name="G$1" symbol="POT-J" x="0" y="0"/>
@@ -27701,7 +27701,7 @@ NS is without screw holes</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ALPHA-16MM-POT">
+<deviceset name="ALPHA-16MM-POT" prefix="RV" uservalue="yes">
 <description>Alpha 16mm potentiometer, 6mm shaft</description>
 <gates>
 <gate name="G$1" symbol="POT-J" x="0" y="0"/>
@@ -27719,7 +27719,7 @@ NS is without screw holes</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ALPHA-16MM-DUAL-POT">
+<deviceset name="ALPHA-16MM-DUAL-POT" prefix="RV" uservalue="yes">
 <description>Alpha Dual 16mm potentiometer, 6mm shaft</description>
 <gates>
 <gate name="G$1" symbol="POT-J" x="0" y="-5.08"/>
