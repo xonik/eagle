@@ -15016,11 +15016,6 @@ Source: Philips - BAS70_1PS7XSB70_SER_8.pdf</description>
 <rectangle x1="7.366" y1="-0.254" x2="7.874" y2="0.254" layer="51"/>
 <rectangle x1="12.446" y1="-0.254" x2="12.954" y2="0.254" layer="51"/>
 <rectangle x1="14.986" y1="-0.254" x2="15.494" y2="0.254" layer="51"/>
-<polygon width="0.1524" layer="51">
-<vertex x="-18.415" y="-1.27"/>
-<vertex x="-19.05" y="-1.27"/>
-<vertex x="-19.05" y="-0.635"/>
-</polygon>
 <pad name="14" x="15.24" y="0" drill="1.016" shape="octagon" rot="R90"/>
 <rectangle x1="-18.034" y1="-0.254" x2="-17.526" y2="0.254" layer="51"/>
 </package>
@@ -22487,7 +22482,7 @@ https://www.aliexpress.com/item/4000060487846.html?spm=a2g0s.9042311.0.0.573d4c4
 <wire x1="8" y1="-1.27" x2="8" y2="1.27" width="0.127" layer="21"/>
 <wire x1="8" y1="1.27" x2="8" y2="2.6" width="0.127" layer="21"/>
 <wire x1="8" y1="2.6" x2="0" y2="2.6" width="0.127" layer="21"/>
-<text x="0" y="7.62" size="1.27" layer="21">TODO: CHECK PINS
+<text x="-30.48" y="-1.27" size="1.27" layer="21">TODO: CHECK PINS
 TODO: CHECK RING</text>
 <wire x1="8" y1="1.27" x2="15.24" y2="1.27" width="0.127" layer="21"/>
 <wire x1="15.24" y1="1.27" x2="15.24" y2="-1.27" width="0.127" layer="21"/>
@@ -22592,7 +22587,108 @@ single carbon potentiometer, 16 mm</description>
 <pad name="CB" x="0" y="9.5" drill="1.2" shape="long" rot="R90"/>
 <pad name="RB" x="5" y="9.5" drill="1.2" shape="long" rot="R90"/>
 </package>
+<package name="PJ-320B-JACK-NO-HOLES">
+<description>PJ-320B 3.5mm jack. Is sold as SMD but may possibly be used as through hole as well.</description>
+<wire x1="-2.7" y1="2.5" x2="-2.7" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="-2.7" y1="-2.5" x2="0" y2="-2.5" width="0.127" layer="51"/>
+<wire x1="-2.7" y1="2.5" x2="0" y2="2.5" width="0.127" layer="51"/>
+<wire x1="0" y1="-3" x2="0" y2="3" width="0.127" layer="21"/>
+<wire x1="0" y1="-3" x2="11.3" y2="-3" width="0.127" layer="21"/>
+<wire x1="11.3" y1="-3" x2="11.3" y2="3" width="0.127" layer="21"/>
+<wire x1="11.3" y1="3" x2="0" y2="3" width="0.127" layer="21"/>
+<pad name="S" x="2.1" y="-2" drill="1.2"/>
+<pad name="R" x="4.1" y="2" drill="1.2"/>
+<pad name="T" x="9.1" y="-2" drill="1.2"/>
+<text x="3.8" y="-2.6" size="1.27" layer="21">S</text>
+<text x="9.884" y="-0.695" size="1.27" layer="21">T</text>
+<text x="5.755" y="1.373" size="1.27" layer="21">R</text>
+</package>
+<package name="CONN-IDC10P-S" urn="urn:adsk.eagle:footprint:5511/1" locally_modified="yes">
+<description>&lt;b&gt;10p IDC Header&lt;/b&gt; Straight&lt;p&gt;</description>
+<wire x1="-10" y1="4.2" x2="10" y2="4.2" width="0.2032" layer="21"/>
+<wire x1="10" y1="4.2" x2="10" y2="-4.2" width="0.2032" layer="21"/>
+<wire x1="10" y1="-4.2" x2="5.938" y2="-4.2" width="0.2032" layer="21"/>
+<wire x1="5.938" y1="-4.2" x2="5.938" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="5.938" y1="-3.9" x2="4.459" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="4.459" y1="-3.9" x2="4.459" y2="-4.2" width="0.2032" layer="21"/>
+<wire x1="4.459" y1="-4.2" x2="1.883" y2="-4.2" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="-4.2" x2="1.883" y2="-2.65" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="-2.65" x2="-1.883" y2="-2.65" width="0.2032" layer="21"/>
+<wire x1="-1.883" y1="-2.65" x2="-1.883" y2="-4.2" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="-4.2" x2="-1.883" y2="-4.2" width="0.2032" layer="21"/>
+<wire x1="-1.883" y1="-4.2" x2="-10" y2="-4.2" width="0.2032" layer="21"/>
+<wire x1="-10" y1="-4.2" x2="-10" y2="4.2" width="0.2032" layer="21"/>
+<wire x1="-8.875" y1="3.275" x2="8.875" y2="3.275" width="0.2032" layer="21"/>
+<wire x1="8.875" y1="3.275" x2="8.875" y2="-3.275" width="0.2032" layer="21"/>
+<wire x1="8.875" y1="-3.275" x2="1.883" y2="-3.275" width="0.2032" layer="21"/>
+<wire x1="-1.883" y1="-3.275" x2="-8.875" y2="-3.275" width="0.2032" layer="21"/>
+<wire x1="-8.875" y1="-3.275" x2="-8.875" y2="3.275" width="0.2032" layer="21"/>
+<pad name="1" x="-5.08" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="2" x="-5.08" y="1.27" drill="1" diameter="1.4224"/>
+<pad name="3" x="-2.54" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="4" x="-2.54" y="1.27" drill="1" diameter="1.4224"/>
+<pad name="5" x="0" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="6" x="0" y="1.27" drill="1" diameter="1.4224"/>
+<pad name="7" x="2.54" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="8" x="2.54" y="1.27" drill="1" diameter="1.4224"/>
+<pad name="9" x="5.08" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="10" x="5.08" y="1.27" drill="1" diameter="1.4224"/>
+<text x="-10.16" y="4.572" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="4.572" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="CONN-IDC10P-A" urn="urn:adsk.eagle:footprint:5510/1" locally_modified="yes">
+<description>&lt;b&gt;10P IDC Header&lt;/b&gt; Right Angle&lt;p&gt;</description>
+<wire x1="10" y1="1.875" x2="10" y2="11.075" width="0.2032" layer="21"/>
+<wire x1="10" y1="11.075" x2="5.938" y2="11.075" width="0.2032" layer="21"/>
+<wire x1="4.459" y1="11.075" x2="5.938" y2="11.075" width="0.2032" layer="21"/>
+<wire x1="5.938" y1="11.075" x2="5.938" y2="10.105" width="0.2032" layer="21"/>
+<wire x1="5.938" y1="10.105" x2="4.459" y2="10.105" width="0.2032" layer="21"/>
+<wire x1="4.459" y1="10.105" x2="4.459" y2="11.075" width="0.2032" layer="21"/>
+<wire x1="4.459" y1="11.075" x2="1.883" y2="11.075" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="11.075" x2="1.883" y2="4.01" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="4.01" x2="-1.883" y2="4.01" width="0.2032" layer="21"/>
+<wire x1="-1.883" y1="4.01" x2="-1.883" y2="11.075" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="11.075" x2="-1.883" y2="11.075" width="0.2032" layer="21"/>
+<wire x1="-1.883" y1="11.075" x2="-10" y2="11.075" width="0.2032" layer="21"/>
+<wire x1="-10" y1="11.075" x2="-10" y2="1.875" width="0.2032" layer="21"/>
+<wire x1="-6.456" y1="1.875" x2="-10" y2="1.875" width="0.2032" layer="21"/>
+<wire x1="6.439" y1="1.875" x2="-6.452" y2="1.875" width="0.2032" layer="51"/>
+<wire x1="10" y1="1.875" x2="6.443" y2="1.875" width="0.2032" layer="21"/>
+<pad name="1" x="-5.08" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="2" x="-5.08" y="1.27" drill="1" diameter="1.4224"/>
+<pad name="3" x="-2.54" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="4" x="-2.54" y="1.27" drill="1" diameter="1.4224"/>
+<pad name="5" x="0" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="6" x="0" y="1.27" drill="1" diameter="1.4224"/>
+<pad name="7" x="2.54" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="8" x="2.54" y="1.27" drill="1" diameter="1.4224"/>
+<pad name="9" x="5.08" y="-1.27" drill="1" diameter="1.4224"/>
+<pad name="10" x="5.08" y="1.27" drill="1" diameter="1.4224"/>
+<text x="-10.16" y="-3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+<polygon width="0.2032" layer="21">
+<vertex x="-6.36" y="10.945"/>
+<vertex x="-3.81" y="10.945"/>
+<vertex x="-5.085" y="8.37"/>
+</polygon>
+</package>
 </packages>
+<packages3d>
+<package3d name="PAK100/2500-10" urn="urn:adsk.eagle:package:5571/1" type="box">
+<description>3M (TM) Pak 100 4-Wall Header Straight
+Source: 3M</description>
+<packageinstances>
+<packageinstance name="CONN-IDC10P-S"/>
+</packageinstances>
+</package3d>
+<package3d name="PAK100/2500-5-10" urn="urn:adsk.eagle:package:5573/1" type="box">
+<description>3M (TM) Pak 100 4-Wall Header Right Angle
+Source: 3M</description>
+<packageinstances>
+<packageinstance name="CONN-IDC10P-A"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="LED">
 <wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
@@ -24585,6 +24681,17 @@ LOGO
 <pin name="3" x="7.62" y="-2.54" visible="pad" length="short" direction="pas" rot="R180"/>
 <wire x1="-2.286" y1="-1.016" x2="-3.048" y2="0" width="0.1524" layer="94"/>
 <wire x1="-1.524" y1="0" x2="-2.286" y2="-1.016" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="PINV">
+<text x="-1.27" y="0.889" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<text x="-3.81" y="2.667" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="0" y1="-0.254" x2="2.794" y2="0.254" layer="94"/>
+<pin name="KL" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="PIN">
+<text x="-1.27" y="0.889" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<rectangle x1="0" y1="-0.254" x2="2.794" y2="0.254" layer="94"/>
+<pin name="KL" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -27629,7 +27736,7 @@ NS is without screw holes</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ALIEXPRESS_JACK_1/4">
+<deviceset name="ALIEXPRESS_JACK_1/4" prefix="J">
 <description>Stereo jack from Ali Express: https://www.aliexpress.com/item/4000060487846.html?spm=a2g0s.9042311.0.0.573d4c4dBz98zZ</description>
 <gates>
 <gate name="G$1" symbol="STEREO_JACK_J" x="0" y="0"/>
@@ -27665,13 +27772,23 @@ NS is without screw holes</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="PJ-320B-STEREO-JACK">
+<deviceset name="PJ-320B-STEREO-JACK" prefix="J">
 <description>PJ-320B Unswitched 3.5mm stereo jack. Is sold as a SMD component but can maybe be used as a through hole component as well</description>
 <gates>
 <gate name="G$1" symbol="STEREO_JACK_J" x="-2.54" y="0"/>
 </gates>
 <devices>
 <device name="" package="PJ-320B-JACK">
+<connects>
+<connect gate="G$1" pin="1" pad="S"/>
+<connect gate="G$1" pin="2" pad="R"/>
+<connect gate="G$1" pin="3" pad="T"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="NH" package="PJ-320B-JACK-NO-HOLES">
 <connects>
 <connect gate="G$1" pin="1" pad="S"/>
 <connect gate="G$1" pin="2" pad="R"/>
@@ -27741,6 +27858,71 @@ NS is without screw holes</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="CONN-IDC-10P" prefix="X">
+<description>&lt;b&gt;10P IDC Header&lt;/b&gt;&lt;p&gt;</description>
+<gates>
+<gate name="-1" symbol="PINV" x="0" y="0" addlevel="always"/>
+<gate name="-2" symbol="PIN" x="0" y="-2.54" addlevel="always"/>
+<gate name="-3" symbol="PIN" x="0" y="-5.08" addlevel="always"/>
+<gate name="-4" symbol="PIN" x="0" y="-7.62" addlevel="always"/>
+<gate name="-5" symbol="PIN" x="0" y="-10.16" addlevel="always"/>
+<gate name="-6" symbol="PIN" x="0" y="-12.7" addlevel="always"/>
+<gate name="-7" symbol="PIN" x="0" y="-15.24" addlevel="always"/>
+<gate name="-8" symbol="PIN" x="0" y="-17.78" addlevel="always"/>
+<gate name="-9" symbol="PIN" x="0" y="-20.32" addlevel="always"/>
+<gate name="-10" symbol="PIN" x="0" y="-22.86" addlevel="always"/>
+</gates>
+<devices>
+<device name="S" package="CONN-IDC10P-S">
+<connects>
+<connect gate="-1" pin="KL" pad="1"/>
+<connect gate="-10" pin="KL" pad="10"/>
+<connect gate="-2" pin="KL" pad="2"/>
+<connect gate="-3" pin="KL" pad="3"/>
+<connect gate="-4" pin="KL" pad="4"/>
+<connect gate="-5" pin="KL" pad="5"/>
+<connect gate="-6" pin="KL" pad="6"/>
+<connect gate="-7" pin="KL" pad="7"/>
+<connect gate="-8" pin="KL" pad="8"/>
+<connect gate="-9" pin="KL" pad="9"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5571/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="A" package="CONN-IDC10P-A">
+<connects>
+<connect gate="-1" pin="KL" pad="1"/>
+<connect gate="-10" pin="KL" pad="10"/>
+<connect gate="-2" pin="KL" pad="2"/>
+<connect gate="-3" pin="KL" pad="3"/>
+<connect gate="-4" pin="KL" pad="4"/>
+<connect gate="-5" pin="KL" pad="5"/>
+<connect gate="-6" pin="KL" pad="6"/>
+<connect gate="-7" pin="KL" pad="7"/>
+<connect gate="-8" pin="KL" pad="8"/>
+<connect gate="-9" pin="KL" pad="9"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5573/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="1788669" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+<attribute name="POPULARITY" value="1" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
@@ -27753,6 +27935,11 @@ which will not be processed correctly with this version.
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
 will not be understood (or retained) with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports the association of 3D packages
+with devices in libraries, schematics, and board files. Those 3D
+packages will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
