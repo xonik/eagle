@@ -1082,6 +1082,231 @@ Trim</text>
 <wire x1="2.2225" y1="3.81" x2="2.2225" y2="13.335" width="0.1524" layer="21"/>
 <wire x1="22.5425" y1="3.81" x2="22.5425" y2="13.335" width="0.1524" layer="21"/>
 </package>
+<package name="XM8-WAVESHAPER-V2.1H">
+<description>Xonik Waveshaper and Sub-oscillator v2.1, horizontal mount</description>
+<wire x1="-2.54" y1="-3.175" x2="60.96" y2="-3.175" width="0.1524" layer="21"/>
+<wire x1="60.96" y1="-3.175" x2="60.96" y2="25.654" width="0.1524" layer="21"/>
+<wire x1="60.96" y1="25.654" x2="0.508" y2="25.654" width="0.1524" layer="21"/>
+<wire x1="0.508" y1="25.654" x2="-2.54" y2="22.606" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="22.606" x2="-2.54" y2="-3.175" width="0.1524" layer="21"/>
+<text x="2.8575" y="2.2225" size="1.016" layer="25" rot="R90">Center</text>
+<text x="5.3975" y="2.2225" size="1.016" layer="25" rot="R90">DCO in</text>
+<text x="10.4775" y="2.2225" size="1.016" layer="25" rot="R90">PW CV</text>
+<text x="7.9375" y="2.2225" size="1.016" layer="25" rot="R90">Pulse VCA</text>
+<text x="13.0175" y="2.2225" size="1.016" layer="25" rot="R90">Symmetry</text>
+<text x="15.5575" y="2.2225" size="1.016" layer="25" rot="R90">Pulse</text>
+<text x="18.0975" y="2.2225" size="1.016" layer="25" rot="R90">Saw inv</text>
+<text x="20.6375" y="2.2225" size="1.016" layer="25" rot="R90">Saw</text>
+<text x="23.1775" y="2.2225" size="1.016" layer="25" rot="R90">Triangle</text>
+<text x="25.7175" y="2.2225" size="1.016" layer="25" rot="R90">Sine</text>
+<text x="30.0355" y="2.2225" size="1.016" layer="25" rot="R90">1</text>
+<text x="31.623" y="2.2225" size="1.016" layer="25" rot="R90">Saw</text>
+<text x="35.8775" y="2.2225" size="1.016" layer="25" rot="R90">Sqr 1</text>
+<text x="33.3375" y="2.2225" size="1.016" layer="25" rot="R90">Sqr 2</text>
+<text x="32.7025" y="7.9375" size="1.016" layer="25">Sub oscillator</text>
+<text x="40.64" y="2.2225" size="1.016" layer="25" rot="R90">Saw 1
+match</text>
+<text x="45.72" y="2.2225" size="1.016" layer="25" rot="R90">Saw 2
+match</text>
+<wire x1="26.9875" y1="7.3025" x2="46.6725" y2="7.3025" width="0.1016" layer="25"/>
+<text x="48.5775" y="2.2225" size="1.016" layer="25" rot="R90">+15V</text>
+<text x="51.1175" y="2.2225" size="1.016" layer="25" rot="R90">-15V</text>
+<text x="53.6575" y="2.2225" size="1.016" layer="25" rot="R90">AGND</text>
+<text x="56.1975" y="2.2225" size="1.016" layer="25" rot="R90">Timer in</text>
+<text x="58.42" y="2.2225" size="1.016" layer="25" rot="R90">+5V</text>
+<hole x="29.21" y="4.7625" drill="3.2"/>
+<text x="28.194" y="2.2225" size="1.016" layer="25" rot="R90">2</text>
+<text x="59.8805" y="24.638" size="1.778" layer="25" font="vector" rot="R180">Waveshaper</text>
+<pad name="1" x="0" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="2" x="2.54" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="3" x="5.08" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="4" x="7.62" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="5" x="10.16" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="6" x="12.7" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="7" x="15.24" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="8" x="17.78" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="9" x="20.32" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="10" x="22.86" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="11" x="25.4" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="12" x="27.94" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="13" x="30.48" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="14" x="33.02" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="15" x="35.56" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="16" x="38.1" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="17" x="40.64" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="18" x="43.18" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="19" x="45.72" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="20" x="48.26" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="21" x="50.8" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="22" x="53.34" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="23" x="55.88" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="24" x="58.42" y="0" drill="1.016" shape="offset" rot="R270"/>
+</package>
+<package name="XM8-WAVESHAPER-V2.1V">
+<description>Xonik Waveshaper and Sub-oscillator v2.1, vertical mount</description>
+<wire x1="-2.54" y1="-1.905" x2="60.96" y2="-1.905" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="2" x="2.54" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="3" x="5.08" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="4" x="7.62" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="5" x="10.16" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="6" x="12.7" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="7" x="15.24" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="8" x="17.78" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="9" x="20.32" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="10" x="22.86" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="11" x="25.4" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="12" x="27.94" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="13" x="30.48" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="14" x="33.02" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="15" x="35.56" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="16" x="38.1" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="17" x="40.64" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="18" x="43.18" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="19" x="45.72" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="20" x="48.26" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="21" x="50.8" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="22" x="53.34" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="23" x="55.88" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="24" x="58.42" y="0" drill="1.016" shape="long" rot="R270"/>
+<text x="-4.445" y="-0.635" size="1.27" layer="25">1</text>
+<wire x1="-2.54" y1="1.905" x2="60.96" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="1.905" x2="-2.54" y2="-1.905" width="0.127" layer="25"/>
+<wire x1="1.27" y1="1.905" x2="1.27" y2="-1.905" width="0.127" layer="25"/>
+<wire x1="60.96" y1="1.905" x2="60.96" y2="-1.905" width="0.127" layer="25"/>
+</package>
+<package name="XM8-SVF-V1.1H">
+<description>Xonik State variable filter v1.1, horizontal mount</description>
+<wire x1="-1.27" y1="-3.175" x2="85.07" y2="-3.175" width="0.1524" layer="21"/>
+<wire x1="85.07" y1="-3.175" x2="85.07" y2="55.8675" width="0.1524" layer="21"/>
+<wire x1="85.07" y1="55.8675" x2="3.81" y2="55.88" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="55.88" x2="3.4925" y2="55.8675" width="0" layer="20"/>
+<wire x1="3.4925" y1="55.8675" x2="-1.27" y2="51.105" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="51.105" x2="-1.27" y2="-3.175" width="0.1524" layer="21"/>
+<circle x="30.48" y="10.795" radius="2.54" width="0.3" layer="21"/>
+<hole x="30.48" y="10.795" drill="3.2"/>
+<circle x="81.915" y="52.3875" radius="2.54" width="0.3" layer="21"/>
+<hole x="81.915" y="52.3875" drill="3.2"/>
+<text x="0.635" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">A2</text>
+<text x="3.175" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">A1</text>
+<text x="8.255" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">A1</text>
+<text x="5.715" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">A0</text>
+<text x="10.795" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">A0</text>
+<text x="2.8575" y="9.2075" size="1.27" layer="25" font="vector">Muxes</text>
+<wire x1="-0.635" y1="8.5725" x2="10.795" y2="8.5725" width="0.127" layer="25"/>
+<text x="15.875" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">In</text>
+<text x="18.415" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">Lin FM</text>
+<text x="22.225" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">Track</text>
+<text x="26.035" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">1v/oct</text>
+<text x="28.575" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">Offset</text>
+<text x="36.195" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">CV</text>
+<text x="40.005" y="2.2225" size="1.27" layer="25" font="vector" rot="R90">Gain</text>
+<text x="43.815" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">Bal</text>
+<text x="64.135" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">VCA CV</text>
+<text x="66.675" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">Overload CV</text>
+<text x="71.755" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">VCA bal</text>
+<text x="76.835" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">Out</text>
+<text x="74.295" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">VCA gain</text>
+<text x="81.915" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">AGND</text>
+<text x="84.455" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">-15v</text>
+<text x="79.375" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">+15v</text>
+<wire x1="28.575" y1="8.5725" x2="14.9225" y2="8.5725" width="0.127" layer="25"/>
+<text x="19.3675" y="9.2075" size="1.27" layer="25" font="vector">Cutoff</text>
+<wire x1="43.815" y1="8.5725" x2="34.925" y2="8.5725" width="0.127" layer="25"/>
+<text x="37.465" y="9.2075" size="1.27" layer="25" font="vector">Reso</text>
+<wire x1="20.32" y1="1.5875" x2="20.32" y2="4.445" width="0.127" layer="25"/>
+<wire x1="20.32" y1="4.445" x2="20.6375" y2="4.445" width="0.127" layer="25"/>
+<wire x1="22.86" y1="1.5875" x2="22.86" y2="4.445" width="0.127" layer="25"/>
+<wire x1="22.86" y1="4.445" x2="22.5425" y2="4.445" width="0.127" layer="25"/>
+<wire x1="38.4175" y1="4.445" x2="38.1" y2="4.445" width="0.127" layer="25"/>
+<wire x1="38.1" y1="4.445" x2="38.1" y2="1.5875" width="0.127" layer="25"/>
+<wire x1="40.64" y1="1.5875" x2="40.64" y2="4.445" width="0.127" layer="25"/>
+<wire x1="40.64" y1="4.445" x2="40.3225" y2="4.445" width="0.127" layer="25"/>
+<wire x1="10.795" y1="4.1275" x2="6.985" y2="4.1275" width="0.127" layer="25"/>
+<wire x1="5.715" y1="4.1275" x2="-0.635" y2="4.1275" width="0.127" layer="25"/>
+<text x="8.5725" y="4.7625" size="1.27" layer="25" font="vector">1</text>
+<text x="2.2225" y="4.7625" size="1.27" layer="25" font="vector">2</text>
+<pad name="1" x="0" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="2" x="2.54" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="3" x="5.08" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="4" x="7.62" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="5" x="10.16" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="6" x="12.7" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="7" x="15.24" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="8" x="17.78" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="9" x="20.32" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="10" x="22.86" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="11" x="25.4" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="12" x="27.94" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="13" x="30.48" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="14" x="33.02" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="15" x="35.56" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="16" x="38.1" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="17" x="40.64" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="18" x="43.18" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="19" x="45.72" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="20" x="48.26" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="21" x="50.8" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="22" x="53.34" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="23" x="55.88" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="24" x="58.42" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="25" x="60.96" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="26" x="63.5" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="27" x="66.04" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="28" x="68.58" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="29" x="71.12" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="30" x="73.66" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="31" x="76.2" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="32" x="78.74" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="33" x="81.28" y="0" drill="1.016" shape="offset" rot="R270"/>
+<pad name="34" x="83.82" y="0" drill="1.016" shape="offset" rot="R270"/>
+<text x="77.47" y="53.34" size="1.778" layer="25" font="vector" rot="R180">State variable filter</text>
+</package>
+<package name="XM8-SVF-V1.1V">
+<description>Xonik State variable filter v1.1, vertical mount</description>
+<wire x1="-1.27" y1="-1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
+<pad name="1" x="0" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="2" x="2.54" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="3" x="5.08" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="4" x="7.62" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="5" x="10.16" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="6" x="12.7" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="7" x="15.24" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="8" x="17.78" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="9" x="20.32" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="10" x="22.86" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="11" x="25.4" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="12" x="27.94" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="13" x="30.48" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="14" x="33.02" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="15" x="35.56" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="16" x="38.1" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="17" x="40.64" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="18" x="43.18" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="19" x="45.72" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="20" x="48.26" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="21" x="50.8" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="22" x="53.34" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="23" x="55.88" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="24" x="58.42" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="25" x="60.96" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="26" x="63.5" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="27" x="66.04" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="28" x="68.58" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="29" x="71.12" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="30" x="73.66" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="31" x="76.2" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="32" x="78.74" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="33" x="81.28" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="34" x="83.82" y="0" drill="1.016" shape="long" rot="R270"/>
+<wire x1="1.27" y1="-1.905" x2="85.07" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="1.905" x2="1.27" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="85.07" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="1.905" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="85.09" y1="1.905" x2="85.09" y2="-1.905" width="0.1524" layer="21"/>
+<text x="-3.175" y="-0.635" size="1.27" layer="21" font="vector">1</text>
+</package>
 </packages>
 <symbols>
 <symbol name="XM8-DCO-V1.4">
@@ -1350,6 +1575,70 @@ Trim</text>
 <pin name="E" x="-5.08" y="-5.08" visible="pad" length="short" rot="R90"/>
 <wire x1="-5.08" y1="-2.54" x2="-5.08" y2="0" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+</symbol>
+<symbol name="XM8-WAVESHAPER-V2.1">
+<description>Xonik Waveshaper and sub-oscillator, v2.1</description>
+<wire x1="-15.24" y1="-20.32" x2="15.24" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-20.32" x2="15.24" y2="17.78" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-20.32" x2="-15.24" y2="17.78" width="0.254" layer="94"/>
+<pin name="CENTER" x="-17.78" y="7.62" length="short"/>
+<pin name="DCOIN" x="-17.78" y="15.24" length="short"/>
+<pin name="PULSEVCA" x="-17.78" y="-10.16" length="short"/>
+<pin name="PWCW" x="-17.78" y="-12.7" length="short"/>
+<pin name="SYMMETRY" x="-17.78" y="5.08" length="short"/>
+<pin name="PULSE" x="17.78" y="12.7" length="short" rot="R180"/>
+<pin name="SAWINV" x="17.78" y="10.16" length="short" rot="R180"/>
+<pin name="SAW" x="17.78" y="7.62" length="short" rot="R180"/>
+<pin name="TRIANGLE" x="17.78" y="5.08" length="short" rot="R180"/>
+<pin name="SINE" x="17.78" y="2.54" length="short" rot="R180"/>
+<pin name="+5V" x="-2.54" y="20.32" length="short" direction="pwr" rot="R270"/>
+<pin name="-15V" x="2.54" y="-22.86" length="short" direction="pwr" rot="R90"/>
+<pin name="+15V" x="2.54" y="20.32" length="short" direction="pwr" rot="R270"/>
+<pin name="AGND" x="-2.54" y="-22.86" length="short" direction="pwr" rot="R90"/>
+<text x="-14.605" y="18.415" size="1.778" layer="95">&gt;NAME</text>
+<pin name="SAW2MAT2" x="-17.78" y="-5.08" length="short" direction="in"/>
+<pin name="SAW2MAT1" x="-17.78" y="-2.54" length="short" swaplevel="1"/>
+<pin name="TIMERIN" x="-17.78" y="12.7" length="short" swaplevel="1"/>
+<pin name="SAW1MAT2" x="-17.78" y="0" length="short" swaplevel="1"/>
+<pin name="SAW1MAT1" x="-17.78" y="2.54" length="short"/>
+<pin name="SUBSQR2" x="17.78" y="-10.16" length="short" rot="R180"/>
+<pin name="SUBSQR1" x="17.78" y="-7.62" length="short" rot="R180"/>
+<pin name="SUBSAW2" x="17.78" y="-5.08" length="short" rot="R180"/>
+<pin name="SUBSAW1" x="17.78" y="-2.54" length="short" rot="R180"/>
+<text x="14.605" y="-20.955" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
+<wire x1="-15.24" y1="17.78" x2="15.24" y2="17.78" width="0.254" layer="94"/>
+</symbol>
+<symbol name="XM8-SWF-V1.1">
+<description>Xonik State variable filter v1.1</description>
+<wire x1="-15.24" y1="-20.32" x2="15.24" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-20.32" x2="15.24" y2="17.78" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-20.32" x2="-15.24" y2="17.78" width="0.254" layer="94"/>
+<pin name="A2-1" x="-17.78" y="-12.7" length="short"/>
+<pin name="A1-1" x="-17.78" y="-5.08" length="short"/>
+<pin name="TRACK2" x="-17.78" y="2.54" length="short"/>
+<pin name="EXPFM" x="-17.78" y="10.16" length="short"/>
+<pin name="A2-2" x="-17.78" y="-15.24" length="short"/>
+<pin name="VCAGAIN" x="17.78" y="-10.16" length="short" rot="R180"/>
+<pin name="VCABAL" x="17.78" y="-12.7" length="short" rot="R180"/>
+<pin name="OVERLOADCV" x="17.78" y="5.08" length="short" rot="R180"/>
+<pin name="VCACV" x="17.78" y="10.16" length="short" rot="R180"/>
+<pin name="RESOBAL" x="17.78" y="-5.08" length="short" rot="R180"/>
+<pin name="-15V" x="2.54" y="-22.86" length="short" direction="pwr" rot="R90"/>
+<pin name="+15V" x="0" y="20.32" length="short" direction="pwr" rot="R270"/>
+<pin name="AGND" x="-2.54" y="-22.86" length="short" direction="pwr" rot="R90"/>
+<text x="-14.605" y="18.415" size="1.778" layer="95">&gt;NAME</text>
+<pin name="TRACK1" x="-17.78" y="5.08" length="short" direction="in"/>
+<pin name="LINFM" x="-17.78" y="12.7" length="short" swaplevel="1"/>
+<pin name="A1-2" x="-17.78" y="-7.62" length="short" swaplevel="1"/>
+<pin name="IN" x="-17.78" y="15.24" length="short" swaplevel="1"/>
+<pin name="A2-3" x="-17.78" y="-17.78" length="short"/>
+<pin name="OFFSET" x="-17.78" y="0" length="short"/>
+<pin name="RESOCV" x="17.78" y="7.62" length="short" rot="R180"/>
+<pin name="RESOGAIN1" x="17.78" y="0" length="short" rot="R180"/>
+<pin name="RESOGAIN2" x="17.78" y="-2.54" length="short" rot="R180"/>
+<text x="14.605" y="-20.955" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
+<wire x1="-15.24" y1="17.78" x2="15.24" y2="17.78" width="0.254" layer="94"/>
+<pin name="OUT" x="17.78" y="15.24" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1794,6 +2083,111 @@ Trim</text>
 <connect gate="G$6" pin="+15V" pad="12"/>
 <connect gate="G$6" pin="-15V" pad="11"/>
 <connect gate="G$6" pin="GND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="WAVESHAPER-V2.1">
+<description>Xonik waveshaper and sub-oscillator v2.1</description>
+<gates>
+<gate name="G$1" symbol="XM8-WAVESHAPER-V2.1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="H" package="XM8-WAVESHAPER-V2.1H">
+<connects>
+<connect gate="G$1" pin="+15V" pad="20"/>
+<connect gate="G$1" pin="+5V" pad="24"/>
+<connect gate="G$1" pin="-15V" pad="21"/>
+<connect gate="G$1" pin="AGND" pad="22"/>
+<connect gate="G$1" pin="CENTER" pad="2"/>
+<connect gate="G$1" pin="DCOIN" pad="3"/>
+<connect gate="G$1" pin="PULSE" pad="7"/>
+<connect gate="G$1" pin="PULSEVCA" pad="4"/>
+<connect gate="G$1" pin="PWCW" pad="5"/>
+<connect gate="G$1" pin="SAW" pad="9"/>
+<connect gate="G$1" pin="SAW1MAT1" pad="16"/>
+<connect gate="G$1" pin="SAW1MAT2" pad="17"/>
+<connect gate="G$1" pin="SAW2MAT1" pad="18"/>
+<connect gate="G$1" pin="SAW2MAT2" pad="19"/>
+<connect gate="G$1" pin="SAWINV" pad="8"/>
+<connect gate="G$1" pin="SINE" pad="11"/>
+<connect gate="G$1" pin="SUBSAW1" pad="13"/>
+<connect gate="G$1" pin="SUBSAW2" pad="12"/>
+<connect gate="G$1" pin="SUBSQR1" pad="15"/>
+<connect gate="G$1" pin="SUBSQR2" pad="14"/>
+<connect gate="G$1" pin="SYMMETRY" pad="6"/>
+<connect gate="G$1" pin="TIMERIN" pad="23"/>
+<connect gate="G$1" pin="TRIANGLE" pad="10"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SVF-V1.1">
+<gates>
+<gate name="G$1" symbol="XM8-SWF-V1.1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="H" package="XM8-SVF-V1.1H">
+<connects>
+<connect gate="G$1" pin="+15V" pad="32"/>
+<connect gate="G$1" pin="-15V" pad="34"/>
+<connect gate="G$1" pin="A1-1" pad="5"/>
+<connect gate="G$1" pin="A1-2" pad="4"/>
+<connect gate="G$1" pin="A2-1" pad="3"/>
+<connect gate="G$1" pin="A2-2" pad="2"/>
+<connect gate="G$1" pin="A2-3" pad="1"/>
+<connect gate="G$1" pin="AGND" pad="33"/>
+<connect gate="G$1" pin="EXPFM" pad="11"/>
+<connect gate="G$1" pin="IN" pad="7"/>
+<connect gate="G$1" pin="LINFM" pad="8"/>
+<connect gate="G$1" pin="OFFSET" pad="12"/>
+<connect gate="G$1" pin="OUT" pad="31"/>
+<connect gate="G$1" pin="OVERLOADCV" pad="27"/>
+<connect gate="G$1" pin="RESOBAL" pad="18"/>
+<connect gate="G$1" pin="RESOCV" pad="15"/>
+<connect gate="G$1" pin="RESOGAIN1" pad="16"/>
+<connect gate="G$1" pin="RESOGAIN2" pad="17"/>
+<connect gate="G$1" pin="TRACK1" pad="9"/>
+<connect gate="G$1" pin="TRACK2" pad="10"/>
+<connect gate="G$1" pin="VCABAL" pad="29"/>
+<connect gate="G$1" pin="VCACV" pad="26"/>
+<connect gate="G$1" pin="VCAGAIN" pad="30"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="V" package="XM8-SVF-V1.1V">
+<connects>
+<connect gate="G$1" pin="+15V" pad="32"/>
+<connect gate="G$1" pin="-15V" pad="34"/>
+<connect gate="G$1" pin="A1-1" pad="5"/>
+<connect gate="G$1" pin="A1-2" pad="4"/>
+<connect gate="G$1" pin="A2-1" pad="3"/>
+<connect gate="G$1" pin="A2-2" pad="2"/>
+<connect gate="G$1" pin="A2-3" pad="1"/>
+<connect gate="G$1" pin="AGND" pad="33"/>
+<connect gate="G$1" pin="EXPFM" pad="11"/>
+<connect gate="G$1" pin="IN" pad="7"/>
+<connect gate="G$1" pin="LINFM" pad="8"/>
+<connect gate="G$1" pin="OFFSET" pad="12"/>
+<connect gate="G$1" pin="OUT" pad="31"/>
+<connect gate="G$1" pin="OVERLOADCV" pad="27"/>
+<connect gate="G$1" pin="RESOBAL" pad="18"/>
+<connect gate="G$1" pin="RESOCV" pad="15"/>
+<connect gate="G$1" pin="RESOGAIN1" pad="16"/>
+<connect gate="G$1" pin="RESOGAIN2" pad="17"/>
+<connect gate="G$1" pin="TRACK1" pad="9"/>
+<connect gate="G$1" pin="TRACK2" pad="10"/>
+<connect gate="G$1" pin="VCABAL" pad="29"/>
+<connect gate="G$1" pin="VCACV" pad="26"/>
+<connect gate="G$1" pin="VCAGAIN" pad="30"/>
 </connects>
 <technologies>
 <technology name=""/>
