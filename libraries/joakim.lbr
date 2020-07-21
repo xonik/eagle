@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -22672,6 +22672,79 @@ single carbon potentiometer, 16 mm</description>
 <vertex x="-5.085" y="8.37"/>
 </polygon>
 </package>
+<package name="POT-ENDLESS">
+<description>Alpha RV112FF-40 endless analog potentiometer&lt;br&gt;
+Alpha RV110 potentiometer</description>
+<pad name="W1" x="3.75" y="10" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="LA" x="1.25" y="10" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="W2A" x="-1.25" y="10" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="RA" x="-3.75" y="10" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="2" x="6" y="0" drill="2.3" shape="octagon" rot="R180"/>
+<pad name="1" x="-6" y="0" drill="2.3" shape="octagon" rot="R180"/>
+<wire x1="-6" y1="-2.54" x2="-6" y2="-5" width="0.127" layer="21"/>
+<wire x1="-6" y1="-5" x2="-5.5" y2="-5" width="0.127" layer="21"/>
+<wire x1="-5.5" y1="-5" x2="-5.5" y2="-9.75" width="0.127" layer="21"/>
+<wire x1="6" y1="-2.54" x2="6" y2="-5" width="0.127" layer="21"/>
+<wire x1="6" y1="-5" x2="5.5" y2="-5" width="0.127" layer="21"/>
+<wire x1="5.5" y1="-5" x2="5.5" y2="-9.75" width="0.127" layer="21"/>
+<wire x1="5.5" y1="-9.75" x2="-5.5" y2="-9.75" width="0.127" layer="21"/>
+<wire x1="-6" y1="2.38" x2="-6" y2="5" width="0.127" layer="21"/>
+<wire x1="-6" y1="5" x2="-5.5" y2="5" width="0.127" layer="21"/>
+<wire x1="-5.5" y1="5" x2="-5.5" y2="8.75" width="0.127" layer="21"/>
+<wire x1="-5.5" y1="8.75" x2="5.5" y2="8.75" width="0.127" layer="21"/>
+<wire x1="5.5" y1="8.75" x2="5.5" y2="5" width="0.127" layer="21"/>
+<wire x1="5.5" y1="5" x2="6" y2="5" width="0.127" layer="21"/>
+<wire x1="6" y1="5" x2="6" y2="2.38" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="3" width="0.127" layer="21"/>
+<pad name="D" x="3.75" y="-11" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="RB" x="1.25" y="-11" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="W2B" x="-1.25" y="-11" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="LB" x="-3.75" y="-11" drill="1.1" shape="octagon" rot="R180"/>
+<text x="4.215" y="8.255" size="1.27" layer="21" font="vector" rot="R180">Endless</text>
+<text x="-3.08" y="-9.215" size="1.27" layer="21" font="vector">RV110</text>
+<text x="4.215" y="6.255" size="1.27" layer="21" font="vector" rot="R180">RV112FF</text>
+<text x="-3.08" y="-7.215" size="1.27" layer="21" font="vector">Normal</text>
+</package>
+<package name="POT-ENDLESS-2">
+<description>Alpha RV112FF-40 endless analog potentiometer&lt;br&gt;
+Alpha RV110 potentiometer</description>
+<pad name="W1" x="-9.722715625" y="-4.419415625" drill="1.1" shape="octagon" rot="R315"/>
+<pad name="LA" x="-7.95495" y="-6.18718125" drill="1.1" shape="octagon" rot="R135"/>
+<pad name="W2B" x="-6.18718125" y="-7.95495" drill="1.1" shape="octagon" rot="R315"/>
+<pad name="RA" x="-4.419415625" y="-9.722715625" drill="1.1" shape="octagon" rot="R315"/>
+<pad name="2" x="-4.242640625" y="4.242640625" drill="2.3" shape="octagon" rot="R315"/>
+<pad name="1" x="4.242640625" y="-4.242640625" drill="2.3" shape="octagon" rot="R315"/>
+<wire x1="6.038690625" y1="-2.4465875" x2="7.778171875" y2="-0.70710625" width="0.127" layer="21"/>
+<wire x1="7.778171875" y1="-0.70710625" x2="7.42461875" y2="-0.353553125" width="0.127" layer="21"/>
+<wire x1="7.42461875" y1="-0.353553125" x2="8.6267" y2="0.848528125" width="0.127" layer="21"/>
+<wire x1="-2.4465875" y1="6.038690625" x2="-0.70710625" y2="7.778171875" width="0.127" layer="21"/>
+<wire x1="-0.70710625" y1="7.778171875" x2="-0.353553125" y2="7.42461875" width="0.127" layer="21"/>
+<wire x1="-0.353553125" y1="7.42461875" x2="0.848528125" y2="8.6267" width="0.127" layer="21"/>
+<wire x1="0.848528125" y1="8.6267" x2="8.6267" y2="0.848528125" width="0.127" layer="21"/>
+<wire x1="2.559725" y1="-5.925553125" x2="0.70710625" y2="-7.778171875" width="0.127" layer="21"/>
+<wire x1="0.70710625" y1="-7.778171875" x2="0.353553125" y2="-7.42461875" width="0.127" layer="21"/>
+<wire x1="0.353553125" y1="-7.42461875" x2="-2.298096875" y2="-10.07626875" width="0.127" layer="21"/>
+<wire x1="-2.298096875" y1="-10.07626875" x2="-10.07626875" y2="-2.298096875" width="0.127" layer="21"/>
+<wire x1="-10.07626875" y1="-2.298096875" x2="-7.42461875" y2="0.353553125" width="0.127" layer="21"/>
+<wire x1="-7.42461875" y1="0.353553125" x2="-7.778171875" y2="0.70710625" width="0.127" layer="21"/>
+<wire x1="-7.778171875" y1="0.70710625" x2="-5.925553125" y2="2.559725" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="3" width="0.127" layer="21"/>
+<pad name="RB" x="2.5" y="-7" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="W2A" x="0" y="-7" drill="1.1" shape="octagon" rot="R180"/>
+<pad name="LB" x="-2.5" y="-7" drill="1.1" shape="octagon" rot="R180"/>
+<text x="-9.45261875" y="-2.539209375" size="1.27" layer="21" font="vector" rot="R315">Endless</text>
+<text x="2.445" y="-3.485" size="1.27" layer="21" font="vector" rot="R180">RV09</text>
+<text x="0.21659375" y="7.130003125" size="1.27" layer="21" font="vector" rot="R315">RV112FF</text>
+<wire x1="4.445" y1="5.715" x2="3.81" y2="5.715" width="0.127" layer="21"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="4.445" width="0.127" layer="21"/>
+<wire x1="4.445" y1="5.715" x2="5.08" y2="5.08" width="0.127" layer="21" curve="-90"/>
+<wire x1="-4.445" y1="-5.3975" x2="2.2225" y2="-5.3975" width="0.127" layer="21" style="shortdash"/>
+<wire x1="-5.08" y1="-4.7625" x2="-5.08" y2="-2.2225" width="0.127" layer="21" style="shortdash"/>
+<wire x1="-4.445" y1="-5.3975" x2="-5.08" y2="-4.7625" width="0.127" layer="21" curve="-90"/>
+<pad name="3" x="-4.8" y="0" drill="2.3" shape="octagon"/>
+<pad name="4" x="4.8" y="0" drill="2.3" shape="octagon"/>
+<wire x1="-2.2225" y1="5.715" x2="1.27" y2="5.715" width="0.127" layer="21" style="shortdash"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="PAK100/2500-10" urn="urn:adsk.eagle:package:5571/1" type="box">
@@ -24692,6 +24765,28 @@ LOGO
 <text x="-1.27" y="0.889" size="1.778" layer="95" rot="R180">&gt;NAME</text>
 <rectangle x1="0" y1="-0.254" x2="2.794" y2="0.254" layer="94"/>
 <pin name="KL" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="POT-ENDLESS-J">
+<description>Endless potentiometer, has two wipers on the same inputs</description>
+<wire x1="-2.413" y1="-0.9525" x2="-2.413" y2="0.9525" width="0.254" layer="94"/>
+<wire x1="-2.413" y1="0.9525" x2="2.413" y2="0.9525" width="0.254" layer="94"/>
+<wire x1="2.413" y1="0.9525" x2="2.413" y2="-0.9525" width="0.254" layer="94"/>
+<wire x1="2.413" y1="-0.9525" x2="0" y2="-0.9525" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.9525" x2="-2.413" y2="-0.9525" width="0.254" layer="94"/>
+<text x="3.81" y="5.08" size="1.778" layer="95">&gt;NAME</text>
+<text x="3.81" y="2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="L" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="W1" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="R" x="5.08" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<wire x1="-0.635" y1="-2.54" x2="0" y2="-0.9525" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.9525" x2="0.635" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0.635" y1="-2.54" x2="-0.635" y2="-2.54" width="0.254" layer="94"/>
+<text x="-1.905" y="-0.635" size="1.27" layer="94">L</text>
+<text x="0.635" y="-0.635" size="1.27" layer="94">R</text>
+<pin name="W2" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<wire x1="0.635" y1="2.54" x2="0" y2="0.9525" width="0.254" layer="94"/>
+<wire x1="0" y1="0.9525" x2="-0.635" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="2.54" x2="0.635" y2="2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -27919,6 +28014,37 @@ NS is without screw holes</description>
 <attribute name="OC_NEWARK" value="unknown" constant="no"/>
 <attribute name="POPULARITY" value="1" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="POT-ENDLESS">
+<description>Alps potmeters&lt;br&gt;
+Combined RV112-FF endless pot and RV09 normal pot</description>
+<gates>
+<gate name="G$1" symbol="POT-ENDLESS-J" x="0" y="0"/>
+</gates>
+<devices>
+<device name="RV09" package="POT-ENDLESS-2">
+<connects>
+<connect gate="G$1" pin="L" pad="LA LB"/>
+<connect gate="G$1" pin="R" pad="RA RB"/>
+<connect gate="G$1" pin="W1" pad="W1"/>
+<connect gate="G$1" pin="W2" pad="W2A W2B"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="RV110" package="POT-ENDLESS">
+<connects>
+<connect gate="G$1" pin="L" pad="LA LB"/>
+<connect gate="G$1" pin="R" pad="RA RB"/>
+<connect gate="G$1" pin="W1" pad="W1"/>
+<connect gate="G$1" pin="W2" pad="W2A W2B"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>

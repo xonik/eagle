@@ -2129,6 +2129,7 @@ match</text>
 </devices>
 </deviceset>
 <deviceset name="SVF-V1.1">
+<description>Xonik State variable filter v1.1</description>
 <gates>
 <gate name="G$1" symbol="XM8-SWF-V1.1" x="0" y="0"/>
 </gates>
