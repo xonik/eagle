@@ -1794,6 +1794,29 @@ match</text>
 <pin name="OPAMP_NEG" x="-10.16" y="7.62" visible="pad" length="short"/>
 <pin name="OPAMP_OUT" x="10.16" y="5.08" visible="pad" length="short" rot="R180"/>
 </symbol>
+<symbol name="XM8-SVF-CUTOFF-CV-V1.0">
+<pin name="CUTOFF_CV" x="-10.16" y="0" length="short"/>
+<pin name="CUTOFF_OFFSET" x="-10.16" y="2.54" length="short"/>
+<pin name="CUTOFF_LIN_FM" x="-10.16" y="-2.54" length="short"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="33.02" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="33.02" y1="-5.08" x2="33.02" y2="5.08" width="0.254" layer="94"/>
+<wire x1="33.02" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<pin name="TRACK_1" x="35.56" y="2.54" length="short" rot="R180"/>
+<pin name="TRACK_2" x="35.56" y="0" length="short" rot="R180"/>
+<pin name="CUTOFF_IABC" x="35.56" y="-2.54" length="short" rot="R180"/>
+</symbol>
+<symbol name="XM8-SVF-RESO-CV-V1.0">
+<pin name="RESO_CV" x="-10.16" y="0" length="short"/>
+<pin name="RESO_BAL" x="-10.16" y="2.54" length="short"/>
+<pin name="RESO_IABC" x="-10.16" y="-2.54" length="short"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="27.94" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="27.94" y1="-5.08" x2="27.94" y2="5.08" width="0.254" layer="94"/>
+<wire x1="27.94" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<pin name="RESO_GAIN_1" x="30.48" y="2.54" length="short" rot="R180"/>
+<pin name="RESO_GAIN_2" x="30.48" y="0" length="short" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DCO-V1.4" prefix="IC">
@@ -2407,6 +2430,57 @@ match</text>
 <connect gate="G$4" pin="+15V" pad="18"/>
 <connect gate="G$4" pin="-15V" pad="20"/>
 <connect gate="G$4" pin="GND" pad="19"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SVF-CV-V1.0">
+<gates>
+<gate name="G$1" symbol="XM8-SVF-CUTOFF-CV-V1.0" x="-10.16" y="20.32"/>
+<gate name="G$2" symbol="XM8-SVF-RESO-CV-V1.0" x="-10.16" y="5.08"/>
+<gate name="G$3" symbol="XM8-PWR" x="-17.78" y="-12.7"/>
+</gates>
+<devices>
+<device name="V" package="XM8-SVF-CV-V1.0V">
+<connects>
+<connect gate="G$1" pin="CUTOFF_CV" pad="5"/>
+<connect gate="G$1" pin="CUTOFF_IABC" pad="1"/>
+<connect gate="G$1" pin="CUTOFF_LIN_FM" pad="2"/>
+<connect gate="G$1" pin="CUTOFF_OFFSET" pad="6"/>
+<connect gate="G$1" pin="TRACK_1" pad="3"/>
+<connect gate="G$1" pin="TRACK_2" pad="4"/>
+<connect gate="G$2" pin="RESO_BAL" pad="8"/>
+<connect gate="G$2" pin="RESO_CV" pad="11"/>
+<connect gate="G$2" pin="RESO_GAIN_1" pad="9"/>
+<connect gate="G$2" pin="RESO_GAIN_2" pad="10"/>
+<connect gate="G$2" pin="RESO_IABC" pad="7"/>
+<connect gate="G$3" pin="+15V" pad="12"/>
+<connect gate="G$3" pin="-15V" pad="14"/>
+<connect gate="G$3" pin="GND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="H" package="XM8-SVF-CV-V1.0H">
+<connects>
+<connect gate="G$1" pin="CUTOFF_CV" pad="5"/>
+<connect gate="G$1" pin="CUTOFF_IABC" pad="1"/>
+<connect gate="G$1" pin="CUTOFF_LIN_FM" pad="2"/>
+<connect gate="G$1" pin="CUTOFF_OFFSET" pad="6"/>
+<connect gate="G$1" pin="TRACK_1" pad="3"/>
+<connect gate="G$1" pin="TRACK_2" pad="4"/>
+<connect gate="G$2" pin="RESO_BAL" pad="8"/>
+<connect gate="G$2" pin="RESO_CV" pad="11"/>
+<connect gate="G$2" pin="RESO_GAIN_1" pad="9"/>
+<connect gate="G$2" pin="RESO_GAIN_2" pad="10"/>
+<connect gate="G$2" pin="RESO_IABC" pad="7"/>
+<connect gate="G$3" pin="+15V" pad="12"/>
+<connect gate="G$3" pin="-15V" pad="14"/>
+<connect gate="G$3" pin="GND" pad="13"/>
 </connects>
 <technologies>
 <technology name=""/>
