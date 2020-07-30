@@ -1807,6 +1807,23 @@ match</text>
 <pin name="DGND" x="0" y="-7.62" visible="off" length="middle" direction="pwr" rot="R90"/>
 <text x="0.635" y="10.16" size="1.778" layer="97" rot="R90">&gt;NAME</text>
 </symbol>
+<symbol name="XM8-MIXER-V1.0">
+<description>Quad input mixer</description>
+<pin name="IN2" x="-10.16" y="0" length="short"/>
+<pin name="IN1" x="-10.16" y="2.54" length="short"/>
+<pin name="IN3" x="-10.16" y="-2.54" length="short"/>
+<wire x1="-7.62" y1="5.08" x2="-7.62" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-15.24" x2="7.62" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-15.24" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<pin name="CV1" x="-5.08" y="-17.78" length="short" rot="R90"/>
+<pin name="CV2" x="-2.54" y="-17.78" length="short" rot="R90"/>
+<pin name="CV3" x="0" y="-17.78" length="short" rot="R90"/>
+<pin name="IN4" x="-10.16" y="-5.08" length="short"/>
+<pin name="EXT" x="5.08" y="7.62" length="short" rot="R270"/>
+<pin name="CV4" x="2.54" y="-17.78" length="short" rot="R90"/>
+<pin name="OUT" x="10.16" y="-5.08" length="short" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DCO-V1.4" prefix="IC">
@@ -2480,6 +2497,35 @@ match</text>
 <connect gate="G$2" pin="RESO_IABC" pad="7"/>
 <connect gate="P" pin="+15V" pad="12"/>
 <connect gate="P" pin="-15V" pad="14"/>
+<connect gate="P" pin="AGND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="4CH-MIXER-2" prefix="IC">
+<description>Xonik 4 channel voltage controlled mixer with external input</description>
+<gates>
+<gate name="P" symbol="XM8-PWR" x="15.24" y="0"/>
+<gate name="G$1" symbol="XM8-MIXER-V1.0" x="0" y="5.08"/>
+</gates>
+<devices>
+<device name="V" package="XM8-4CH-MIXER-V">
+<connects>
+<connect gate="G$1" pin="CV1" pad="3"/>
+<connect gate="G$1" pin="CV2" pad="4"/>
+<connect gate="G$1" pin="CV3" pad="6"/>
+<connect gate="G$1" pin="CV4" pad="7"/>
+<connect gate="G$1" pin="EXT" pad="5"/>
+<connect gate="G$1" pin="IN1" pad="1"/>
+<connect gate="G$1" pin="IN2" pad="2"/>
+<connect gate="G$1" pin="IN3" pad="8"/>
+<connect gate="G$1" pin="IN4" pad="9"/>
+<connect gate="G$1" pin="OUT" pad="10"/>
+<connect gate="P" pin="+15V" pad="12"/>
+<connect gate="P" pin="-15V" pad="11"/>
 <connect gate="P" pin="AGND" pad="13"/>
 </connects>
 <technologies>
