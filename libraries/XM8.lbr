@@ -1823,6 +1823,7 @@ match</text>
 <pin name="EXT" x="5.08" y="7.62" length="short" rot="R270"/>
 <pin name="CV4" x="2.54" y="-17.78" length="short" rot="R90"/>
 <pin name="OUT" x="10.16" y="-5.08" length="short" rot="R180"/>
+<text x="0" y="7.62" size="1.778" layer="96" rot="R180">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2509,21 +2510,21 @@ match</text>
 <description>Xonik 4 channel voltage controlled mixer with external input</description>
 <gates>
 <gate name="P" symbol="XM8-PWR" x="15.24" y="0"/>
-<gate name="G$1" symbol="XM8-MIXER-V1.0" x="0" y="5.08"/>
+<gate name="C" symbol="XM8-MIXER-V1.0" x="0" y="5.08"/>
 </gates>
 <devices>
 <device name="V" package="XM8-4CH-MIXER-V">
 <connects>
-<connect gate="G$1" pin="CV1" pad="3"/>
-<connect gate="G$1" pin="CV2" pad="4"/>
-<connect gate="G$1" pin="CV3" pad="6"/>
-<connect gate="G$1" pin="CV4" pad="7"/>
-<connect gate="G$1" pin="EXT" pad="5"/>
-<connect gate="G$1" pin="IN1" pad="1"/>
-<connect gate="G$1" pin="IN2" pad="2"/>
-<connect gate="G$1" pin="IN3" pad="8"/>
-<connect gate="G$1" pin="IN4" pad="9"/>
-<connect gate="G$1" pin="OUT" pad="10"/>
+<connect gate="C" pin="CV1" pad="3"/>
+<connect gate="C" pin="CV2" pad="4"/>
+<connect gate="C" pin="CV3" pad="6"/>
+<connect gate="C" pin="CV4" pad="7"/>
+<connect gate="C" pin="EXT" pad="5"/>
+<connect gate="C" pin="IN1" pad="1"/>
+<connect gate="C" pin="IN2" pad="2"/>
+<connect gate="C" pin="IN3" pad="8"/>
+<connect gate="C" pin="IN4" pad="9"/>
+<connect gate="C" pin="OUT" pad="10"/>
 <connect gate="P" pin="+15V" pad="12"/>
 <connect gate="P" pin="-15V" pad="11"/>
 <connect gate="P" pin="AGND" pad="13"/>

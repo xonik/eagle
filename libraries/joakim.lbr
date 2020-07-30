@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -55,6 +55,8 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -24804,6 +24806,37 @@ LOGO
 <wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
 <text x="10.16" y="10.16" size="1.778" layer="96" rot="R180">&gt;NAME</text>
 </symbol>
+<symbol name="DG419-J">
+<description>DG419 Switch, normally closed to top input</description>
+<pin name="S1" x="-2.54" y="2.54" visible="pad" length="short"/>
+<pin name="S2" x="-2.54" y="0" visible="pad" length="short"/>
+<pin name="D" x="10.16" y="2.54" visible="pad" length="short" rot="R180"/>
+<pin name="C" x="10.16" y="0" visible="pad" length="short" rot="R180"/>
+<wire x1="1.27" y1="2.54" x2="3.175" y2="1.27" width="0.254" layer="94"/>
+<wire x1="3.175" y1="1.27" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="7.62" y2="1.27" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="0.635" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0.635" x2="4.445" y2="0.635" width="0.254" layer="94"/>
+<wire x1="4.445" y1="0.635" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="5.715" y2="0.635" width="0.254" layer="94"/>
+<wire x1="5.715" y1="0.635" x2="5.08" y2="0.635" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<text x="6.985" y="4.445" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+</symbol>
+<symbol name="VL-PWR">
+<pin name="VL" x="0" y="2.54" length="short" rot="R270"/>
+<text x="-0.635" y="-6.35" size="1.778" layer="95" rot="R270">&gt;NAME</text>
+</symbol>
+<symbol name="XM8-PWR">
+<description>Analog power, +/-15v and AGND</description>
+<pin name="-15V" x="0" y="-7.62" visible="off" length="short" direction="pwr" rot="R90"/>
+<pin name="+15V" x="0" y="7.62" visible="off" length="short" direction="pwr" rot="R270"/>
+<pin name="AGND" x="0" y="0" visible="off" length="short" direction="pwr" rot="R90"/>
+<text x="0.635" y="10.16" size="1.778" layer="97" rot="R90">&gt;NAME</text>
+<wire x1="0" y1="0" x2="0" y2="-5.08" width="0.254" layer="97"/>
+<wire x1="0" y1="5.08" x2="0" y2="2.54" width="0.254" layer="97"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="LED_J" prefix="LED" uservalue="yes">
@@ -28081,6 +28114,45 @@ Combined RV112-FF endless pot and RV09 normal pot</description>
 <connect gate="G$1" pin="IO" pad="7"/>
 <connect gate="G$1" pin="IO2" pad="3"/>
 <connect gate="G$1" pin="VCC" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG419-J">
+<gates>
+<gate name="-S" symbol="DG419-J" x="-15.24" y="5.08"/>
+<gate name="D" symbol="VL-PWR" x="7.62" y="5.08"/>
+<gate name="P" symbol="XM8-PWR" x="17.78" y="0"/>
+</gates>
+<devices>
+<device name="P" package="DIL08J">
+<connects>
+<connect gate="-S" pin="C" pad="6"/>
+<connect gate="-S" pin="D" pad="1"/>
+<connect gate="-S" pin="S1" pad="2"/>
+<connect gate="-S" pin="S2" pad="8"/>
+<connect gate="D" pin="VL" pad="5"/>
+<connect gate="P" pin="+15V" pad="4"/>
+<connect gate="P" pin="-15V" pad="7"/>
+<connect gate="P" pin="AGND" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="S" package="SO08J">
+<connects>
+<connect gate="-S" pin="C" pad="6"/>
+<connect gate="-S" pin="D" pad="1"/>
+<connect gate="-S" pin="S1" pad="2"/>
+<connect gate="-S" pin="S2" pad="8"/>
+<connect gate="D" pin="VL" pad="5"/>
+<connect gate="P" pin="+15V" pad="4"/>
+<connect gate="P" pin="-15V" pad="7"/>
+<connect gate="P" pin="AGND" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
