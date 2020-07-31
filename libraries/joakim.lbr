@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -24838,6 +24838,19 @@ LOGO
 <wire x1="0" y1="0" x2="0" y2="-5.08" width="0.254" layer="97"/>
 <wire x1="0" y1="5.08" x2="0" y2="2.54" width="0.254" layer="97"/>
 </symbol>
+<symbol name="VARIABLE_RES">
+<description>Potmeter based variable resistor</description>
+<pin name="L" x="2.54" y="-2.54" visible="pad" length="short" swaplevel="1" rot="R180"/>
+<pin name="C" x="2.54" y="0" visible="pad" length="short" swaplevel="1" rot="R180"/>
+<wire x1="0" y1="0.635" x2="0" y2="-3.175" width="0.254" layer="94"/>
+<wire x1="0" y1="-3.175" x2="-2.54" y2="-3.175" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-3.175" x2="-2.54" y2="0.635" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0.635" x2="0" y2="0.635" width="0.254" layer="94"/>
+<wire x1="0.635" y1="-1.905" x2="-3.175" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="-3.01625" y1="-0.15875" x2="-3.33375" y2="-1.11125" width="0.254" layer="94"/>
+<wire x1="-3.33375" y1="-1.11125" x2="-3.96875" y2="-0.3175" width="0.254" layer="94"/>
+<wire x1="-3.96875" y1="-0.3175" x2="-3.01625" y2="-0.15875" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="LED_J" prefix="LED" uservalue="yes">
@@ -28169,6 +28182,23 @@ Combined RV112-FF endless pot and RV09 normal pot</description>
 <connect gate="P" pin="+15V" pad="4"/>
 <connect gate="P" pin="-15V" pad="7"/>
 <connect gate="P" pin="AGND" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RESISTOR_VARIABLE">
+<description>Potentiometer used as a variable resistor between left leg and center</description>
+<gates>
+<gate name="G$1" symbol="VARIABLE_RES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MULTIPOT_J">
+<connects>
+<connect gate="G$1" pin="C" pad="S S1 S2"/>
+<connect gate="G$1" pin="L" pad="A A1 A2"/>
 </connects>
 <technologies>
 <technology name=""/>
