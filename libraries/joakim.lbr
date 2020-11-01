@@ -23164,6 +23164,19 @@ distributor Farnell 149-452</description>
 <rectangle x1="-1.4732" y1="0.2032" x2="-1.3462" y2="0.3302" layer="51"/>
 <rectangle x1="-1.1176" y1="0.5842" x2="-0.9906" y2="0.7112" layer="51"/>
 </package>
+<package name="XT30-J">
+<description>XT30 connector, straight</description>
+<wire x1="-5.1" y1="2.6" x2="3.5" y2="2.6" width="0.1524" layer="21"/>
+<wire x1="3.5" y1="2.6" x2="5.1" y2="1" width="0.1524" layer="21"/>
+<wire x1="5.1" y1="-1" x2="3.5" y2="-2.6" width="0.1524" layer="21"/>
+<wire x1="3.5" y1="-2.6" x2="-5.1" y2="-2.6" width="0.1524" layer="21"/>
+<wire x1="5.1" y1="1" x2="5.1" y2="-1" width="0.1524" layer="21"/>
+<pad name="1" x="2.5" y="0" drill="1.8" shape="octagon" rot="R90"/>
+<pad name="2" x="-2.5" y="0" drill="1.8" shape="octagon" rot="R90"/>
+<text x="-3.81" y="2.921" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<wire x1="-5.1" y1="-2.6" x2="-5.1" y2="2.6" width="0.1524" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="PAK100/2500-10" urn="urn:adsk.eagle:package:5571/1" type="box">
@@ -29220,6 +29233,23 @@ potentiometer, Alpha RV09</description>
 </gates>
 <devices>
 <device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="XT30-J" prefix="X">
+<description>XT30 connector</description>
+<gates>
+<gate name="G$1" symbol="MA02-1J" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="XT30-J">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
