@@ -28663,6 +28663,21 @@ NS is without screw holes</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="" package="DIL08J">
+<connects>
+<connect gate="G$1" pin="!CS" pad="4"/>
+<connect gate="G$1" pin="AGND" pad="2"/>
+<connect gate="G$1" pin="DGND" pad="7"/>
+<connect gate="G$1" pin="SCLK" pad="5"/>
+<connect gate="G$1" pin="SDI" pad="6"/>
+<connect gate="G$1" pin="VDD" pad="8"/>
+<connect gate="G$1" pin="VOUT" pad="1"/>
+<connect gate="G$1" pin="VREF" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="MA14-1J" prefix="SV" uservalue="yes">
