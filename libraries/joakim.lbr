@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -23760,6 +23760,21 @@ Source. http://cache.national.com/ds/LM/LM2937-2.5.pdf</description>
 <rectangle x1="1.905" y1="-10.414" x2="3.175" y2="-7.62" layer="21"/>
 <hole x="0" y="4.826" drill="3.302"/>
 </package>
+<package name="TO220-5V-J">
+<pad name="P$1" x="-3.4" y="-8.51" drill="1.2"/>
+<pad name="P$2" x="-1.7" y="-4.28" drill="1.2"/>
+<pad name="P$3" x="0" y="-8.51" drill="1.2"/>
+<pad name="P$4" x="1.7" y="-4.28" drill="1.2"/>
+<pad name="P$5" x="3.4" y="-8.51" drill="1.2"/>
+<wire x1="-5.08" y1="0" x2="5.08" y2="0" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-1.27" x2="5.08" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-1.27" x2="5.08" y2="0" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-1.27" x2="-5.08" y2="-4.57" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-4.57" x2="-3.81" y2="-4.57" width="0.127" layer="21"/>
+<wire x1="3.81" y1="-4.57" x2="5.08" y2="-4.57" width="0.127" layer="21"/>
+<wire x1="5.08" y1="-4.57" x2="5.08" y2="-1.27" width="0.127" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="PAK100/2500-10" urn="urn:adsk.eagle:package:5571/1" type="box">
@@ -30464,8 +30479,8 @@ Vcc-Vee = 26V max, so +/-12V or +15V/-9V</description>
 <device name="2" package="TO220H-J">
 <connects>
 <connect gate="G$1" pin="ADJ" pad="1"/>
-<connect gate="G$1" pin="VI" pad="2"/>
-<connect gate="G$1" pin="VO" pad="3"/>
+<connect gate="G$1" pin="VI" pad="3"/>
+<connect gate="G$1" pin="VO" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -30485,6 +30500,18 @@ Vcc-Vee = 26V max, so +/-12V or +15V/-9V</description>
 <connect gate="G$1" pin="ON" pad="2"/>
 <connect gate="G$1" pin="VI" pad="3 6"/>
 <connect gate="G$1" pin="VO" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="V" package="TO220-5V-J">
+<connects>
+<connect gate="G$1" pin="ADJ" pad="P$1"/>
+<connect gate="G$1" pin="GND" pad="P$4"/>
+<connect gate="G$1" pin="ON" pad="P$2"/>
+<connect gate="G$1" pin="VI" pad="P$3"/>
+<connect gate="G$1" pin="VO" pad="P$5"/>
 </connects>
 <technologies>
 <technology name=""/>
