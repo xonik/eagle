@@ -25671,10 +25671,10 @@ box</text>
 <pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
 </symbol>
 <symbol name="DG403">
-<wire x1="7.62" y1="-12.7" x2="-7.62" y2="-12.7" width="0.4064" layer="94"/>
+<wire x1="15.24" y1="-12.7" x2="-7.62" y2="-12.7" width="0.4064" layer="94"/>
 <wire x1="-7.62" y1="12.7" x2="-7.62" y2="-12.7" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="12.7" x2="7.62" y2="12.7" width="0.4064" layer="94"/>
-<wire x1="7.62" y1="-12.7" x2="7.62" y2="12.7" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="12.7" x2="15.24" y2="12.7" width="0.4064" layer="94"/>
+<wire x1="15.24" y1="-12.7" x2="15.24" y2="12.7" width="0.4064" layer="94"/>
 <text x="-7.62" y="13.335" size="1.778" layer="95">&gt;NAME</text>
 <text x="-7.62" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="IN1" x="-12.7" y="-2.54" length="middle" direction="in"/>
@@ -25682,15 +25682,58 @@ box</text>
 <pin name="S1" x="-12.7" y="10.16" length="middle" direction="pas"/>
 <pin name="S2" x="-12.7" y="7.62" length="middle" direction="pas"/>
 <pin name="S3" x="-12.7" y="5.08" length="middle" direction="pas"/>
-<pin name="D1" x="12.7" y="10.16" length="middle" direction="pas" rot="R180"/>
-<pin name="D2" x="12.7" y="7.62" length="middle" direction="pas" rot="R180"/>
-<pin name="D3" x="12.7" y="5.08" length="middle" direction="pas" rot="R180"/>
-<pin name="GND" x="12.7" y="-10.16" length="middle" direction="pwr" rot="R180"/>
-<pin name="V-" x="12.7" y="-7.62" length="middle" direction="pwr" rot="R180"/>
-<pin name="V+" x="12.7" y="-2.54" length="middle" direction="pwr" rot="R180"/>
-<pin name="VL" x="12.7" y="-5.08" length="middle" direction="pwr" rot="R180"/>
-<pin name="D4" x="12.7" y="2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="D1" x="20.32" y="10.16" length="middle" direction="pas" rot="R180"/>
+<pin name="D2" x="20.32" y="7.62" length="middle" direction="pas" rot="R180"/>
+<pin name="D3" x="20.32" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="GND" x="20.32" y="-10.16" length="middle" direction="pwr" rot="R180"/>
+<pin name="V-" x="20.32" y="-7.62" length="middle" direction="pwr" rot="R180"/>
+<pin name="V+" x="20.32" y="-2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="VL" x="20.32" y="-5.08" length="middle" direction="pwr" rot="R180"/>
+<pin name="D4" x="20.32" y="2.54" length="middle" direction="pas" rot="R180"/>
 <pin name="S4" x="-12.7" y="2.54" length="middle" direction="pas"/>
+<wire x1="-1.905" y1="10.16" x2="0.9525" y2="10.16" width="0.1524" layer="94"/>
+<circle x="1.27" y="10.16" radius="0.3175" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="10.16" x2="4.7625" y2="10.4775" width="0.1524" layer="94"/>
+<wire x1="4.7625" y1="10.4775" x2="5.08" y2="10.16" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="10.16" x2="7.9375" y2="10.16" width="0.1524" layer="94"/>
+<wire x1="1.5875" y1="10.16" x2="4.445" y2="11.1125" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="7.62" x2="0.9525" y2="7.62" width="0.1524" layer="94"/>
+<circle x="1.27" y="7.62" radius="0.3175" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="7.62" x2="4.7625" y2="7.9375" width="0.1524" layer="94"/>
+<wire x1="4.7625" y1="7.9375" x2="5.08" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="7.62" x2="7.9375" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="1.5875" y1="7.62" x2="4.445" y2="8.5725" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="5.08" x2="0.9525" y2="5.08" width="0.1524" layer="94"/>
+<circle x="1.27" y="5.08" radius="0.3175" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="5.08" x2="4.7625" y2="5.3975" width="0.1524" layer="94"/>
+<wire x1="4.7625" y1="5.3975" x2="5.08" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="5.08" x2="7.9375" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="1.5875" y1="5.08" x2="4.7625" y2="5.3975" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="2.54" x2="0.9525" y2="2.54" width="0.1524" layer="94"/>
+<circle x="1.27" y="2.54" radius="0.3175" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="2.54" x2="4.7625" y2="2.8575" width="0.1524" layer="94"/>
+<wire x1="4.7625" y1="2.8575" x2="5.08" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="2.54" x2="7.9375" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.5875" y1="2.54" x2="4.7625" y2="2.8575" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="-2.54" x2="0" y2="-2.54" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="0" y1="-2.54" x2="0" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="3.175" x2="0" y2="4.1275" width="0.1524" layer="94"/>
+<wire x1="0" y1="4.1275" x2="0" y2="4.445" width="0.1524" layer="94"/>
+<wire x1="0" y1="5.715" x2="0" y2="6.985" width="0.1524" layer="94"/>
+<wire x1="0" y1="8.255" x2="0" y2="9.2075" width="0.1524" layer="94"/>
+<wire x1="0" y1="9.2075" x2="2.54" y2="9.2075" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="9.2075" x2="2.54" y2="9.8425" width="0.1524" layer="94"/>
+<wire x1="0" y1="4.1275" x2="2.54" y2="4.1275" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="4.1275" x2="2.54" y2="4.7625" width="0.1524" layer="94"/>
+<wire x1="-1.5875" y1="-5.08" x2="6.35" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="-5.08" x2="6.35" y2="1.5875" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="1.5875" x2="6.35" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="3.175" x2="6.35" y2="4.445" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="5.715" x2="6.35" y2="6.6675" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="6.6675" x2="3.81" y2="6.6675" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="6.6675" x2="3.81" y2="7.3025" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="1.5875" x2="3.81" y2="1.5875" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="1.5875" x2="3.81" y2="2.2225" width="0.1524" layer="94"/>
 </symbol>
 <symbol name="CEM3340">
 <description>CEM 3340 VCO</description>
@@ -26537,6 +26580,129 @@ LOGO
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <rectangle x1="0" y1="-0.508" x2="2.54" y2="0.508" layer="94"/>
 <pin name="1" x="-5.08" y="0" visible="off" length="middle" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="DG-CELL-NC">
+<description>DG-type switch, normally closed</description>
+<pin name="S" x="-2.54" y="0" visible="pad" length="short"/>
+<pin name="D" x="-2.54" y="2.54" visible="pad" length="short"/>
+<pin name="C" x="2.54" y="-2.54" visible="pad" length="short" rot="R90"/>
+<text x="6.985" y="5.715" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<wire x1="0" y1="2.54" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="0.3175" width="0.1524" layer="94"/>
+<circle x="1.27" y="0.47625" radius="0.15875" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="2.2225" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="2.2225" x2="1.27" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.905" x2="1.42875" y2="2.06375" width="0.1524" layer="94"/>
+<wire x1="1.42875" y1="2.06375" x2="1.27" y2="2.2225" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.635" x2="1.5875" y2="2.06375" width="0.1524" layer="94"/>
+<text x="-1.11125" y="0.79375" size="1.016" layer="94">NC</text>
+<wire x1="2.54" y1="0" x2="2.54" y2="0.3175" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.3175" x2="2.2225" y2="0.3175" width="0.1524" layer="94"/>
+<wire x1="2.2225" y1="0.3175" x2="2.54" y2="0.9525" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.9525" x2="2.8575" y2="0.3175" width="0.1524" layer="94"/>
+<wire x1="2.8575" y1="0.3175" x2="2.54" y2="0.3175" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.9525" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="DG-CELL-NO">
+<description>DG-type switch, normally open</description>
+<pin name="S" x="-2.54" y="0" visible="pad" length="short"/>
+<pin name="D" x="-2.54" y="2.54" visible="pad" length="short"/>
+<pin name="C" x="2.54" y="-2.54" visible="pad" length="short" rot="R90"/>
+<text x="6.985" y="5.715" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<wire x1="0" y1="2.54" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="0.3175" width="0.1524" layer="94"/>
+<circle x="1.27" y="0.47625" radius="0.15875" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="2.2225" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="2.2225" x2="1.27" y2="1.905" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.905" x2="1.42875" y2="2.06375" width="0.1524" layer="94"/>
+<wire x1="1.42875" y1="2.06375" x2="1.27" y2="2.2225" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.905" width="0.1524" layer="94"/>
+<text x="-1.11125" y="0.79375" size="1.016" layer="94">NO</text>
+<wire x1="2.54" y1="0" x2="2.54" y2="0.3175" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.3175" x2="2.2225" y2="0.3175" width="0.1524" layer="94"/>
+<wire x1="2.2225" y1="0.3175" x2="2.54" y2="0.9525" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.9525" x2="2.8575" y2="0.3175" width="0.1524" layer="94"/>
+<wire x1="2.8575" y1="0.3175" x2="2.54" y2="0.3175" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.9525" x2="2.54" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="DG-CELL-O-C">
+<description>DG-type switch, complementary on/off controlled by single control</description>
+<pin name="S_A" x="-2.54" y="0" visible="pad" length="short"/>
+<pin name="D_A" x="7.62" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="C" x="-2.54" y="-5.08" visible="pad" length="short"/>
+<text x="6.985" y="5.715" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<wire x1="0" y1="0" x2="1.5875" y2="0" width="0.1524" layer="94"/>
+<circle x="1.74625" y="0" radius="0.15875" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.4925" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.4925" y1="0" x2="3.175" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="0" x2="3.33375" y2="0.15875" width="0.1524" layer="94"/>
+<wire x1="3.33375" y1="0.15875" x2="3.4925" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="0" x2="2.8575" y2="0.9525" width="0.1524" layer="94"/>
+<text x="-0.635" y="0.3175" size="1.016" layer="94">NO</text>
+<wire x1="0" y1="-5.08" x2="0.3175" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="0.3175" y1="-5.08" x2="0.3175" y2="-4.7625" width="0.1524" layer="94"/>
+<wire x1="0.3175" y1="-4.7625" x2="0.9525" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="0.9525" y1="-5.08" x2="0.3175" y2="-5.3975" width="0.1524" layer="94"/>
+<wire x1="0.3175" y1="-5.3975" x2="0.3175" y2="-5.08" width="0.1524" layer="94"/>
+<pin name="S_B" x="-2.54" y="-2.54" visible="pad" length="short"/>
+<pin name="D_B" x="7.62" y="-2.54" visible="pad" length="short" rot="R180"/>
+<wire x1="0" y1="-2.54" x2="1.5875" y2="-2.54" width="0.1524" layer="94"/>
+<circle x="1.74625" y="-2.54" radius="0.15875" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="3.4925" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="3.4925" y1="-2.54" x2="3.175" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="-2.54" x2="3.33375" y2="-2.38125" width="0.1524" layer="94"/>
+<wire x1="3.33375" y1="-2.38125" x2="3.4925" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="-2.54" x2="3.33375" y2="-2.2225" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.69875" x2="2.54" y2="-3.01625" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-3.4925" x2="2.54" y2="-3.81" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-4.28625" x2="2.54" y2="-4.60375" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.15875" x2="2.54" y2="-0.47625" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.9525" x2="2.54" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-1.74625" x2="2.54" y2="-2.06375" width="0.1524" layer="94"/>
+<wire x1="1.42875" y1="-5.08" x2="1.74625" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="2.2225" y1="-5.08" x2="2.54" y2="-5.08" width="0.1524" layer="94"/>
+<text x="-0.635" y="-2.2225" size="1.016" layer="94">NC</text>
+</symbol>
+<symbol name="DG-CELL-O-O">
+<description>DG-type switch, complementary on/off controlled by single control</description>
+<pin name="S_A" x="-2.54" y="0" visible="pad" length="short"/>
+<pin name="D_A" x="7.62" y="0" visible="pad" length="short" rot="R180"/>
+<pin name="C" x="-2.54" y="-5.08" visible="pad" length="short"/>
+<text x="6.985" y="5.715" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<wire x1="0" y1="0" x2="1.5875" y2="0" width="0.1524" layer="94"/>
+<circle x="1.74625" y="0" radius="0.15875" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.4925" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.4925" y1="0" x2="3.175" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="0" x2="3.33375" y2="0.15875" width="0.1524" layer="94"/>
+<wire x1="3.33375" y1="0.15875" x2="3.4925" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="0" x2="2.8575" y2="0.9525" width="0.1524" layer="94"/>
+<text x="-0.635" y="0.3175" size="1.016" layer="94">NO</text>
+<wire x1="0" y1="-5.08" x2="0.3175" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="0.3175" y1="-5.08" x2="0.3175" y2="-4.7625" width="0.1524" layer="94"/>
+<wire x1="0.3175" y1="-4.7625" x2="0.9525" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="0.9525" y1="-5.08" x2="0.3175" y2="-5.3975" width="0.1524" layer="94"/>
+<wire x1="0.3175" y1="-5.3975" x2="0.3175" y2="-5.08" width="0.1524" layer="94"/>
+<pin name="S_B" x="-2.54" y="-2.54" visible="pad" length="short"/>
+<pin name="D_B" x="7.62" y="-2.54" visible="pad" length="short" rot="R180"/>
+<wire x1="0" y1="-2.54" x2="1.5875" y2="-2.54" width="0.1524" layer="94"/>
+<circle x="1.74625" y="-2.54" radius="0.15875" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="3.4925" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="3.4925" y1="-2.54" x2="3.175" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="-2.54" x2="3.33375" y2="-2.38125" width="0.1524" layer="94"/>
+<wire x1="3.33375" y1="-2.38125" x2="3.4925" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="-2.54" x2="2.8575" y2="-1.5875" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.69875" x2="2.54" y2="-3.01625" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-3.4925" x2="2.54" y2="-3.81" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-4.28625" x2="2.54" y2="-4.60375" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.15875" x2="2.54" y2="-0.47625" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.9525" x2="2.54" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.42875" y1="-5.08" x2="1.74625" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="2.2225" y1="-5.08" x2="2.54" y2="-5.08" width="0.1524" layer="94"/>
+<text x="-0.635" y="-2.2225" size="1.016" layer="94">NO</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -29007,7 +29173,7 @@ Source: Mitsubishi M5218AL/P/FP</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="DG403C" prefix="IC">
+<deviceset name="DG403C-J" prefix="IC">
 <description>&lt;b&gt;ANALOG SWITCH&lt;/b&gt;</description>
 <gates>
 <gate name="G$2" symbol="DG403" x="0" y="-7.62"/>
@@ -29904,6 +30070,7 @@ Combined RV112-FF endless pot and RV09 normal pot</description>
 </devices>
 </deviceset>
 <deviceset name="DG419-J" prefix="S">
+<description>Single switch with two inputs. SPDT</description>
 <gates>
 <gate name="-S" symbol="DG419-J" x="-15.24" y="5.08"/>
 <gate name="D" symbol="VL-PWR" x="7.62" y="5.08"/>
@@ -30745,6 +30912,341 @@ JLCPCB: C86469, found under Connectors/Terminals</description>
 <connect gate="G$1" pin="C" pad="2"/>
 <connect gate="G$1" pin="L" pad="1"/>
 <connect gate="G$1" pin="R" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG411-J">
+<description>Quad switch, normally closed</description>
+<gates>
+<gate name="G$1" symbol="DG-CELL-NC" x="-22.86" y="20.32"/>
+<gate name="G$2" symbol="DG-CELL-NC" x="-22.86" y="10.16"/>
+<gate name="G$3" symbol="DG-CELL-NC" x="-22.86" y="0"/>
+<gate name="G$4" symbol="DG-CELL-NC" x="-22.86" y="-10.16"/>
+<gate name="G$5" symbol="VL-PWR" x="5.08" y="5.08"/>
+<gate name="G$6" symbol="XM8-PWR" x="15.24" y="0"/>
+</gates>
+<devices>
+<device name="" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="C" pad="1"/>
+<connect gate="G$1" pin="D" pad="2"/>
+<connect gate="G$1" pin="S" pad="3"/>
+<connect gate="G$2" pin="C" pad="16"/>
+<connect gate="G$2" pin="D" pad="15"/>
+<connect gate="G$2" pin="S" pad="14"/>
+<connect gate="G$3" pin="C" pad="9"/>
+<connect gate="G$3" pin="D" pad="10"/>
+<connect gate="G$3" pin="S" pad="11"/>
+<connect gate="G$4" pin="C" pad="8"/>
+<connect gate="G$4" pin="D" pad="7"/>
+<connect gate="G$4" pin="S" pad="6"/>
+<connect gate="G$5" pin="VL" pad="12"/>
+<connect gate="G$6" pin="+15V" pad="13"/>
+<connect gate="G$6" pin="-15V" pad="4"/>
+<connect gate="G$6" pin="AGND" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG413-J">
+<description>Quad switch, halv normally closed/half normally open. May be used as SPDT or DPDT</description>
+<gates>
+<gate name="G$2" symbol="DG-CELL-NC" x="-22.86" y="10.16"/>
+<gate name="G$3" symbol="DG-CELL-NC" x="-22.86" y="0"/>
+<gate name="G$5" symbol="VL-PWR" x="5.08" y="5.08"/>
+<gate name="G$6" symbol="XM8-PWR" x="15.24" y="0"/>
+<gate name="G$1" symbol="DG-CELL-NO" x="-22.86" y="20.32"/>
+<gate name="G$4" symbol="DG-CELL-NO" x="-22.86" y="-10.16"/>
+</gates>
+<devices>
+<device name="" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="C" pad="1"/>
+<connect gate="G$1" pin="D" pad="2"/>
+<connect gate="G$1" pin="S" pad="3"/>
+<connect gate="G$2" pin="C" pad="16"/>
+<connect gate="G$2" pin="D" pad="15"/>
+<connect gate="G$2" pin="S" pad="14"/>
+<connect gate="G$3" pin="C" pad="9"/>
+<connect gate="G$3" pin="D" pad="10"/>
+<connect gate="G$3" pin="S" pad="11"/>
+<connect gate="G$4" pin="C" pad="8"/>
+<connect gate="G$4" pin="D" pad="7"/>
+<connect gate="G$4" pin="S" pad="6"/>
+<connect gate="G$5" pin="VL" pad="12"/>
+<connect gate="G$6" pin="+15V" pad="13"/>
+<connect gate="G$6" pin="-15V" pad="4"/>
+<connect gate="G$6" pin="AGND" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG412-J">
+<description>Quad switch, normally open</description>
+<gates>
+<gate name="G$5" symbol="VL-PWR" x="5.08" y="5.08"/>
+<gate name="G$6" symbol="XM8-PWR" x="15.24" y="0"/>
+<gate name="G$1" symbol="DG-CELL-NO" x="-22.86" y="20.32"/>
+<gate name="G$4" symbol="DG-CELL-NO" x="-22.86" y="-10.16"/>
+<gate name="G$2" symbol="DG-CELL-NO" x="-22.86" y="10.16"/>
+<gate name="G$3" symbol="DG-CELL-NO" x="-22.86" y="0"/>
+</gates>
+<devices>
+<device name="" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="C" pad="1"/>
+<connect gate="G$1" pin="D" pad="2"/>
+<connect gate="G$1" pin="S" pad="3"/>
+<connect gate="G$2" pin="C" pad="16"/>
+<connect gate="G$2" pin="D" pad="15"/>
+<connect gate="G$2" pin="S" pad="14"/>
+<connect gate="G$3" pin="C" pad="9"/>
+<connect gate="G$3" pin="D" pad="10"/>
+<connect gate="G$3" pin="S" pad="11"/>
+<connect gate="G$4" pin="C" pad="8"/>
+<connect gate="G$4" pin="D" pad="7"/>
+<connect gate="G$4" pin="S" pad="6"/>
+<connect gate="G$5" pin="VL" pad="12"/>
+<connect gate="G$6" pin="+15V" pad="13"/>
+<connect gate="G$6" pin="-15V" pad="4"/>
+<connect gate="G$6" pin="AGND" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG417-J" prefix="S">
+<description>Single switch, normally closed. SPST</description>
+<gates>
+<gate name="D" symbol="VL-PWR" x="7.62" y="5.08"/>
+<gate name="P" symbol="XM8-PWR" x="17.78" y="0"/>
+<gate name="G$1" symbol="DG-CELL-NC" x="-10.16" y="5.08"/>
+</gates>
+<devices>
+<device name="P" package="DIL08J">
+<connects>
+<connect gate="D" pin="VL" pad="5"/>
+<connect gate="G$1" pin="C" pad="6"/>
+<connect gate="G$1" pin="D" pad="8"/>
+<connect gate="G$1" pin="S" pad="1"/>
+<connect gate="P" pin="+15V" pad="4"/>
+<connect gate="P" pin="-15V" pad="7"/>
+<connect gate="P" pin="AGND" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="S" package="SO08J">
+<connects>
+<connect gate="D" pin="VL" pad="5"/>
+<connect gate="G$1" pin="C" pad="6"/>
+<connect gate="G$1" pin="D" pad="8"/>
+<connect gate="G$1" pin="S" pad="1"/>
+<connect gate="P" pin="+15V" pad="4"/>
+<connect gate="P" pin="-15V" pad="7"/>
+<connect gate="P" pin="AGND" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG418-J" prefix="S">
+<description>Single switch, normally open. SPST</description>
+<gates>
+<gate name="D" symbol="VL-PWR" x="7.62" y="5.08"/>
+<gate name="P" symbol="XM8-PWR" x="17.78" y="0"/>
+<gate name="G$1" symbol="DG-CELL-NO" x="-5.08" y="0"/>
+</gates>
+<devices>
+<device name="P" package="DIL08J">
+<connects>
+<connect gate="D" pin="VL" pad="5"/>
+<connect gate="G$1" pin="C" pad="6"/>
+<connect gate="G$1" pin="D" pad="8"/>
+<connect gate="G$1" pin="S" pad="1"/>
+<connect gate="P" pin="+15V" pad="4"/>
+<connect gate="P" pin="-15V" pad="7"/>
+<connect gate="P" pin="AGND" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="S" package="SO08J">
+<connects>
+<connect gate="D" pin="VL" pad="5"/>
+<connect gate="G$1" pin="C" pad="6"/>
+<connect gate="G$1" pin="D" pad="8"/>
+<connect gate="G$1" pin="S" pad="1"/>
+<connect gate="P" pin="+15V" pad="4"/>
+<connect gate="P" pin="-15V" pad="7"/>
+<connect gate="P" pin="AGND" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG403-2-J" prefix="IC">
+<description>Two  SPDT switches</description>
+<gates>
+<gate name="G$1" symbol="DG-CELL-O-C" x="-10.16" y="5.08"/>
+<gate name="G$2" symbol="DG-CELL-O-C" x="-10.16" y="-7.62"/>
+<gate name="G$3" symbol="VL-PWR" x="10.16" y="0"/>
+<gate name="G$4" symbol="XM8-PWR" x="15.24" y="-5.08"/>
+</gates>
+<devices>
+<device name="J" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="C" pad="15"/>
+<connect gate="G$1" pin="D_A" pad="1"/>
+<connect gate="G$1" pin="D_B" pad="3"/>
+<connect gate="G$1" pin="S_A" pad="16"/>
+<connect gate="G$1" pin="S_B" pad="4"/>
+<connect gate="G$2" pin="C" pad="10"/>
+<connect gate="G$2" pin="D_A" pad="8"/>
+<connect gate="G$2" pin="D_B" pad="6"/>
+<connect gate="G$2" pin="S_A" pad="9"/>
+<connect gate="G$2" pin="S_B" pad="5"/>
+<connect gate="G$3" pin="VL" pad="12"/>
+<connect gate="G$4" pin="+15V" pad="11"/>
+<connect gate="G$4" pin="-15V" pad="14"/>
+<connect gate="G$4" pin="AGND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="Y" package="SO16J">
+<connects>
+<connect gate="G$1" pin="C" pad="15"/>
+<connect gate="G$1" pin="D_A" pad="1"/>
+<connect gate="G$1" pin="D_B" pad="3"/>
+<connect gate="G$1" pin="S_A" pad="16"/>
+<connect gate="G$1" pin="S_B" pad="4"/>
+<connect gate="G$2" pin="C" pad="10"/>
+<connect gate="G$2" pin="D_A" pad="8"/>
+<connect gate="G$2" pin="D_B" pad="6"/>
+<connect gate="G$2" pin="S_A" pad="9"/>
+<connect gate="G$2" pin="S_B" pad="5"/>
+<connect gate="G$3" pin="VL" pad="12"/>
+<connect gate="G$4" pin="+15V" pad="11"/>
+<connect gate="G$4" pin="-15V" pad="14"/>
+<connect gate="G$4" pin="AGND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG405-J" prefix="IC">
+<description>Two  DPST switches</description>
+<gates>
+<gate name="G$3" symbol="VL-PWR" x="10.16" y="0"/>
+<gate name="G$4" symbol="XM8-PWR" x="15.24" y="-5.08"/>
+<gate name="G$1" symbol="DG-CELL-O-O" x="-7.62" y="7.62"/>
+<gate name="G$2" symbol="DG-CELL-O-O" x="-7.62" y="-7.62"/>
+</gates>
+<devices>
+<device name="J" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="C" pad="15"/>
+<connect gate="G$1" pin="D_A" pad="1"/>
+<connect gate="G$1" pin="D_B" pad="3"/>
+<connect gate="G$1" pin="S_A" pad="16"/>
+<connect gate="G$1" pin="S_B" pad="4"/>
+<connect gate="G$2" pin="C" pad="10"/>
+<connect gate="G$2" pin="D_A" pad="8"/>
+<connect gate="G$2" pin="D_B" pad="6"/>
+<connect gate="G$2" pin="S_A" pad="9"/>
+<connect gate="G$2" pin="S_B" pad="5"/>
+<connect gate="G$3" pin="VL" pad="12"/>
+<connect gate="G$4" pin="+15V" pad="11"/>
+<connect gate="G$4" pin="-15V" pad="14"/>
+<connect gate="G$4" pin="AGND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="Y" package="SO16J">
+<connects>
+<connect gate="G$1" pin="C" pad="15"/>
+<connect gate="G$1" pin="D_A" pad="1"/>
+<connect gate="G$1" pin="D_B" pad="3"/>
+<connect gate="G$1" pin="S_A" pad="16"/>
+<connect gate="G$1" pin="S_B" pad="4"/>
+<connect gate="G$2" pin="C" pad="10"/>
+<connect gate="G$2" pin="D_A" pad="8"/>
+<connect gate="G$2" pin="D_B" pad="6"/>
+<connect gate="G$2" pin="S_A" pad="9"/>
+<connect gate="G$2" pin="S_B" pad="5"/>
+<connect gate="G$3" pin="VL" pad="12"/>
+<connect gate="G$4" pin="+15V" pad="11"/>
+<connect gate="G$4" pin="-15V" pad="14"/>
+<connect gate="G$4" pin="AGND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG401-J" prefix="IC">
+<description>Two  SPST switches</description>
+<gates>
+<gate name="G$3" symbol="VL-PWR" x="10.16" y="0"/>
+<gate name="G$4" symbol="XM8-PWR" x="15.24" y="-5.08"/>
+<gate name="G$1" symbol="DG-CELL-NO" x="-10.16" y="5.08"/>
+<gate name="G$2" symbol="DG-CELL-NO" x="-10.16" y="-7.62"/>
+</gates>
+<devices>
+<device name="J" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="C" pad="15"/>
+<connect gate="G$1" pin="D" pad="1"/>
+<connect gate="G$1" pin="S" pad="16"/>
+<connect gate="G$2" pin="C" pad="10"/>
+<connect gate="G$2" pin="D" pad="8"/>
+<connect gate="G$2" pin="S" pad="9"/>
+<connect gate="G$3" pin="VL" pad="12"/>
+<connect gate="G$4" pin="+15V" pad="11"/>
+<connect gate="G$4" pin="-15V" pad="14"/>
+<connect gate="G$4" pin="AGND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="Y" package="SO16J">
+<connects>
+<connect gate="G$1" pin="C" pad="15"/>
+<connect gate="G$1" pin="D" pad="1"/>
+<connect gate="G$1" pin="S" pad="16"/>
+<connect gate="G$2" pin="C" pad="10"/>
+<connect gate="G$2" pin="D" pad="8"/>
+<connect gate="G$2" pin="S" pad="9"/>
+<connect gate="G$3" pin="VL" pad="12"/>
+<connect gate="G$4" pin="+15V" pad="11"/>
+<connect gate="G$4" pin="-15V" pad="14"/>
+<connect gate="G$4" pin="AGND" pad="13"/>
 </connects>
 <technologies>
 <technology name=""/>
