@@ -25449,19 +25449,22 @@ box</text>
 <pin name="D2" x="-17.78" y="0" visible="pin" length="middle"/>
 </symbol>
 <symbol name="SPDT_J">
-<wire x1="-3.175" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="3.175" y2="1.905" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-1.27" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="3.175" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="1.27" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="3.175" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="0.889" x2="0" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="0" y1="1.905" x2="0" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="3.175" x2="0" y2="3.81" width="0.1524" layer="94"/>
+<description>Digitally controllable SPDT switch</description>
 <text x="-1.905" y="-5.08" size="1.778" layer="95">&gt;PART</text>
-<pin name="2" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
-<pin name="3" x="5.08" y="-2.54" visible="pad" length="short" direction="pas" rot="R180"/>
-<pin name="1" x="5.08" y="2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="COMMON" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="NO" x="5.08" y="2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="NC" x="5.08" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="CTRL" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
+<wire x1="1.905" y1="0" x2="0.635" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0.635" y1="1.27" x2="-0.635" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="1.27" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="2.54" x2="-0.635" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="1.905" x2="0" y2="1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="1.905" x2="-0.635" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="1.27" x2="-1.27" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.905" x2="-0.635" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-0.635" y2="2.54" width="0.254" layer="94"/>
 </symbol>
 <symbol name="PUSHBUTTON_2P_J">
 <pin name="1" x="-7.62" y="0" visible="pad" length="short"/>
@@ -26585,7 +26588,7 @@ LOGO
 <description>DG-type switch, normally closed</description>
 <pin name="S" x="-2.54" y="0" visible="pad" length="short"/>
 <pin name="D" x="-2.54" y="2.54" visible="pad" length="short"/>
-<pin name="C" x="2.54" y="-2.54" visible="pad" length="short" rot="R90"/>
+<pin name="C" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
 <text x="6.985" y="5.715" size="1.778" layer="95" rot="R180">&gt;NAME</text>
 <wire x1="0" y1="2.54" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
 <wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
@@ -26609,7 +26612,7 @@ LOGO
 <description>DG-type switch, normally open</description>
 <pin name="S" x="-2.54" y="0" visible="pad" length="short"/>
 <pin name="D" x="-2.54" y="2.54" visible="pad" length="short"/>
-<pin name="C" x="2.54" y="-2.54" visible="pad" length="short" rot="R90"/>
+<pin name="C" x="5.08" y="0" visible="pad" length="short" rot="R180"/>
 <text x="6.985" y="5.715" size="1.778" layer="95" rot="R180">&gt;NAME</text>
 <wire x1="0" y1="2.54" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
 <wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
@@ -28847,9 +28850,9 @@ Source: Mitsubishi M5218AL/P/FP</description>
 <devices>
 <device name="" package="SK12D07">
 <connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="COMMON" pad="2"/>
+<connect gate="G$1" pin="NC" pad="1"/>
+<connect gate="G$1" pin="NO" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -29822,9 +29825,9 @@ NS is without screw holes</description>
 <devices>
 <device name="A" package="SMTS102C4BN0">
 <connects>
-<connect gate="G$1" pin="1" pad="UP"/>
-<connect gate="G$1" pin="2" pad="C"/>
-<connect gate="G$1" pin="3" pad="DN"/>
+<connect gate="G$1" pin="COMMON" pad="C"/>
+<connect gate="G$1" pin="NC" pad="UP"/>
+<connect gate="G$1" pin="NO" pad="DN"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -30955,35 +30958,35 @@ JLCPCB: C86469, found under Connectors/Terminals</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="DG413-J">
-<description>Quad switch, halv normally closed/half normally open. May be used as SPDT or DPDT</description>
+<deviceset name="DG413-J" prefix="IC">
+<description>Quad switch, half normally closed/half normally open. May be used as SPDT or DPDT</description>
 <gates>
-<gate name="G$2" symbol="DG-CELL-NC" x="-22.86" y="10.16"/>
-<gate name="G$3" symbol="DG-CELL-NC" x="-22.86" y="0"/>
-<gate name="G$5" symbol="VL-PWR" x="5.08" y="5.08"/>
-<gate name="G$6" symbol="XM8-PWR" x="15.24" y="0"/>
-<gate name="G$1" symbol="DG-CELL-NO" x="-22.86" y="20.32"/>
-<gate name="G$4" symbol="DG-CELL-NO" x="-22.86" y="-10.16"/>
+<gate name="SW2" symbol="DG-CELL-NC" x="-22.86" y="10.16"/>
+<gate name="SW3" symbol="DG-CELL-NC" x="-7.62" y="20.32"/>
+<gate name="_VL" symbol="VL-PWR" x="-20.32" y="-5.08"/>
+<gate name="_PWR" symbol="XM8-PWR" x="-7.62" y="-10.16"/>
+<gate name="SW1" symbol="DG-CELL-NO" x="-22.86" y="20.32"/>
+<gate name="SW4" symbol="DG-CELL-NO" x="-7.62" y="10.16"/>
 </gates>
 <devices>
 <device name="" package="DIL16J">
 <connects>
-<connect gate="G$1" pin="C" pad="1"/>
-<connect gate="G$1" pin="D" pad="2"/>
-<connect gate="G$1" pin="S" pad="3"/>
-<connect gate="G$2" pin="C" pad="16"/>
-<connect gate="G$2" pin="D" pad="15"/>
-<connect gate="G$2" pin="S" pad="14"/>
-<connect gate="G$3" pin="C" pad="9"/>
-<connect gate="G$3" pin="D" pad="10"/>
-<connect gate="G$3" pin="S" pad="11"/>
-<connect gate="G$4" pin="C" pad="8"/>
-<connect gate="G$4" pin="D" pad="7"/>
-<connect gate="G$4" pin="S" pad="6"/>
-<connect gate="G$5" pin="VL" pad="12"/>
-<connect gate="G$6" pin="+15V" pad="13"/>
-<connect gate="G$6" pin="-15V" pad="4"/>
-<connect gate="G$6" pin="AGND" pad="5"/>
+<connect gate="SW1" pin="C" pad="1"/>
+<connect gate="SW1" pin="D" pad="2"/>
+<connect gate="SW1" pin="S" pad="3"/>
+<connect gate="SW2" pin="C" pad="16"/>
+<connect gate="SW2" pin="D" pad="15"/>
+<connect gate="SW2" pin="S" pad="14"/>
+<connect gate="SW3" pin="C" pad="9"/>
+<connect gate="SW3" pin="D" pad="10"/>
+<connect gate="SW3" pin="S" pad="11"/>
+<connect gate="SW4" pin="C" pad="8"/>
+<connect gate="SW4" pin="D" pad="7"/>
+<connect gate="SW4" pin="S" pad="6"/>
+<connect gate="_PWR" pin="+15V" pad="13"/>
+<connect gate="_PWR" pin="-15V" pad="4"/>
+<connect gate="_PWR" pin="AGND" pad="5"/>
+<connect gate="_VL" pin="VL" pad="12"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -31247,6 +31250,69 @@ JLCPCB: C86469, found under Connectors/Terminals</description>
 <connect gate="G$4" pin="+15V" pad="11"/>
 <connect gate="G$4" pin="-15V" pad="14"/>
 <connect gate="G$4" pin="AGND" pad="13"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG413-SPDT-J" prefix="IC">
+<description>Quad switch, half normally closed/half normally open. Configured as two SPDTs</description>
+<gates>
+<gate name="_VL" symbol="VL-PWR" x="5.08" y="5.08"/>
+<gate name="_PWR" symbol="XM8-PWR" x="15.24" y="0"/>
+<gate name="SW1" symbol="SPDT_J" x="-15.24" y="12.7" swaplevel="1"/>
+<gate name="SW2" symbol="SPDT_J" x="-15.24" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="DIL16J">
+<connects>
+<connect gate="SW1" pin="COMMON" pad="3 14"/>
+<connect gate="SW1" pin="CTRL" pad="1 16"/>
+<connect gate="SW1" pin="NC" pad="15"/>
+<connect gate="SW1" pin="NO" pad="2"/>
+<connect gate="SW2" pin="COMMON" pad="6 11"/>
+<connect gate="SW2" pin="CTRL" pad="8 9"/>
+<connect gate="SW2" pin="NC" pad="10"/>
+<connect gate="SW2" pin="NO" pad="7"/>
+<connect gate="_PWR" pin="+15V" pad="13"/>
+<connect gate="_PWR" pin="-15V" pad="4"/>
+<connect gate="_PWR" pin="AGND" pad="5"/>
+<connect gate="_VL" pin="VL" pad="12"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG413-SPDT-SPST-J">
+<description>Quad switch, half normally closed/half normally open. Configured as one SPDT and two SPSTs</description>
+<gates>
+<gate name="G$5" symbol="VL-PWR" x="5.08" y="5.08"/>
+<gate name="G$6" symbol="XM8-PWR" x="15.24" y="0"/>
+<gate name="G$1" symbol="SPDT_J" x="-15.24" y="12.7"/>
+<gate name="G$2" symbol="DG-CELL-NC" x="-17.78" y="-2.54"/>
+<gate name="G$3" symbol="DG-CELL-NO" x="-7.62" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="COMMON" pad="3 14"/>
+<connect gate="G$1" pin="CTRL" pad="1 16"/>
+<connect gate="G$1" pin="NC" pad="15"/>
+<connect gate="G$1" pin="NO" pad="2"/>
+<connect gate="G$2" pin="C" pad="9"/>
+<connect gate="G$2" pin="D" pad="10"/>
+<connect gate="G$2" pin="S" pad="11"/>
+<connect gate="G$3" pin="C" pad="8"/>
+<connect gate="G$3" pin="D" pad="7"/>
+<connect gate="G$3" pin="S" pad="6"/>
+<connect gate="G$5" pin="VL" pad="12"/>
+<connect gate="G$6" pin="+15V" pad="13"/>
+<connect gate="G$6" pin="-15V" pad="4"/>
+<connect gate="G$6" pin="AGND" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
