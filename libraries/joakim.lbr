@@ -27188,28 +27188,28 @@ LOGO
 <pin name="SDA" x="-10.16" y="5.08" length="short"/>
 </symbol>
 <symbol name="TEENSY4.0-BARE">
-<pin name="14-A0/TX3/S-PDIF_IN" x="-27.94" y="-15.24" visible="pin" length="middle"/>
-<pin name="15-A1/RX3/SPDIF_IN" x="-27.94" y="-17.78" visible="pin" length="middle"/>
+<pin name="14-A0/TX3/S-PDIF_IN" x="-27.94" y="-22.86" visible="pin" length="middle"/>
+<pin name="15-A1/RX3/SPDIF_IN" x="-27.94" y="-25.4" visible="pin" length="middle"/>
 <pin name="16-A2/RX4/SCL1" x="27.94" y="12.7" visible="pin" length="middle" rot="R180"/>
 <pin name="17-A3/TX4/SDA1" x="27.94" y="15.24" visible="pin" length="middle" rot="R180"/>
-<pin name="18-A4/SDA0" x="-27.94" y="-20.32" visible="pin" length="middle"/>
-<pin name="19-A5/SCL0" x="-27.94" y="-22.86" visible="pin" length="middle"/>
+<pin name="18-A4/SDA0" x="-27.94" y="0" visible="pin" length="middle"/>
+<pin name="19-A5/SCL0" x="-27.94" y="-2.54" visible="pin" length="middle"/>
 <pin name="20-A6/TX5/LRCLK1" x="-27.94" y="10.16" visible="pin" length="middle"/>
 <pin name="21-A7/RX5/BCLK1" x="-27.94" y="7.62" visible="pin" length="middle"/>
-<pin name="22-A8/CTX1" x="-27.94" y="-25.4" visible="pin" length="middle"/>
+<pin name="22-A8/CTX1" x="-27.94" y="-27.94" visible="pin" length="middle"/>
 <pin name="23-A9/CRX1/MCLK1" x="-27.94" y="5.08" visible="pin" length="middle"/>
 <pin name="8-IN1/TX2" x="-27.94" y="12.7" visible="pin" length="middle"/>
-<pin name="5-IN2" x="-27.94" y="-7.62" visible="pin" length="middle"/>
-<pin name="3-LRCLK2" x="-27.94" y="-2.54" visible="pin" length="middle"/>
-<pin name="4-BCLK1" x="-27.94" y="-5.08" visible="pin" length="middle"/>
+<pin name="5-IN2" x="-27.94" y="-15.24" visible="pin" length="middle"/>
+<pin name="3-LRCLK2" x="-27.94" y="-10.16" visible="pin" length="middle"/>
+<pin name="4-BCLK1" x="-27.94" y="-12.7" visible="pin" length="middle"/>
 <pin name="0-CS1/RX1/CRX2" x="-27.94" y="27.94" visible="pin" length="middle"/>
 <pin name="1-MISO1/TX1/CTX2" x="-27.94" y="22.86" visible="pin" length="middle"/>
-<pin name="GND1" x="2.54" y="-30.48" visible="pin" length="short" rot="R90"/>
-<pin name="GND3" x="7.62" y="-30.48" visible="pin" length="short" rot="R90"/>
-<pin name="6-OUT1D" x="-27.94" y="-10.16" visible="pin" length="middle"/>
+<pin name="GND1" x="2.54" y="-33.02" visible="pin" length="short" rot="R90"/>
+<pin name="GND3" x="7.62" y="-33.02" visible="pin" length="short" rot="R90"/>
+<pin name="6-OUT1D" x="-27.94" y="-17.78" visible="pin" length="middle"/>
 <pin name="7-OUT1A/RX2" x="-27.94" y="15.24" visible="pin" length="middle"/>
-<pin name="2-OUT2" x="-27.94" y="0" visible="pin" length="middle"/>
-<pin name="9-OUT1C" x="-27.94" y="-12.7" visible="pin" length="middle"/>
+<pin name="2-OUT2" x="-27.94" y="-7.62" visible="pin" length="middle"/>
+<pin name="9-OUT1C" x="-27.94" y="-20.32" visible="pin" length="middle"/>
 <pin name="10-CS" x="27.94" y="27.94" visible="pin" length="middle" rot="R180"/>
 <pin name="11-MOSI/CTX1" x="27.94" y="25.4" visible="pin" length="middle" rot="R180"/>
 <pin name="12-MISO/MQSL" x="27.94" y="22.86" visible="pin" length="middle" rot="R180"/>
@@ -27217,19 +27217,19 @@ LOGO
 <pin name="3V3" x="2.54" y="33.02" visible="pin" length="short" rot="R270"/>
 <pin name="VIN" x="0" y="33.02" visible="pin" length="short" rot="R270"/>
 <wire x1="22.86" y1="30.48" x2="-22.86" y2="30.48" width="0.254" layer="94"/>
-<wire x1="-22.86" y1="30.48" x2="-22.86" y2="-27.94" width="0.254" layer="94"/>
-<wire x1="-22.86" y1="-27.94" x2="22.86" y2="-27.94" width="0.254" layer="94"/>
-<wire x1="22.86" y1="-27.94" x2="22.86" y2="30.48" width="0.254" layer="94"/>
-<pin name="24-A10/TX6/SCL2" x="27.94" y="0" visible="pin" length="middle" rot="R180"/>
-<pin name="25-A11/RX6/SDA2" x="27.94" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<wire x1="-22.86" y1="30.48" x2="-22.86" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="-22.86" y1="-30.48" x2="22.86" y2="-30.48" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-30.48" x2="22.86" y2="30.48" width="0.254" layer="94"/>
+<pin name="24-A10/TX6/SCL2" x="27.94" y="-10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="25-A11/RX6/SDA2" x="27.94" y="-12.7" visible="pin" length="middle" rot="R180"/>
 <pin name="26-A12/MOSI1" x="-27.94" y="25.4" visible="pin" length="middle"/>
 <pin name="27-A13/SCK1" x="-27.94" y="20.32" visible="pin" length="middle"/>
-<pin name="28-RX7" x="27.94" y="-5.08" visible="pin" length="middle" rot="R180"/>
-<pin name="29-TX7" x="27.94" y="-7.62" visible="pin" length="middle" rot="R180"/>
-<pin name="30-CRX3" x="27.94" y="-10.16" visible="pin" length="middle" rot="R180"/>
-<pin name="31-CTX3" x="27.94" y="-12.7" visible="pin" length="middle" rot="R180"/>
-<pin name="32-OUT1B" x="27.94" y="-15.24" visible="pin" length="middle" rot="R180"/>
-<pin name="33-MCLK2" x="27.94" y="-17.78" visible="pin" length="middle" rot="R180"/>
+<pin name="28-RX7" x="27.94" y="-15.24" visible="pin" length="middle" rot="R180"/>
+<pin name="29-TX7" x="27.94" y="-17.78" visible="pin" length="middle" rot="R180"/>
+<pin name="30-CRX3" x="27.94" y="-20.32" visible="pin" length="middle" rot="R180"/>
+<pin name="31-CTX3" x="27.94" y="-22.86" visible="pin" length="middle" rot="R180"/>
+<pin name="32-OUT1B" x="27.94" y="-25.4" visible="pin" length="middle" rot="R180"/>
+<pin name="33-MCLK2" x="27.94" y="-27.94" visible="pin" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
