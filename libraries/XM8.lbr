@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -1633,6 +1633,30 @@ match</text>
 <text x="23.495" y="3.81" size="1.27" layer="21">C</text>
 <text x="33.655" y="3.81" size="1.27" layer="21">C</text>
 </package>
+<package name="XM8-DISTORTION-V1.3V">
+<description>Xonik Soft clipping distortion v1.3/4, vertical mount</description>
+<wire x1="-11.43" y1="0" x2="-8.89" y2="0" width="0.1524" layer="21"/>
+<pad name="1" x="-10.16" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="2" x="-7.62" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="3" x="-5.08" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="4" x="-2.54" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="5" x="0" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="6" x="2.54" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="7" x="5.08" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="8" x="7.62" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="9" x="10.16" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<wire x1="-8.89" y1="0" x2="11.41" y2="0" width="0.1524" layer="21"/>
+<wire x1="-11.43" y1="0" x2="-11.43" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="-11.43" y1="3.81" x2="-8.89" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="-8.89" y1="3.81" x2="11.43" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="11.43" y1="3.81" x2="11.43" y2="0" width="0.1524" layer="21"/>
+<wire x1="-8.89" y1="3.81" x2="-8.89" y2="0" width="0.1524" layer="21"/>
+<text x="-11.43" y="5.715" size="1.27" layer="21" font="vector">&gt;NAME</text>
+<text x="-13.335" y="1.27" size="1.27" layer="21" font="vector">1</text>
+<wire x1="-11.43" y1="3.81" x2="-11.43" y2="5.3975" width="0.127" layer="21"/>
+<wire x1="-11.43" y1="5.3975" x2="11.43" y2="5.3975" width="0.127" layer="21"/>
+<wire x1="11.43" y1="5.3975" x2="11.43" y2="3.81" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="XM8-DCO-V1.4">
@@ -1841,8 +1865,8 @@ match</text>
 </symbol>
 <symbol name="XM8-PWR">
 <description>Analog power, +/-15v and AGND</description>
-<pin name="-15V" x="0" y="-7.62" visible="off" length="short" direction="pwr" rot="R90"/>
-<pin name="+15V" x="0" y="7.62" visible="off" length="short" direction="pwr" rot="R270"/>
+<pin name="-V" x="0" y="-7.62" visible="off" length="short" direction="pwr" rot="R90"/>
+<pin name="+V" x="0" y="7.62" visible="off" length="short" direction="pwr" rot="R270"/>
 <pin name="AGND" x="0" y="0" visible="off" length="short" direction="pwr" rot="R90"/>
 <text x="0.635" y="10.16" size="1.778" layer="97" rot="R90">&gt;NAME</text>
 <wire x1="0" y1="0" x2="0" y2="-5.08" width="0.254" layer="97"/>
@@ -2291,6 +2315,19 @@ match</text>
 <pin name="PULSE" x="-10.16" y="10.16" length="short"/>
 <pin name="TRI_DIR" x="-10.16" y="2.54" length="short"/>
 </symbol>
+<symbol name="XM8-DISTORTION-V1.3">
+<description>Xonik Soft clipping distortion v1.3/1.4</description>
+<wire x1="-5.08" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<pin name="IN" x="-7.62" y="2.54" length="short"/>
+<pin name="DISTCV" x="-7.62" y="-2.54" length="short"/>
+<pin name="OUT" x="-7.62" y="0" length="short" direction="out"/>
+<text x="-4.445" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="4.445" y="-5.715" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
+<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DCO-V1.4" prefix="IC">
@@ -2328,8 +2365,8 @@ match</text>
 <connect gate="C" pin="U3" pad="21"/>
 <connect gate="DP" pin="+5V" pad="11"/>
 <connect gate="DP" pin="DGND" pad="10"/>
-<connect gate="P" pin="+15V" pad="14"/>
-<connect gate="P" pin="-15V" pad="15"/>
+<connect gate="P" pin="+V" pad="14"/>
+<connect gate="P" pin="-V" pad="15"/>
 <connect gate="P" pin="AGND" pad="16"/>
 </connects>
 <technologies>
@@ -2365,8 +2402,8 @@ match</text>
 <connect gate="C" pin="SAW" pad="12"/>
 <connect gate="C" pin="TRACK" pad="9"/>
 <connect gate="C" pin="TRI" pad="14"/>
-<connect gate="P" pin="+15V" pad="28"/>
-<connect gate="P" pin="-15V" pad="1"/>
+<connect gate="P" pin="+V" pad="28"/>
+<connect gate="P" pin="-V" pad="1"/>
 <connect gate="P" pin="AGND" pad="6"/>
 </connects>
 <technologies>
@@ -2400,8 +2437,8 @@ match</text>
 <connect gate="C" pin="OUTCAP" pad="11"/>
 <connect gate="DP" pin="+5V" pad="16"/>
 <connect gate="DP" pin="DGND" pad="17"/>
-<connect gate="P" pin="+15V" pad="13"/>
-<connect gate="P" pin="-15V" pad="15"/>
+<connect gate="P" pin="+V" pad="13"/>
+<connect gate="P" pin="-V" pad="15"/>
 <connect gate="P" pin="AGND" pad="14"/>
 </connects>
 <technologies>
@@ -2425,8 +2462,8 @@ match</text>
 <connect gate="C" pin="OUTCAP" pad="11"/>
 <connect gate="DP" pin="+5V" pad="16"/>
 <connect gate="DP" pin="DGND" pad="17"/>
-<connect gate="P" pin="+15V" pad="13"/>
-<connect gate="P" pin="-15V" pad="15"/>
+<connect gate="P" pin="+V" pad="13"/>
+<connect gate="P" pin="-V" pad="15"/>
 <connect gate="P" pin="AGND" pad="14"/>
 </connects>
 <technologies>
@@ -2463,8 +2500,8 @@ match</text>
 <connect gate="C" pin="VCACV" pad="14"/>
 <connect gate="C" pin="VCAGAIN1" pad="16"/>
 <connect gate="C" pin="VCAGAIN2" pad="17"/>
-<connect gate="P" pin="+15V" pad="23"/>
-<connect gate="P" pin="-15V" pad="25"/>
+<connect gate="P" pin="+V" pad="23"/>
+<connect gate="P" pin="-V" pad="25"/>
 <connect gate="P" pin="AGND" pad="24"/>
 </connects>
 <technologies>
@@ -2492,8 +2529,8 @@ match</text>
 <connect gate="C" pin="VCACV" pad="14"/>
 <connect gate="C" pin="VCAGAIN1" pad="16"/>
 <connect gate="C" pin="VCAGAIN2" pad="17"/>
-<connect gate="P" pin="+15V" pad="23"/>
-<connect gate="P" pin="-15V" pad="25"/>
+<connect gate="P" pin="+V" pad="23"/>
+<connect gate="P" pin="-V" pad="25"/>
 <connect gate="P" pin="AGND" pad="24"/>
 </connects>
 <technologies>
@@ -2522,8 +2559,8 @@ match</text>
 <connect gate="G$3" pin="O" pad="9"/>
 <connect gate="G$4" pin="I" pad="10"/>
 <connect gate="G$4" pin="O" pad="11"/>
-<connect gate="P" pin="+15V" pad="2"/>
-<connect gate="P" pin="-15V" pad="3"/>
+<connect gate="P" pin="+V" pad="2"/>
+<connect gate="P" pin="-V" pad="3"/>
 <connect gate="P" pin="AGND" pad="1"/>
 </connects>
 <technologies>
@@ -2540,8 +2577,8 @@ match</text>
 <connect gate="G$3" pin="O" pad="9"/>
 <connect gate="G$4" pin="I" pad="10"/>
 <connect gate="G$4" pin="O" pad="11"/>
-<connect gate="P" pin="+15V" pad="2"/>
-<connect gate="P" pin="-15V" pad="3"/>
+<connect gate="P" pin="+V" pad="2"/>
+<connect gate="P" pin="-V" pad="3"/>
 <connect gate="P" pin="AGND" pad="1"/>
 </connects>
 <technologies>
@@ -2570,8 +2607,8 @@ match</text>
 <connect gate="G$3" pin="O" pad="8"/>
 <connect gate="G$4" pin="I" pad="12"/>
 <connect gate="G$4" pin="O" pad="14"/>
-<connect gate="P" pin="+15V" pad="4"/>
-<connect gate="P" pin="-15V" pad="11"/>
+<connect gate="P" pin="+V" pad="4"/>
+<connect gate="P" pin="-V" pad="11"/>
 <connect gate="P" pin="AGND" pad="2"/>
 </connects>
 <technologies>
@@ -2588,8 +2625,8 @@ match</text>
 <connect gate="G$3" pin="O" pad="11"/>
 <connect gate="G$4" pin="I" pad="5"/>
 <connect gate="G$4" pin="O" pad="10"/>
-<connect gate="P" pin="+15V" pad="14"/>
-<connect gate="P" pin="-15V" pad="7"/>
+<connect gate="P" pin="+V" pad="14"/>
+<connect gate="P" pin="-V" pad="7"/>
 <connect gate="P" pin="AGND" pad="8"/>
 </connects>
 <technologies>
@@ -2613,8 +2650,8 @@ match</text>
 <connect gate="C" pin="TRIM1" pad="2"/>
 <connect gate="C" pin="TRIM2" pad="3"/>
 <connect gate="C" pin="WHITE" pad="4"/>
-<connect gate="P" pin="+15V" pad="7"/>
-<connect gate="P" pin="-15V" pad="8"/>
+<connect gate="P" pin="+V" pad="7"/>
+<connect gate="P" pin="-V" pad="8"/>
 <connect gate="P" pin="AGND" pad="9"/>
 </connects>
 <technologies>
@@ -2629,8 +2666,8 @@ match</text>
 <connect gate="C" pin="TRIM1" pad="2"/>
 <connect gate="C" pin="TRIM2" pad="3"/>
 <connect gate="C" pin="WHITE" pad="4"/>
-<connect gate="P" pin="+15V" pad="7"/>
-<connect gate="P" pin="-15V" pad="8"/>
+<connect gate="P" pin="+V" pad="7"/>
+<connect gate="P" pin="-V" pad="8"/>
 <connect gate="P" pin="AGND" pad="9"/>
 </connects>
 <technologies>
@@ -2655,8 +2692,8 @@ match</text>
 <connect gate="C" pin="SIGNAL" pad="6"/>
 <connect gate="C" pin="STRIM1" pad="5"/>
 <connect gate="C" pin="STRIM2" pad="4"/>
-<connect gate="P" pin="+15V" pad="1"/>
-<connect gate="P" pin="-15V" pad="3"/>
+<connect gate="P" pin="+V" pad="1"/>
+<connect gate="P" pin="-V" pad="3"/>
 <connect gate="P" pin="AGND" pad="2"/>
 </connects>
 <technologies>
@@ -2672,8 +2709,8 @@ match</text>
 <connect gate="C" pin="SIGNAL" pad="6"/>
 <connect gate="C" pin="STRIM1" pad="5"/>
 <connect gate="C" pin="STRIM2" pad="4"/>
-<connect gate="P" pin="+15V" pad="1"/>
-<connect gate="P" pin="-15V" pad="3"/>
+<connect gate="P" pin="+V" pad="1"/>
+<connect gate="P" pin="-V" pad="3"/>
 <connect gate="P" pin="AGND" pad="2"/>
 </connects>
 <technologies>
@@ -2706,8 +2743,8 @@ match</text>
 <connect gate="G$4" pin="C" pad="8"/>
 <connect gate="G$4" pin="I" pad="10"/>
 <connect gate="G$4" pin="O" pad="12"/>
-<connect gate="P" pin="+15V" pad="14"/>
-<connect gate="P" pin="-15V" pad="13"/>
+<connect gate="P" pin="+V" pad="14"/>
+<connect gate="P" pin="-V" pad="13"/>
 <connect gate="P" pin="AGND" pad="15"/>
 </connects>
 <technologies>
@@ -2739,8 +2776,8 @@ match</text>
 <connect gate="G$4" pin="I" pad="9"/>
 <connect gate="G$5" pin="E" pad="5"/>
 <connect gate="G$5" pin="O" pad="10"/>
-<connect gate="P" pin="+15V" pad="12"/>
-<connect gate="P" pin="-15V" pad="11"/>
+<connect gate="P" pin="+V" pad="12"/>
+<connect gate="P" pin="-V" pad="11"/>
 <connect gate="P" pin="AGND" pad="13"/>
 </connects>
 <technologies>
@@ -2778,8 +2815,8 @@ match</text>
 <connect gate="C" pin="SYMMETRY" pad="6"/>
 <connect gate="C" pin="TIMERIN" pad="23"/>
 <connect gate="C" pin="TRIANGLE" pad="10"/>
-<connect gate="P" pin="+15V" pad="20"/>
-<connect gate="P" pin="-15V" pad="21"/>
+<connect gate="P" pin="+V" pad="20"/>
+<connect gate="P" pin="-V" pad="21"/>
 <connect gate="P" pin="AGND" pad="22"/>
 </connects>
 <technologies>
@@ -2808,8 +2845,8 @@ match</text>
 <connect gate="C" pin="SYMMETRY" pad="6"/>
 <connect gate="C" pin="TIMERIN" pad="23"/>
 <connect gate="C" pin="TRIANGLE" pad="10"/>
-<connect gate="P" pin="+15V" pad="20"/>
-<connect gate="P" pin="-15V" pad="21"/>
+<connect gate="P" pin="+V" pad="20"/>
+<connect gate="P" pin="-V" pad="21"/>
 <connect gate="P" pin="AGND" pad="22"/>
 </connects>
 <technologies>
@@ -2847,8 +2884,8 @@ match</text>
 <connect gate="C" pin="VCABAL" pad="29"/>
 <connect gate="C" pin="VCACV" pad="26"/>
 <connect gate="C" pin="VCAGAIN" pad="30"/>
-<connect gate="P" pin="+15V" pad="32"/>
-<connect gate="P" pin="-15V" pad="34"/>
+<connect gate="P" pin="+V" pad="32"/>
+<connect gate="P" pin="-V" pad="34"/>
 <connect gate="P" pin="AGND" pad="33"/>
 </connects>
 <technologies>
@@ -2877,8 +2914,8 @@ match</text>
 <connect gate="C" pin="VCABAL" pad="29"/>
 <connect gate="C" pin="VCACV" pad="26"/>
 <connect gate="C" pin="VCAGAIN" pad="30"/>
-<connect gate="P" pin="+15V" pad="32"/>
-<connect gate="P" pin="-15V" pad="34"/>
+<connect gate="P" pin="+V" pad="32"/>
+<connect gate="P" pin="-V" pad="34"/>
 <connect gate="P" pin="AGND" pad="33"/>
 </connects>
 <technologies>
@@ -2915,8 +2952,8 @@ match</text>
 <connect gate="G$2" pin="VCA_POS_IN" pad="14"/>
 <connect gate="G$3" pin="OPAMP_NEG" pad="1"/>
 <connect gate="G$3" pin="OPAMP_OUT" pad="3"/>
-<connect gate="P" pin="+15V" pad="19"/>
-<connect gate="P" pin="-15V" pad="21"/>
+<connect gate="P" pin="+V" pad="19"/>
+<connect gate="P" pin="-V" pad="21"/>
 <connect gate="P" pin="AGND" pad="20"/>
 </connects>
 <technologies>
@@ -2943,8 +2980,8 @@ match</text>
 <connect gate="G$2" pin="VCA_POS_IN" pad="14"/>
 <connect gate="G$3" pin="OPAMP_NEG" pad="1"/>
 <connect gate="G$3" pin="OPAMP_OUT" pad="3"/>
-<connect gate="P" pin="+15V" pad="19"/>
-<connect gate="P" pin="-15V" pad="21"/>
+<connect gate="P" pin="+V" pad="19"/>
+<connect gate="P" pin="-V" pad="21"/>
 <connect gate="P" pin="AGND" pad="20"/>
 </connects>
 <technologies>
@@ -2973,8 +3010,8 @@ match</text>
 <connect gate="G$2" pin="RESO_GAIN_1" pad="9"/>
 <connect gate="G$2" pin="RESO_GAIN_2" pad="10"/>
 <connect gate="G$2" pin="RESO_IABC" pad="7"/>
-<connect gate="P" pin="+15V" pad="12"/>
-<connect gate="P" pin="-15V" pad="14"/>
+<connect gate="P" pin="+V" pad="12"/>
+<connect gate="P" pin="-V" pad="14"/>
 <connect gate="P" pin="AGND" pad="13"/>
 </connects>
 <technologies>
@@ -2994,8 +3031,8 @@ match</text>
 <connect gate="G$2" pin="RESO_GAIN_1" pad="9"/>
 <connect gate="G$2" pin="RESO_GAIN_2" pad="10"/>
 <connect gate="G$2" pin="RESO_IABC" pad="7"/>
-<connect gate="P" pin="+15V" pad="12"/>
-<connect gate="P" pin="-15V" pad="14"/>
+<connect gate="P" pin="+V" pad="12"/>
+<connect gate="P" pin="-V" pad="14"/>
 <connect gate="P" pin="AGND" pad="13"/>
 </connects>
 <technologies>
@@ -3023,8 +3060,8 @@ match</text>
 <connect gate="C" pin="IN2" pad="2"/>
 <connect gate="C" pin="IN3" pad="8"/>
 <connect gate="C" pin="IN4" pad="9"/>
-<connect gate="P" pin="+15V" pad="12"/>
-<connect gate="P" pin="-15V" pad="11"/>
+<connect gate="P" pin="+V" pad="12"/>
+<connect gate="P" pin="-V" pad="11"/>
 <connect gate="P" pin="AGND" pad="13"/>
 </connects>
 <technologies>
@@ -3076,8 +3113,8 @@ match</text>
 <connect gate="G$5" pin="B" pad="10"/>
 <connect gate="G$5" pin="M" pad="11"/>
 <connect gate="G$5" pin="O" pad="9"/>
-<connect gate="P" pin="+15V" pad="13"/>
-<connect gate="P" pin="-15V" pad="12"/>
+<connect gate="P" pin="+V" pad="13"/>
+<connect gate="P" pin="-V" pad="12"/>
 <connect gate="P" pin="AGND" pad="14"/>
 </connects>
 <technologies>
@@ -3106,8 +3143,8 @@ match</text>
 <connect gate="C" pin="IN3" pad="7"/>
 <connect gate="C" pin="IN4" pad="8"/>
 <connect gate="C" pin="MIX" pad="11"/>
-<connect gate="P" pin="+15V" pad="13"/>
-<connect gate="P" pin="-15V" pad="12"/>
+<connect gate="P" pin="+V" pad="13"/>
+<connect gate="P" pin="-V" pad="12"/>
 <connect gate="P" pin="AGND" pad="14"/>
 </connects>
 <technologies>
@@ -3138,8 +3175,8 @@ NB: not +/-15V compatible, use +/-12V only!</description>
 <connect gate="C" pin="SUB2_CV" pad="9"/>
 <connect gate="C" pin="TRI" pad="5"/>
 <connect gate="C" pin="TRI_DIR" pad="6"/>
-<connect gate="P" pin="+15V" pad="15"/>
-<connect gate="P" pin="-15V" pad="14"/>
+<connect gate="P" pin="+V" pad="15"/>
+<connect gate="P" pin="-V" pad="14"/>
 <connect gate="P" pin="AGND" pad="16"/>
 </connects>
 <technologies>
@@ -3172,8 +3209,8 @@ NB: not +/-15V compatible, use +/-12V only!</description>
 <connect gate="G$4" pin="C" pad="8"/>
 <connect gate="G$4" pin="I" pad="10"/>
 <connect gate="G$4" pin="O" pad="12"/>
-<connect gate="P" pin="+15V" pad="14"/>
-<connect gate="P" pin="-15V" pad="13"/>
+<connect gate="P" pin="+V" pad="14"/>
+<connect gate="P" pin="-V" pad="13"/>
 <connect gate="P" pin="AGND" pad="15"/>
 </connects>
 <technologies>
@@ -3206,8 +3243,8 @@ NB: not +/-15V compatible, use +/-12V only!</description>
 <connect gate="G$4" pin="C" pad="8"/>
 <connect gate="G$4" pin="I" pad="10"/>
 <connect gate="G$4" pin="O" pad="12"/>
-<connect gate="P" pin="+15V" pad="14"/>
-<connect gate="P" pin="-15V" pad="13"/>
+<connect gate="P" pin="+V" pad="14"/>
+<connect gate="P" pin="-V" pad="13"/>
 <connect gate="P" pin="AGND" pad="15"/>
 </connects>
 <technologies>
@@ -3248,8 +3285,8 @@ NB: not +/-15V compatible, use +/-12V only!</description>
 <connect gate="C" pin="VPP" pad="13"/>
 <connect gate="DP" pin="+5V" pad="10"/>
 <connect gate="DP" pin="DGND" pad="14"/>
-<connect gate="P" pin="+15V" pad="28"/>
-<connect gate="P" pin="-15V" pad="1"/>
+<connect gate="P" pin="+V" pad="28"/>
+<connect gate="P" pin="-V" pad="1"/>
 <connect gate="P" pin="AGND" pad="3"/>
 </connects>
 <technologies>
@@ -3286,9 +3323,57 @@ NB: not +/-15V compatible, use +/-12V only!</description>
 <connect gate="C" pin="SAW" pad="4"/>
 <connect gate="C" pin="TRI" pad="5"/>
 <connect gate="C" pin="TRI_DIR" pad="6"/>
-<connect gate="P" pin="+15V" pad="17"/>
-<connect gate="P" pin="-15V" pad="16"/>
+<connect gate="P" pin="+V" pad="17"/>
+<connect gate="P" pin="-V" pad="16"/>
 <connect gate="P" pin="AGND" pad="18"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DISTORTION-V1.3" prefix="IC">
+<description>Xonik Soft clipping distortion v1.3&lt;br&gt;
+No internal gain, output needs to be amplified 11 times to get unity gain&lt;br&gt;
+Is designed for +/-12V but runs from +/-15V as well</description>
+<gates>
+<gate name="P" symbol="XM8-PWR" x="27.94" y="2.54"/>
+<gate name="G$1" symbol="XM8-DISTORTION-V1.3" x="12.7" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="XM8-DISTORTION-V1.3V">
+<connects>
+<connect gate="G$1" pin="DISTCV" pad="3"/>
+<connect gate="G$1" pin="IN" pad="2"/>
+<connect gate="G$1" pin="OUT" pad="1"/>
+<connect gate="P" pin="+V" pad="7"/>
+<connect gate="P" pin="-V" pad="9"/>
+<connect gate="P" pin="AGND" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DISTORTION-V1.4" prefix="IC">
+<description>Xonik Soft clipping distortion v1.4&lt;br&gt;
+Internal gain, output is at unity gain and not inverted&lt;br&gt;
+Is designed for +/-12V but runs from +/-15V as well</description>
+<gates>
+<gate name="P" symbol="XM8-PWR" x="27.94" y="2.54"/>
+<gate name="G$1" symbol="XM8-DISTORTION-V1.3" x="12.7" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="XM8-DISTORTION-V1.3V">
+<connects>
+<connect gate="G$1" pin="DISTCV" pad="3"/>
+<connect gate="G$1" pin="IN" pad="2"/>
+<connect gate="G$1" pin="OUT" pad="1"/>
+<connect gate="P" pin="+V" pad="7"/>
+<connect gate="P" pin="-V" pad="9"/>
+<connect gate="P" pin="AGND" pad="8"/>
 </connects>
 <technologies>
 <technology name=""/>
