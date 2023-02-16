@@ -3362,15 +3362,15 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 Internal gain, output is at unity gain and not inverted&lt;br&gt;
 Is designed for +/-12V but runs from +/-15V as well</description>
 <gates>
-<gate name="P" symbol="XM8-PWR" x="27.94" y="2.54"/>
-<gate name="G$1" symbol="XM8-DISTORTION-V1.3" x="12.7" y="2.54"/>
+<gate name="P" symbol="XM8-PWR" x="27.94" y="2.54" addlevel="request"/>
+<gate name="C" symbol="XM8-DISTORTION-V1.3" x="12.7" y="2.54"/>
 </gates>
 <devices>
 <device name="" package="XM8-DISTORTION-V1.3V">
 <connects>
-<connect gate="G$1" pin="DISTCV" pad="3"/>
-<connect gate="G$1" pin="IN" pad="2"/>
-<connect gate="G$1" pin="OUT" pad="1"/>
+<connect gate="C" pin="DISTCV" pad="3"/>
+<connect gate="C" pin="IN" pad="2"/>
+<connect gate="C" pin="OUT" pad="1"/>
 <connect gate="P" pin="+V" pad="7"/>
 <connect gate="P" pin="-V" pad="9"/>
 <connect gate="P" pin="AGND" pad="8"/>
