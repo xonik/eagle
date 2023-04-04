@@ -1,0 +1,180 @@
+// dlgMessageBox("Start this ULP in a SCH, BRD, DEV, PAC or SYM:", "OK");
+
+string file_name;
+string project_path;
+
+string brd_top_suffix = "-brd-top";
+string brd_bottom_suffix = "-brd-bottom";
+string sch_suffix = "-sch";
+
+string actualsheet;
+
+int layerVisible[];
+int useLayer[];
+
+// Accumulated command to execute
+string cmd = "";
+
+// String used for string templating
+string s;
+
+void gitAdd(string file) {
+  sprintf(s, "cd %s && git add %s > /tmp/out.txt 2> /tmp/err.txt", project_path, file);
+  system(s);
+}
+
+
+// *** functions ***
+void commandPrint(string name_suffix, int dpi) {
+  string h;
+  sprintf(h, "EXPORT IMAGE '%s%s%s' %s %d;\n", file_name, name_suffix, ".png", "", dpi);
+  cmd += h;
+  return;
+}
+
+void exportBoard(int boardView, string suffix) {
+  // arrays cannot be passed as function parameters so we do it this way instead
+  // arbitrary number of elements just to make room for whatever we copy
+  cmd += "SET DISPLAY_MODE REAL;\n";
+  cmd += "RATSNEST;\n";
+  cmd += "DISPLAY NONE ";
+
+  if(boardView == 0) {
+    cmd += "21 -23 -25 -27 -51 17 18 20 25 51 1;\n";
+  } else {
+    cmd += "17 18 20 26 16;\n";
+  }
+  dlgMessageBox(cmd, "OK");
+  commandPrint(suffix, 600);
+}
+
+void exportSchematic() {
+  cmd += "DISPLAY NONE 91 94 95 96 97;\n";
+
+  string sh;
+  string shn;
+  schematic(S) {
+    S.sheets(SH) {
+      sprintf(sh, "EDIT '.s%d';\n", SH.number);
+      cmd += sh;
+      sprintf(shn, "%s-%d", sch_suffix, SH.number);
+      commandPrint(shn, 150);
+    }
+  }
+}
+
+void saveBoardView(){
+  board(B) {
+    file_name = filesetext(B.name, "");
+    project_path = filedir(B.name);
+    B.layers(L) {
+      layerVisible[L.number] = L.visible;
+      useLayer[L.number] = L.used;
+    }
+  }
+}
+
+void restoreBoardView() {
+  cmd += "DISPLAY ";
+  for(int l = 1; l < 90; l++) {
+    if (useLayer[l]) {
+      if (layerVisible[l]) {
+        sprintf(s, " %d", l);
+        cmd += s;
+      }
+      else {
+        sprintf(s, " -%d", l);
+        cmd += s;
+      }
+    }
+  }
+  for(l = 100; l < 256; l++) {
+    if (useLayer[l]) {
+      if (layerVisible[l]) {
+        sprintf(s, " %d", l);
+        cmd += s;
+      }
+      else {
+        sprintf(s, " -%d", l);
+        cmd += s;
+      }
+    }
+  }
+  cmd += ";\n";
+}
+
+void saveSchematicView(){
+  schematic(S) {
+    file_name = filesetext(S.name, "");
+    project_path = filedir(S.name);
+    if (sheet) sheet(SH) sprintf(actualsheet, "%d", SH.number);
+    S.layers(L) {
+      layerVisible[L.number] = L.visible;
+      useLayer[L.number] = L.used;
+    }
+  }
+}
+
+void restoreSchematicView(){
+  cmd += "DISPLAY ";
+  for(int l = 91; l < 256; l++) {
+    if (useLayer[l]) {
+      if (layerVisible[l]) {
+        sprintf(s, " %d", l);
+        cmd += s;
+      }
+      else {
+        sprintf(s, " -%d", l);
+        cmd += s;
+      }
+    }
+  }
+  cmd += ";\n";
+  if(schematic) {
+    sprintf(s, "EDIT '.s%s';\n", actualsheet);
+    cmd += s;
+  }
+}
+
+// main
+if (schematic) {
+  saveSchematicView();
+
+  // remove all current images to prevent "overwrite" dialog
+  schematic(S) {
+    S.sheets(SH) {
+      sprintf(s, "rm -f \"%s%s-%d.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, sch_suffix, SH.number);
+      system(s);
+    }
+  }
+  exportSchematic();
+  restoreSchematicView();
+} else if (board) {
+  saveBoardView();
+
+  // remove all current images to prevent "overwrite" dialog
+  sprintf(s, "rm -f \"%s%s.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, brd_top_suffix);
+  system(s);
+  sprintf(s, "rm -f \"%s%s.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, brd_bottom_suffix);
+  system(s);
+
+  exportBoard(0, brd_top_suffix);
+  cmd += "WINDOW FLIP;\n";
+  exportBoard(1, brd_bottom_suffix);
+  cmd += "WINDOW FLIP;\n";
+
+  restoreBoardView();
+}
+
+exit (cmd);
+
+/*
+
+// https://community.element14.com/products/eagle/f/eagle-user-support-english/16690/running-cam-from-ulp
+//int i = system("p");
+
+// Eagle builtin constants: http://web.mit.edu/xavid/arch/i386_rhel4/help/228.htm
+// Åpne schematic? https://community.element14.com/products/eagle/f/eagle-user-support-english/4756/path-to-current-schematic-in-ulp
+
+// RUN ULP from terminal: https://electronics.stackexchange.com/questions/269623/is-it-possible-to-run-eaglecads-drc-from-a-terminal-and-pipe-the-error-list-to
+*/
