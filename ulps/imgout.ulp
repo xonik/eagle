@@ -1,5 +1,18 @@
 // dlgMessageBox("Start this ULP in a SCH, BRD, DEV, PAC or SYM:", "OK");
-
+// Put script in Documents/eagle/ulps
+//
+// To add shortcut to image generation (must be done from both schematic and board editors):
+//   Options->Assign Command-I, RUN imgout
+// For buttons
+//   Edit Documents/eagle/scripts/eagle.scr
+//   Under BRD and SCH MENU, add aline saying
+//     'IMG Out : Run imgout.ulp;'\
+//
+// Usage:
+// Generate images from current board or schematic
+//   RUN imgout
+// Generate images from current board or schematic and commit them to git if git.ulp is present
+//   RUN imgout git
 string file_name;
 string project_path;
 
@@ -155,6 +168,11 @@ if (schematic) {
   cmd += "WINDOW FLIP;\n";
 
   restoreBoardView();
+}
+
+// Commit images and board/schem to git afterwards
+if(argv[1] == "git") {
+  cmd += "RUN git;\n";
 }
 
 exit (cmd);

@@ -1,4 +1,17 @@
-// dlgMessageBox("Start this ULP in a SCH, BRD, DEV, PAC or SYM:", "OK");
+// Put script in Documents/eagle/ulps
+//
+// To add shortcut to git commit (must be done from both schematic and board editors):
+//   Options->Assign Command-T, RUN imgout
+// For buttons
+//   Edit Documents/eagle/scripts/eagle.scr
+//   Under BRD and SCH MENU, add aline saying
+//     'Git : Run git.ulp;'\
+
+// Usage:
+// Commit and push only images and files with the same name as the current
+//  RUN git
+// Commit and push all files in current directory
+//  RUN git all
 
 string file_name;
 string project_path;
@@ -7,174 +20,96 @@ string brd_top_suffix = "-brd-top";
 string brd_bottom_suffix = "-brd-bottom";
 string sch_suffix = "-sch";
 
-string actualsheet;
-
-int layerVisible[];
-int useLayer[];
-
-// Accumulated command to execute
-string cmd = "";
-
 // String used for string templating
 string s;
+string history[] = {""};
 
 void gitAdd(string file) {
-  sprintf(s, "cd %s && git add %s > /tmp/out.txt 2> /tmp/err.txt", project_path, file);
+  sprintf(s, "cd %s && git add \"%s\" > /tmp/out.txt 2> /tmp/err.txt", project_path, file);
   system(s);
 }
 
-
-// *** functions ***
-void commandPrint(string name_suffix, int dpi) {
-  string h;
-  sprintf(h, "EXPORT IMAGE '%s%s%s' %s %d;\n", file_name, name_suffix, ".png", "", dpi);
-  cmd += h;
-  return;
-}
-
-void exportBoard(int boardView, string suffix) {
-  // arrays cannot be passed as function parameters so we do it this way instead
-  // arbitrary number of elements just to make room for whatever we copy
-  cmd += "SET DISPLAY_MODE REAL;\n";
-  cmd += "RATSNEST;\n";
-  cmd += "DISPLAY NONE ";
-
-  if(boardView == 0) {
-    cmd += "21 -23 -25 -27 -51 17 18 20 25 51 1;\n";
-  } else {
-    cmd += "17 18 20 26 16;\n";
+void gitCommit(string commitMessage) {
+  sprintf(s, "cd %s && git commit -m \"%s\" > /tmp/out.txt 2> /tmp/err.txt", project_path, commitMessage);
+  int result = system(s);
+  if(!result) {
+    dlgMessageBox("Git commit failed, check /tmp/err.txt", "OK");
+    exit(0);
   }
-  dlgMessageBox(cmd, "OK");
-  commandPrint(suffix, 600);
 }
 
-void exportSchematic() {
-  cmd += "DISPLAY NONE 91 94 95 96 97;\n";
+void addBoardToGit() {
+  sprintf(s, "%s.brd", file_name);
+  gitAdd(s);
 
-  string sh;
-  string shn;
-  schematic(S) {
+  sprintf(s, "%s%s.png", file_name, brd_top_suffix);
+  gitAdd(s);
+
+  sprintf(s, "%s%s.png", file_name, brd_bottom_suffix);
+  gitAdd(s);
+}
+
+void addSchematicToGit() {
+  sprintf(s, "%s.sch", file_name);
+  gitAdd(s);
+
+  project.schematic(S) {
     S.sheets(SH) {
-      sprintf(sh, "EDIT '.s%d';\n", SH.number);
-      cmd += sh;
-      sprintf(shn, "%s-%d", sch_suffix, SH.number);
-      commandPrint(shn, 150);
+      sprintf(s, "%s%s-%d.png", file_name, sch_suffix, SH.number);
+      gitAdd(s);
     }
   }
 }
 
-void saveBoardView(){
+void getNamesFromBoard(){
   board(B) {
     file_name = filesetext(B.name, "");
     project_path = filedir(B.name);
-    B.layers(L) {
-      layerVisible[L.number] = L.visible;
-      useLayer[L.number] = L.used;
-    }
   }
 }
 
-void restoreBoardView() {
-  cmd += "DISPLAY ";
-  for(int l = 1; l < 90; l++) {
-    if (useLayer[l]) {
-      if (layerVisible[l]) {
-        sprintf(s, " %d", l);
-        cmd += s;
-      }
-      else {
-        sprintf(s, " -%d", l);
-        cmd += s;
-      }
-    }
-  }
-  for(l = 100; l < 256; l++) {
-    if (useLayer[l]) {
-      if (layerVisible[l]) {
-        sprintf(s, " %d", l);
-        cmd += s;
-      }
-      else {
-        sprintf(s, " -%d", l);
-        cmd += s;
-      }
-    }
-  }
-  cmd += ";\n";
-}
-
-void saveSchematicView(){
+void getNamesFromSchematic(){
   schematic(S) {
     file_name = filesetext(S.name, "");
     project_path = filedir(S.name);
-    if (sheet) sheet(SH) sprintf(actualsheet, "%d", SH.number);
-    S.layers(L) {
-      layerVisible[L.number] = L.visible;
-      useLayer[L.number] = L.used;
-    }
-  }
-}
-
-void restoreSchematicView(){
-  cmd += "DISPLAY ";
-  for(int l = 91; l < 256; l++) {
-    if (useLayer[l]) {
-      if (layerVisible[l]) {
-        sprintf(s, " %d", l);
-        cmd += s;
-      }
-      else {
-        sprintf(s, " -%d", l);
-        cmd += s;
-      }
-    }
-  }
-  cmd += ";\n";
-  if(schematic) {
-    sprintf(s, "EDIT '.s%s';\n", actualsheet);
-    cmd += s;
   }
 }
 
 // main
-if (schematic) {
-  saveSchematicView();
 
-  // remove all current images to prevent "overwrite" dialog
-  schematic(S) {
-    S.sheets(SH) {
-      sprintf(s, "rm -f \"%s%s-%d.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, sch_suffix, SH.number);
-      system(s);
-    }
+string commitMessage = "Another commit from Eagle";
+
+int result = dlgDialog("Commit and push to Git"){
+  dlgHBoxLayout {
+    dlgLabel("Commit message");
+    dlgSpacing(200); // makes this box wider to let text field below get bigger
   }
-  exportSchematic();
-  restoreSchematicView();
-} else if (board) {
-  saveBoardView();
+  dlgHBoxLayout {
+    dlgStringEdit(commitMessage);
+  }
+  dlgHBoxLayout {
+    dlgStretch(1);
+    dlgPushButton("+OK") dlgAccept();
+    dlgPushButton("-Cancel") dlgReject();
+    dlgStretch(0);
+  }
+};
 
-  // remove all current images to prevent "overwrite" dialog
-  sprintf(s, "rm -f \"%s%s.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, brd_top_suffix);
-  system(s);
-  sprintf(s, "rm -f \"%s%s.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, brd_bottom_suffix);
-  system(s);
-
-  exportBoard(0, brd_top_suffix);
-  cmd += "WINDOW FLIP;\n";
-  exportBoard(1, brd_bottom_suffix);
-  cmd += "WINDOW FLIP;\n";
-
-  restoreBoardView();
+if(!result){
+  exit (0);
 }
 
-exit (cmd);
+if (schematic) {
+  getNamesFromSchematic();
+} else if (board) {
+  getNamesFromBoard();
+}
 
-/*
+if(argv[1] == "all") {
+  gitAdd("*");
+} else {
+  addBoardToGit();
+  addSchematicToGit();
+}
+gitCommit(commitMessage);
 
-// https://community.element14.com/products/eagle/f/eagle-user-support-english/16690/running-cam-from-ulp
-//int i = system("p");
-
-// Eagle builtin constants: http://web.mit.edu/xavid/arch/i386_rhel4/help/228.htm
-// Åpne schematic? https://community.element14.com/products/eagle/f/eagle-user-support-english/4756/path-to-current-schematic-in-ulp
-
-// RUN ULP from terminal: https://electronics.stackexchange.com/questions/269623/is-it-possible-to-run-eaglecads-drc-from-a-terminal-and-pipe-the-error-list-to
-*/
