@@ -32,8 +32,20 @@ void gitAdd(string file) {
 void gitCommit(string commitMessage) {
   sprintf(s, "cd %s && git commit -m \"%s\" > /tmp/out.txt 2> /tmp/err.txt", project_path, commitMessage);
   int result = system(s);
+  if(result) {
+    dlgMessageBox("Git commit failed, perhaps file is unchanged?", "OK");
+    exit(0);
+  }
+}
+
+void gitPush() {
+  sprintf(s, "cd %s && git push > /tmp/out.txt 2> /tmp/err.txt", project_path);
+  int result = system(s);
   if(!result) {
-    dlgMessageBox("Git commit failed, check /tmp/err.txt", "OK");
+    dlgMessageBox("Git push succeeded", "OK");
+    exit(0);
+  } else {
+    dlgMessageBox("Git push failed, check /tmp/err.txt", "OK");
     exit(0);
   }
 }
@@ -81,11 +93,16 @@ void getNamesFromLibrary(){
     project_path = filedir(L.name);
   }
 }
-// main
 
+// main
 string commitMessage = "Another commit from Eagle";
 
-int result = dlgDialog("Commit and push to Git"){
+string heading = "Commit and push to Git";
+if(argv[1] == "all") {
+  heading = "Commit all and push to Git";
+}
+
+int result = dlgDialog(heading){
   dlgHBoxLayout {
     dlgLabel("Commit message");
     dlgSpacing(200); // makes this box wider to let text field below get bigger
@@ -124,4 +141,5 @@ if(argv[1] == "all") {
   }
 }
 gitCommit(commitMessage);
+gitPush();
 

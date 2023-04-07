@@ -33,6 +33,7 @@ MENU '[bin/designlink.svg] Search and order {\
 
 LBR:
 MENU '[bin/designlink.svg] Search and order : Run designlink-order.ulp -general;'\
+     'Git: Run git.ulp;'\
 ;
 
 DEV:
