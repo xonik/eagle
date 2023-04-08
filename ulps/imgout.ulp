@@ -39,6 +39,21 @@ void commandPrint(string name_suffix, int dpi) {
   return;
 }
 
+string replaceSpace(string in) {
+  string joined = "";
+  string splits[];
+
+  int parts = strsplit(splits, in, ' ');
+
+  for(int i=0; i<parts; i++) {
+    joined += splits[i];
+    if(i< parts-1){
+      joined += "%20";
+    }
+  }
+  return joined;
+}
+
 void saveBoardView(){
   board(B) {
     file_name = filesetext(B.name, "");
@@ -68,16 +83,13 @@ void exportBoard(int boardView, string suffix) {
 void generateBoardMarkdown() {
   sprintf(s, "%s-brd.md", file_name);
   output(s, "wt") {
-    sprintf(s, "# %s\n\n", file_name_short);
-    printf(s);
+    printf("# %s\n\n", file_name_short);
 
     printf("### Board top\n");
-    sprintf(s, "![Top side](./%s%s.png)\n", file_name_short, brd_top_suffix);
-    printf(s);
+    printf("![Top side](./%s%s.png)\n", replaceSpace(file_name_short), brd_top_suffix);
 
     printf("### Board bottom\n");
-    sprintf(s, "![Bottom side](./%s%s.png)\n", file_name_short, brd_bottom_suffix);
-    printf(s);
+    printf("![Bottom side](./%s%s.png)\n", replaceSpace(file_name_short), brd_bottom_suffix);
   }
 }
 
@@ -146,10 +158,8 @@ void generateSchematicMarkdown() {
 
     schematic(S) {
       S.sheets(SH) {
-        sprintf(s, "### Sheet %d\n\n", SH.number);
-        printf(s);
-        sprintf(s, "![Top side](./%s%s-%d.png)\n", file_name_short, sch_suffix, SH.number);
-        printf(s);
+        printf("### Sheet %d\n\n", SH.number);
+        printf("![Top side](./%s%s-%d.png)\n", replaceSpace(file_name_short), sch_suffix, SH.number);
       }
     }
   }
@@ -174,10 +184,6 @@ void restoreSchematicView(){
     sprintf(s, "EDIT '.s%s';\n", actualsheet);
     cmd += s;
   }
-}
-
-void replaceSpace() {
-
 }
 
 // main
