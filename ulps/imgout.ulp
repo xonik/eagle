@@ -176,6 +176,10 @@ void restoreSchematicView(){
   }
 }
 
+void replaceSpace() {
+
+}
+
 // main
 if (schematic) {
   saveSchematicView();
