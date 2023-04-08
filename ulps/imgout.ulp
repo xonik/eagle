@@ -39,6 +39,17 @@ void commandPrint(string name_suffix, int dpi) {
   return;
 }
 
+void saveBoardView(){
+  board(B) {
+    file_name = filesetext(B.name, "");
+    file_name_short = filename(file_name);
+    B.layers(L) {
+      layerVisible[L.number] = L.visible;
+      useLayer[L.number] = L.used;
+    }
+  }
+}
+
 void exportBoard(int boardView, string suffix) {
   // arrays cannot be passed as function parameters so we do it this way instead
   // arbitrary number of elements just to make room for whatever we copy
@@ -54,33 +65,19 @@ void exportBoard(int boardView, string suffix) {
   commandPrint(suffix, 600);
 }
 
-void exportSchematic() {
-  cmd += "DISPLAY NONE 91 94 95 96 97;\n";
+void generateBoardMarkdown() {
+  sprintf(s, "%s-brd.md", file_name);
+  output(s, "wt") {
+    sprintf(s, "# %s\n\n", file_name_short);
+    printf(s);
 
-  string sh;
-  string shn;
-  schematic(S) {
-    S.sheets(SH) {
-      sprintf(sh, "EDIT '.s%d';\n", SH.number);
-      cmd += sh;
-      sprintf(shn, "%s-%d", sch_suffix, SH.number);
-      commandPrint(shn, 150);
-    }
-  }
+    printf("### Board top\n");
+    sprintf(s, "![Top side](./%s%s.png)\n", file_name_short, brd_top_suffix);
+    printf(s);
 
-  /*
-  # %s\n\nBoard top\n![Top side](./%s)\n\nBoard bottom\n\n![Bottom side](./%x)
-  */
-}
-
-void saveBoardView(){
-  board(B) {
-    file_name = filesetext(B.name, "");
-    file_name_short = filename(file_name);
-    B.layers(L) {
-      layerVisible[L.number] = L.visible;
-      useLayer[L.number] = L.used;
-    }
+    printf("### Board bottom\n");
+    sprintf(s, "![Bottom side](./%s%s.png)\n", file_name_short, brd_bottom_suffix);
+    printf(s);
   }
 }
 
@@ -125,6 +122,39 @@ void saveSchematicView(){
   }
 }
 
+void exportSchematic() {
+  cmd += "DISPLAY NONE 91 94 95 96 97;\n";
+
+  string sh;
+  string shn;
+  schematic(S) {
+    S.sheets(SH) {
+      sprintf(sh, "EDIT '.s%d';\n", SH.number);
+      cmd += sh;
+      sprintf(shn, "%s-%d", sch_suffix, SH.number);
+      commandPrint(shn, 150);
+    }
+  }
+}
+
+void generateSchematicMarkdown() {
+  sprintf(s, "%s-sch.md", file_name);
+  output(s, "wt") {
+    sprintf(s, "# %s", file_name_short);
+    printf(s);
+    printf("\n\n");
+
+    schematic(S) {
+      S.sheets(SH) {
+        sprintf(s, "### Sheet %d\n\n", SH.number);
+        printf(s);
+        sprintf(s, "![Top side](./%s%s-%d.png)\n", file_name_short, sch_suffix, SH.number);
+        printf(s);
+      }
+    }
+  }
+}
+
 void restoreSchematicView(){
   cmd += "DISPLAY ";
   for(int l = 91; l < 256; l++) {
@@ -158,6 +188,9 @@ if (schematic) {
     }
   }
   exportSchematic();
+
+  generateSchematicMarkdown();
+
   restoreSchematicView();
 } else if (board) {
   saveBoardView();
@@ -173,21 +206,7 @@ if (schematic) {
   exportBoard(1, brd_bottom_suffix);
   cmd += "WINDOW FLIP;\n";
 
-  sprintf(s, "%s-brd.md", file_name);
-  output(s, "wt") {
-    sprintf(s, "# %s", file_name_short);
-    printf(s);
-    printf("\n\n");
-
-    printf("### Board top\n");
-    sprintf(s, "![Top side](./%s%s.png)\n", file_name_short, brd_top_suffix);
-    printf(s);
-
-    printf("### Board bottom\n");
-    sprintf(s, "![Bottom side](./%s%s.png)\n", file_name_short, brd_bottom_suffix);
-    printf(s);
-  }
-
+  generateBoardMarkdown();
   restoreBoardView();
 }
 
