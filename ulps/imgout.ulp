@@ -14,7 +14,7 @@
 // Generate images from current board or schematic and commit them to git if git.ulp is present
 //   RUN imgout git
 string file_name;
-string project_path;
+string file_name_short;
 
 string brd_top_suffix = "-brd-top";
 string brd_bottom_suffix = "-brd-bottom";
@@ -67,11 +67,16 @@ void exportSchematic() {
       commandPrint(shn, 150);
     }
   }
+
+  /*
+  # %s\n\nBoard top\n![Top side](./%s)\n\nBoard bottom\n\n![Bottom side](./%x)
+  */
 }
 
 void saveBoardView(){
   board(B) {
     file_name = filesetext(B.name, "");
+    file_name_short = filename(file_name);
     B.layers(L) {
       layerVisible[L.number] = L.visible;
       useLayer[L.number] = L.used;
@@ -111,6 +116,7 @@ void restoreBoardView() {
 void saveSchematicView(){
   schematic(S) {
     file_name = filesetext(S.name, "");
+    file_name_short = filename(file_name);
     if (sheet) sheet(SH) sprintf(actualsheet, "%d", SH.number);
     S.layers(L) {
       layerVisible[L.number] = L.visible;
@@ -166,6 +172,21 @@ if (schematic) {
   cmd += "WINDOW FLIP;\n";
   exportBoard(1, brd_bottom_suffix);
   cmd += "WINDOW FLIP;\n";
+
+  sprintf(s, "%s-brd.md", file_name);
+  output(s, "wt") {
+    sprintf(s, "# %s", file_name_short);
+    printf(s);
+    printf("\n\n");
+
+    printf("### Board top\n");
+    sprintf(s, "![Top side](./%s%s.png)\n", file_name_short, brd_top_suffix);
+    printf(s);
+
+    printf("### Board bottom\n");
+    sprintf(s, "![Bottom side](./%s%s.png)\n", file_name_short, brd_bottom_suffix);
+    printf(s);
+  }
 
   restoreBoardView();
 }
