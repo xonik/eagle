@@ -106,7 +106,7 @@ void getNamesFromLibrary(){
 if(argv[1] != "saved") {
   string cmd = "";
   cmd += "WRITE;\n";
-  cmd += "RUN git-execute saved ";
+  cmd += "RUN git saved ";
   if(argv[1]) {
     cmd += argv[1];
   }
