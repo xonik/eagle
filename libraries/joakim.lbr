@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -24685,6 +24685,11 @@ JLCPCB-C8467&lt;br&gt;
 <text x="-1.27" y="1.397" size="0.8128" layer="51">Front</text>
 <text x="-6.858" y="1.397" size="0.8128" layer="21">1</text>
 </package>
+<package name="VOLTMETER">
+<description>0.36" voltmeter from Ali express, 30 x 14.2mm, 26mm between screw holes</description>
+<rectangle x1="-11.4" y1="0" x2="11.5" y2="10" layer="21"/>
+<rectangle x1="-15" y1="10" x2="15" y2="11.6" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="PAK100/2500-10" urn="urn:adsk.eagle:package:5571/1" type="box">
@@ -27873,6 +27878,13 @@ LOGO
 <pin name="10" x="5.08" y="10.16" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="11" x="5.08" y="12.7" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <wire x1="-1.27" y1="12.7" x2="0" y2="12.7" width="0.6096" layer="94"/>
+</symbol>
+<symbol name="VOLTMETER">
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<text x="0" y="0" size="5.08" layer="94" font="vector" align="center">0.0V</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -33142,7 +33154,7 @@ Connect AVdd to IOVdd
 </device>
 </devices>
 </deviceset>
-<deviceset name="WJ300V-5.0-3P">
+<deviceset name="WJ300V-5.0-3P" prefix="X">
 <description>3p screw terminal&lt;br&gt;
 Ningbo Kangnex Elec&lt;br&gt;
 WJ300V-5.0-3P&lt;br&gt;
@@ -33158,6 +33170,18 @@ JLCPCB: C8467&lt;br&gt;
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VOLTMETER" prefix="IC">
+<gates>
+<gate name="G$1" symbol="VOLTMETER" x="10.16" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="VOLTMETER">
 <technologies>
 <technology name=""/>
 </technologies>
