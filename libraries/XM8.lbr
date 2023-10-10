@@ -1704,6 +1704,32 @@ match</text>
 <pad name="31" x="76.2" y="1.905" drill="1.016" shape="long" rot="R270"/>
 <pad name="32" x="78.74" y="1.905" drill="1.016" shape="long" rot="R270"/>
 </package>
+<package name="XM8-SVF-CV-V1.1V">
+<description>Xonik SVF Cutoff and Resonance CV board v1.1, vertical mount</description>
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.127" layer="21"/>
+<wire x1="1.27" y1="0" x2="26.67" y2="0" width="0.127" layer="21"/>
+<wire x1="26.67" y1="0" x2="26.67" y2="3.81" width="0.127" layer="21"/>
+<wire x1="26.67" y1="3.81" x2="1.27" y2="3.81" width="0.127" layer="21"/>
+<wire x1="1.27" y1="3.81" x2="-1.27" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="3.81" x2="-1.27" y2="0" width="0.127" layer="21"/>
+<pad name="1" x="0" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="2" x="2.54" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="3" x="5.08" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="4" x="7.62" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="5" x="10.16" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="6" x="12.7" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="7" x="15.24" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="8" x="17.78" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="9" x="20.32" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="10" x="22.86" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<pad name="11" x="25.4" y="1.905" drill="1.016" shape="long" rot="R270"/>
+<wire x1="1.27" y1="3.81" x2="1.27" y2="0" width="0.127" layer="21"/>
+<text x="-2.8575" y="1.27" size="1.27" layer="21">1</text>
+<text x="-1.27" y="5.715" size="1.27" layer="25">&gt;NAME</text>
+<wire x1="-1.27" y1="3.81" x2="-1.27" y2="5.3975" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="5.3975" x2="26.67" y2="5.3975" width="0.127" layer="21"/>
+<wire x1="26.67" y1="5.3975" x2="26.67" y2="3.81" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="XM8-DCO-V1.4">
@@ -2388,7 +2414,7 @@ match</text>
 <pin name="CV6" x="22.86" y="2.54" length="short" rot="R180"/>
 <pin name="CV_FX_1" x="22.86" y="-2.54" length="short" rot="R180"/>
 <pin name="CV2" x="22.86" y="12.7" length="short" rot="R180"/>
-<pin name="OUT_B" x="22.86" y="-12.7" length="short" rot="R180"/>
+<pin name="OUT_B" x="22.86" y="-17.78" length="short" rot="R180"/>
 <pin name="CV5" x="22.86" y="5.08" length="short" rot="R180"/>
 <text x="-19.685" y="18.415" size="1.778" layer="95">&gt;NAME</text>
 <pin name="IN4" x="-22.86" y="7.62" length="short" direction="in"/>
@@ -2402,7 +2428,7 @@ match</text>
 <pin name="CV4" x="22.86" y="7.62" length="short" rot="R180"/>
 <text x="19.685" y="-20.955" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
 <wire x1="-20.32" y1="17.78" x2="20.32" y2="17.78" width="0.254" layer="94"/>
-<pin name="OUT_A" x="22.86" y="-10.16" length="short" rot="R180"/>
+<pin name="OUT_A" x="22.86" y="-15.24" length="short" rot="R180"/>
 <pin name="CV_FX_2" x="22.86" y="-5.08" length="short" rot="R180"/>
 <pin name="CV_OUT_B_FX" x="-22.86" y="-17.78" length="short"/>
 <pin name="-12V" x="-7.62" y="20.32" length="short" direction="pwr" swaplevel="1" rot="R270"/>
@@ -2413,6 +2439,34 @@ match</text>
 <pin name="+3V3" x="5.08" y="20.32" length="short" direction="pwr" swaplevel="1" rot="R270"/>
 <pin name="SDA" x="2.54" y="-22.86" length="short" swaplevel="1" rot="R90"/>
 <pin name="!RST" x="5.08" y="-22.86" length="short" swaplevel="1" rot="R90"/>
+<pin name="SUM_A" x="22.86" y="-10.16" length="short" rot="R180"/>
+<pin name="SUM_B" x="22.86" y="-12.7" length="short" rot="R180"/>
+</symbol>
+<symbol name="XM8-SVF-CUTOFF-CV-V1.1">
+<pin name="CUTOFF_CV" x="-10.16" y="0" length="short"/>
+<pin name="CUTOFF_LIN_FM" x="-10.16" y="-2.54" length="short"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="33.02" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="33.02" y1="-5.08" x2="33.02" y2="2.54" width="0.254" layer="94"/>
+<wire x1="33.02" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<pin name="CUTOFF_IABC" x="35.56" y="-2.54" length="short" rot="R180"/>
+</symbol>
+<symbol name="XM8-SVF-RESO-CV-V1.1">
+<pin name="RESO_CV" x="-10.16" y="0" length="short"/>
+<pin name="RESO_IABC" x="25.4" y="0" length="short" rot="R180"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="22.86" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-2.54" x2="22.86" y2="2.54" width="0.254" layer="94"/>
+<wire x1="22.86" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="XM8-SVF-TEMP-V1.1">
+<pin name="TEMP_SENSE" x="-10.16" y="0" length="short"/>
+<pin name="GND" x="20.32" y="-2.54" length="short" rot="R180"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="17.78" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-5.08" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<pin name="VDD" x="20.32" y="0" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -3478,35 +3532,131 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <device name="" package="XM8-BUX-MIX-V1.0V">
 <connects>
 <connect gate="G$1" pin="!RST" pad="5"/>
-<connect gate="G$1" pin="+12V" pad="21"/>
+<connect gate="G$1" pin="+12V" pad="22"/>
 <connect gate="G$1" pin="+3V3" pad="1"/>
-<connect gate="G$1" pin="-12V" pad="23"/>
-<connect gate="G$1" pin="AGND" pad="22"/>
-<connect gate="G$1" pin="CV1" pad="9"/>
-<connect gate="G$1" pin="CV2" pad="10"/>
-<connect gate="G$1" pin="CV3" pad="11"/>
-<connect gate="G$1" pin="CV4" pad="12"/>
-<connect gate="G$1" pin="CV5" pad="26"/>
-<connect gate="G$1" pin="CV6" pad="27"/>
-<connect gate="G$1" pin="CV_FX_1" pad="28"/>
-<connect gate="G$1" pin="CV_FX_2" pad="29"/>
-<connect gate="G$1" pin="CV_OUT_A" pad="15"/>
-<connect gate="G$1" pin="CV_OUT_A_FX" pad="19"/>
-<connect gate="G$1" pin="CV_OUT_B" pad="16"/>
-<connect gate="G$1" pin="CV_OUT_B_FX" pad="20"/>
+<connect gate="G$1" pin="-12V" pad="24"/>
+<connect gate="G$1" pin="AGND" pad="23"/>
+<connect gate="G$1" pin="CV1" pad="8"/>
+<connect gate="G$1" pin="CV2" pad="9"/>
+<connect gate="G$1" pin="CV3" pad="10"/>
+<connect gate="G$1" pin="CV4" pad="11"/>
+<connect gate="G$1" pin="CV5" pad="27"/>
+<connect gate="G$1" pin="CV6" pad="28"/>
+<connect gate="G$1" pin="CV_FX_1" pad="29"/>
+<connect gate="G$1" pin="CV_FX_2" pad="30"/>
+<connect gate="G$1" pin="CV_OUT_A" pad="16"/>
+<connect gate="G$1" pin="CV_OUT_A_FX" pad="20"/>
+<connect gate="G$1" pin="CV_OUT_B" pad="17"/>
+<connect gate="G$1" pin="CV_OUT_B_FX" pad="21"/>
 <connect gate="G$1" pin="DGND" pad="4"/>
-<connect gate="G$1" pin="IN1" pad="7"/>
-<connect gate="G$1" pin="IN2" pad="8"/>
-<connect gate="G$1" pin="IN3" pad="13"/>
-<connect gate="G$1" pin="IN4" pad="14"/>
-<connect gate="G$1" pin="IN5" pad="24"/>
-<connect gate="G$1" pin="IN6" pad="25"/>
-<connect gate="G$1" pin="IN_FX_1" pad="30"/>
-<connect gate="G$1" pin="IN_FX_2" pad="31"/>
-<connect gate="G$1" pin="OUT_A" pad="17"/>
-<connect gate="G$1" pin="OUT_B" pad="18"/>
+<connect gate="G$1" pin="IN1" pad="6"/>
+<connect gate="G$1" pin="IN2" pad="7"/>
+<connect gate="G$1" pin="IN3" pad="12"/>
+<connect gate="G$1" pin="IN4" pad="13"/>
+<connect gate="G$1" pin="IN5" pad="25"/>
+<connect gate="G$1" pin="IN6" pad="26"/>
+<connect gate="G$1" pin="IN_FX_1" pad="31"/>
+<connect gate="G$1" pin="IN_FX_2" pad="32"/>
+<connect gate="G$1" pin="OUT_A" pad="18"/>
+<connect gate="G$1" pin="OUT_B" pad="19"/>
 <connect gate="G$1" pin="SCL" pad="3"/>
 <connect gate="G$1" pin="SDA" pad="2"/>
+<connect gate="G$1" pin="SUM_A" pad="14"/>
+<connect gate="G$1" pin="SUM_B" pad="15"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SVF-CELL-V1.1" prefix="IC">
+<gates>
+<gate name="G$1" symbol="XM8-SVF-CELL-V1.0" x="0" y="-30.48"/>
+<gate name="G$2" symbol="XM8-SVF-VCA-V1.0" x="-7.62" y="33.02"/>
+<gate name="G$3" symbol="XM8-SVF-OPAMP-V1.0" x="0" y="-5.08"/>
+<gate name="P" symbol="XM8-PWR" x="25.4" y="27.94"/>
+</gates>
+<devices>
+<device name="H" package="XM8-SVF-CELL-V1.0H">
+<connects>
+<connect gate="G$1" pin="BP" pad="10"/>
+<connect gate="G$1" pin="CUTOFF" pad="8"/>
+<connect gate="G$1" pin="HP" pad="9"/>
+<connect gate="G$1" pin="LP" pad="11"/>
+<connect gate="G$1" pin="NEG_FEEDBACK" pad="4"/>
+<connect gate="G$1" pin="NEG_IN" pad="5"/>
+<connect gate="G$1" pin="PJ1" pad="6"/>
+<connect gate="G$1" pin="PJ2" pad="7"/>
+<connect gate="G$1" pin="POS_IN" pad="2"/>
+<connect gate="G$1" pin="RESONANCE" pad="12"/>
+<connect gate="G$2" pin="VCA_BIAS" pad="13"/>
+<connect gate="G$2" pin="VCA_CV" pad="17"/>
+<connect gate="G$2" pin="VCA_GAIN" pad="16"/>
+<connect gate="G$2" pin="VCA_NEG_IN" pad="15"/>
+<connect gate="G$2" pin="VCA_OUT" pad="18"/>
+<connect gate="G$2" pin="VCA_POS_IN" pad="14"/>
+<connect gate="G$3" pin="OPAMP_NEG" pad="1"/>
+<connect gate="G$3" pin="OPAMP_OUT" pad="3"/>
+<connect gate="P" pin="+V" pad="19"/>
+<connect gate="P" pin="-V" pad="21"/>
+<connect gate="P" pin="AGND" pad="20"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="V" package="XM8-SVF-CELL-V1.0V">
+<connects>
+<connect gate="G$1" pin="BP" pad="10"/>
+<connect gate="G$1" pin="CUTOFF" pad="8"/>
+<connect gate="G$1" pin="HP" pad="9"/>
+<connect gate="G$1" pin="LP" pad="11"/>
+<connect gate="G$1" pin="NEG_FEEDBACK" pad="4"/>
+<connect gate="G$1" pin="NEG_IN" pad="5"/>
+<connect gate="G$1" pin="PJ1" pad="6"/>
+<connect gate="G$1" pin="PJ2" pad="7"/>
+<connect gate="G$1" pin="POS_IN" pad="2"/>
+<connect gate="G$1" pin="RESONANCE" pad="12"/>
+<connect gate="G$2" pin="VCA_BIAS" pad="13"/>
+<connect gate="G$2" pin="VCA_CV" pad="17"/>
+<connect gate="G$2" pin="VCA_GAIN" pad="16"/>
+<connect gate="G$2" pin="VCA_NEG_IN" pad="15"/>
+<connect gate="G$2" pin="VCA_OUT" pad="18"/>
+<connect gate="G$2" pin="VCA_POS_IN" pad="14"/>
+<connect gate="G$3" pin="OPAMP_NEG" pad="1"/>
+<connect gate="G$3" pin="OPAMP_OUT" pad="3"/>
+<connect gate="P" pin="+V" pad="19"/>
+<connect gate="P" pin="-V" pad="21"/>
+<connect gate="P" pin="AGND" pad="20"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SVF-CV-V1.1" prefix="IC">
+<gates>
+<gate name="G$1" symbol="XM8-SVF-CUTOFF-CV-V1.1" x="-12.7" y="17.78"/>
+<gate name="G$2" symbol="XM8-SVF-RESO-CV-V1.1" x="-12.7" y="7.62"/>
+<gate name="G$3" symbol="XM8-SVF-TEMP-V1.1" x="-12.7" y="0"/>
+<gate name="G$4" symbol="XM8-PWR" x="33.02" y="10.16"/>
+</gates>
+<devices>
+<device name="" package="XM8-SVF-CV-V1.1V">
+<connects>
+<connect gate="G$1" pin="CUTOFF_CV" pad="2"/>
+<connect gate="G$1" pin="CUTOFF_IABC" pad="3"/>
+<connect gate="G$1" pin="CUTOFF_LIN_FM" pad="1"/>
+<connect gate="G$2" pin="RESO_CV" pad="8"/>
+<connect gate="G$2" pin="RESO_IABC" pad="7"/>
+<connect gate="G$3" pin="GND" pad="6"/>
+<connect gate="G$3" pin="TEMP_SENSE" pad="4"/>
+<connect gate="G$3" pin="VDD" pad="5"/>
+<connect gate="G$4" pin="+V" pad="9"/>
+<connect gate="G$4" pin="-V" pad="11"/>
+<connect gate="G$4" pin="AGND" pad="10"/>
 </connects>
 <technologies>
 <technology name=""/>
