@@ -4269,27 +4269,27 @@ chip</description>
 &lt;li&gt;&lt;u&gt;JEDEC&lt;/u&gt;: --
 &lt;li&gt;&lt;u&gt;IEC&lt;/u&gt;: --
 &lt;li&gt;&lt;u&gt;JEITA&lt;/u&gt;:  SC-88&lt;/ul&gt;</description>
-<wire x1="-1" y1="0.625" x2="-1" y2="-0.625" width="0.127" layer="51"/>
-<wire x1="1" y1="-0.625" x2="1" y2="0.625" width="0.127" layer="51"/>
-<wire x1="-1" y1="0.625" x2="1" y2="0.625" width="0.127" layer="51"/>
-<wire x1="1" y1="-0.625" x2="-1" y2="-0.625" width="0.127" layer="51"/>
-<wire x1="1" y1="-0.4" x2="1" y2="0.4" width="0.127" layer="21"/>
-<wire x1="-1" y1="-0.4" x2="-1" y2="0.4" width="0.127" layer="21"/>
-<circle x="-0.7" y="-0.2" radius="0.2" width="0" layer="21"/>
-<smd name="6" x="-0.75" y="0.9" dx="0.6" dy="0.6" layer="1"/>
-<smd name="5" x="0" y="0.9" dx="0.4" dy="0.6" layer="1"/>
-<smd name="4" x="0.75" y="0.9" dx="0.6" dy="0.6" layer="1"/>
-<smd name="1" x="-0.75" y="-0.9" dx="0.6" dy="0.6" layer="1"/>
-<smd name="2" x="0" y="-0.9" dx="0.4" dy="0.6" layer="1"/>
-<smd name="3" x="0.75" y="-0.9" dx="0.6" dy="0.6" layer="1"/>
-<text x="2" y="-1" size="1" layer="27" font="vector">&gt;VALUE</text>
-<text x="2" y="0.5" size="1" layer="25" font="vector">&gt;NAME</text>
-<rectangle x1="-0.125" y1="0.625" x2="0.125" y2="0.925" layer="51"/>
-<rectangle x1="0.525" y1="0.625" x2="0.775" y2="0.925" layer="51"/>
-<rectangle x1="-0.125" y1="-0.925" x2="0.125" y2="-0.625" layer="51"/>
-<rectangle x1="0.525" y1="-0.925" x2="0.775" y2="-0.625" layer="51"/>
-<rectangle x1="-0.775" y1="-0.925" x2="-0.525" y2="-0.625" layer="51"/>
-<rectangle x1="-0.775" y1="0.625" x2="-0.525" y2="0.925" layer="51"/>
+<wire x1="0.625" y1="1" x2="-0.625" y2="1" width="0.127" layer="51"/>
+<wire x1="-0.625" y1="-1" x2="0.625" y2="-1" width="0.127" layer="51"/>
+<wire x1="0.625" y1="1" x2="0.625" y2="-1" width="0.127" layer="51"/>
+<wire x1="-0.625" y1="-1" x2="-0.625" y2="1" width="0.127" layer="51"/>
+<wire x1="-0.4" y1="-1" x2="0.4" y2="-1" width="0.127" layer="21"/>
+<wire x1="-0.4" y1="1" x2="0.4" y2="1" width="0.127" layer="21"/>
+<circle x="-0.2" y="0.7" radius="0.2" width="0" layer="21"/>
+<smd name="6" x="0.9" y="0.75" dx="0.6" dy="0.6" layer="1" rot="R270"/>
+<smd name="5" x="0.9" y="0" dx="0.4" dy="0.6" layer="1" rot="R270"/>
+<smd name="4" x="0.9" y="-0.75" dx="0.6" dy="0.6" layer="1" rot="R270"/>
+<smd name="1" x="-0.9" y="0.75" dx="0.6" dy="0.6" layer="1" rot="R270"/>
+<smd name="2" x="-0.9" y="0" dx="0.4" dy="0.6" layer="1" rot="R270"/>
+<smd name="3" x="-0.9" y="-0.75" dx="0.6" dy="0.6" layer="1" rot="R270"/>
+<text x="-1" y="-2" size="1" layer="27" font="vector" rot="R270">&gt;VALUE</text>
+<text x="0.5" y="-2" size="1" layer="25" font="vector" rot="R270">&gt;NAME</text>
+<rectangle x1="0.65" y1="-0.15" x2="0.9" y2="0.15" layer="51" rot="R270"/>
+<rectangle x1="0.65" y1="-0.8" x2="0.9" y2="-0.5" layer="51" rot="R270"/>
+<rectangle x1="-0.9" y1="-0.15" x2="-0.65" y2="0.15" layer="51" rot="R270"/>
+<rectangle x1="-0.9" y1="-0.8" x2="-0.65" y2="-0.5" layer="51" rot="R270"/>
+<rectangle x1="-0.9" y1="0.5" x2="-0.65" y2="0.8" layer="51" rot="R270"/>
+<rectangle x1="0.65" y1="0.5" x2="0.9" y2="0.8" layer="51" rot="R270"/>
 </package>
 <package name="SOT666J">
 <description>&lt;b&gt;SOT 666 Reflow soldering foorprint&lt;/b&gt;&lt;p&gt;
