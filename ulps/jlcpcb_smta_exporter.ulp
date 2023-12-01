@@ -54,10 +54,11 @@ if (board) board(B) {
 
 	B.elements(E) if (E.populate) {
 		E.package.contacts(C) {
-			if (C.smd && C.smd.layer == layer_id_map[layer_choice]) {
+      // Fixes by joakim: Removed check to force printing of non-smd components
+			//if (C.smd && C.smd.layer == layer_id_map[layer_choice]) {
 				selected_elements[element_count++] = E;
 				break;
-			}
+			//}
 		}
 	}
 
@@ -71,7 +72,7 @@ if (board) board(B) {
 	output(cpl_filename) {
 		printf("Designator,Mid X,Mid Y,Layer,Rotation\n");
 
-		for (int i = 0 ; i < element_count ; ++i) {
+		for (int i = 0 ; i < element_count ; i++) {
 			UL_ELEMENT E = selected_elements[i];
 
         	printf("%s,%5.2f,%5.2f,%s,%.1f\n",
@@ -86,7 +87,7 @@ if (board) board(B) {
 		int indexes[];
 		numeric string values[];
 
-		for (i=0 ; i < element_count ; ++i) {
+		for (i=0 ; i < element_count ; i++) {
 			indexes[i] = i;
 			values[i] = selected_elements[i].value;
 		}
@@ -98,10 +99,16 @@ if (board) board(B) {
 		string current_lscpart = "";
 		string designators = "";
 
-		for (i = 0 ; i < element_count ; ++i) {
+		for (i = 0 ; i < element_count ; i++) {
 			UL_ELEMENT E = selected_elements[indexes[i]];
 
-			if (current_value != "" && (E.value != current_value || E.footprint.name != current_footprint)) {
+      // If the current value or footprint has changed, print a bom line with the
+      // contents found this far.
+			if (
+        (current_value != "" &&
+          (E.value != current_value || E.footprint.name != current_footprint)
+        )
+      ) {
 				printf("%s,%s,%s,%s\n", current_value, designators, current_footprint, current_lscpart);
 				designators = "";
 			}
@@ -119,7 +126,17 @@ if (board) board(B) {
 					current_lscpart = A.value;
 				}
 			}
-		}		
+
+      // The last group is not printed automatically as there no next part and thus
+      // no difference to detect. We also need to do it after the last part has been
+      // added to designators to include the very last part of the bom.
+      if (
+        i == element_count - 1
+      ) {
+				printf("%s,%s,%s,%s\n", current_value, designators, current_footprint, current_lscpart);
+				designators = "";
+			}
+		}
 	}
 
   dlgMessageBox("BOM and CPL files have been exported to: " + output_dir, "OK");
