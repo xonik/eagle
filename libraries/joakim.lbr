@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -26610,6 +26610,49 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <rectangle x1="17.4498" y1="0.4064" x2="18.1102" y2="2.1336" layer="51"/>
 <rectangle x1="17.4498" y1="-1.5748" x2="18.1102" y2="-0.4064" layer="51"/>
 </package>
+<package name="DIL16" urn="urn:adsk.eagle:footprint:917/1">
+<description>&lt;b&gt;Dual In Line Package&lt;/b&gt;</description>
+<wire x1="10.16" y1="2.921" x2="-10.16" y2="2.921" width="0.1524" layer="21"/>
+<wire x1="-10.16" y1="-2.921" x2="10.16" y2="-2.921" width="0.1524" layer="21"/>
+<wire x1="10.16" y1="2.921" x2="10.16" y2="-2.921" width="0.1524" layer="21"/>
+<wire x1="-10.16" y1="2.921" x2="-10.16" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="-10.16" y1="-2.921" x2="-10.16" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="-10.16" y1="1.016" x2="-10.16" y2="-1.016" width="0.1524" layer="21" curve="-180"/>
+<pad name="1" x="-8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="2" x="-6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="7" x="6.35" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="8" x="8.89" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="3" x="-3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="4" x="-1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="6" x="3.81" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="5" x="1.27" y="-3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="9" x="8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="10" x="6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="11" x="3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="12" x="1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="13" x="-1.27" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="14" x="-3.81" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="15" x="-6.35" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<pad name="16" x="-8.89" y="3.81" drill="0.8128" shape="long" rot="R90"/>
+<text x="-10.541" y="-2.921" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="-7.493" y="-0.635" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="MA06N-1J">
+<pad name="1" x="-6.35" y="0" drill="1.016" shape="octagon" rot="R90"/>
+<pad name="2" x="-3.81" y="0" drill="1.016" shape="octagon" rot="R90"/>
+<pad name="3" x="-1.27" y="0" drill="1.016" shape="octagon" rot="R90"/>
+<pad name="4" x="1.27" y="0" drill="1.016" shape="octagon" rot="R90"/>
+<pad name="5" x="3.81" y="0" drill="1.016" shape="octagon" rot="R90"/>
+<text x="-7.62" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-2.921" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
+<rectangle x1="-6.604" y1="-0.254" x2="-6.096" y2="0.254" layer="51"/>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
+<rectangle x1="3.556" y1="-0.254" x2="4.064" y2="0.254" layer="51"/>
+<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+<rectangle x1="6.096" y1="-0.254" x2="6.604" y2="0.254" layer="51"/>
+<pad name="6" x="6.35" y="0" drill="1.016" shape="octagon" rot="R90"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="PAK100/2500-10" urn="urn:adsk.eagle:package:5571/1" type="box">
@@ -27381,6 +27424,12 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <description>PIN HEADER</description>
 <packageinstances>
 <packageinstance name="MA16-2WJ"/>
+</packageinstances>
+</package3d>
+<package3d name="DIL16" urn="urn:adsk.eagle:package:922/2" type="model">
+<description>Dual In Line Package</description>
+<packageinstances>
+<packageinstance name="DIL16"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -30574,6 +30623,30 @@ https://www.wch-ic.com/downloads/CH446DS1_PDF.html</description>
 <pin name="31" x="7.62" y="17.78" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="32" x="-7.62" y="17.78" visible="pad" length="middle" direction="pas" swaplevel="1"/>
 </symbol>
+<symbol name="DG408">
+<wire x1="7.62" y1="-20.32" x2="-7.62" y2="-20.32" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="20.32" x2="-7.62" y2="-20.32" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="20.32" x2="7.62" y2="20.32" width="0.4064" layer="94"/>
+<wire x1="7.62" y1="-20.32" x2="7.62" y2="20.32" width="0.4064" layer="94"/>
+<text x="-7.62" y="20.955" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-22.86" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="S5" x="-12.7" y="7.62" length="middle" direction="pas"/>
+<pin name="S6" x="-12.7" y="5.08" length="middle" direction="pas"/>
+<pin name="S7" x="-12.7" y="2.54" length="middle" direction="pas"/>
+<pin name="S8" x="-12.7" y="0" length="middle" direction="pas"/>
+<pin name="S1" x="-12.7" y="17.78" length="middle" direction="pas"/>
+<pin name="S2" x="-12.7" y="15.24" length="middle" direction="pas"/>
+<pin name="S3" x="-12.7" y="12.7" length="middle" direction="pas"/>
+<pin name="S4" x="-12.7" y="10.16" length="middle" direction="pas"/>
+<pin name="D" x="12.7" y="17.78" length="middle" direction="pas" rot="R180"/>
+<pin name="GND" x="12.7" y="-17.78" length="middle" direction="pwr" rot="R180"/>
+<pin name="V-" x="12.7" y="-12.7" length="middle" direction="pwr" rot="R180"/>
+<pin name="V+" x="12.7" y="-7.62" length="middle" direction="pwr" rot="R180"/>
+<pin name="A0" x="-12.7" y="-7.62" length="middle" direction="in"/>
+<pin name="A1" x="-12.7" y="-10.16" length="middle" direction="in"/>
+<pin name="A2" x="-12.7" y="-12.7" length="middle" direction="in"/>
+<pin name="EN" x="-12.7" y="-17.78" length="middle" direction="in"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="LED_J" prefix="LED" uservalue="yes">
@@ -30895,7 +30968,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA03-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA03-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA03-1J" x="0" y="0"/>
@@ -30938,7 +31011,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA04-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA04-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="MA04-1J" x="0" y="0"/>
@@ -30984,7 +31057,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA08-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA08-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="MA08-1J" x="0" y="0"/>
@@ -31042,7 +31115,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA09-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA09-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="MA09-1J" x="0" y="0"/>
@@ -31087,7 +31160,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA01-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA01-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA01-1J" x="0" y="0"/>
@@ -31127,7 +31200,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA05-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA05-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA05-1J" x="0" y="0"/>
@@ -31164,7 +31237,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA15-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA15-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA15-1J" x="0" y="0"/>
@@ -31221,7 +31294,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA20-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA20-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="MA20-1J" x="0" y="0"/>
@@ -31389,7 +31462,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA04-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA04-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA04-2J" x="0" y="0"/>
@@ -31417,7 +31490,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA05-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA05-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA05-2J" x="0" y="0"/>
@@ -31447,7 +31520,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA08-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA08-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA08-2J" x="0" y="0"/>
@@ -31483,7 +31556,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA03-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA03-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="MA03-2J" x="0" y="0"/>
@@ -31509,7 +31582,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA06-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA06-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="MA06-2J" x="0" y="0"/>
@@ -31541,7 +31614,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA07-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA07-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA07-2J" x="0" y="0"/>
@@ -31575,7 +31648,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA09-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA09-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA09-2J" x="0" y="0"/>
@@ -31613,7 +31686,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA10-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA10-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA10-2J" x="0" y="0"/>
@@ -31653,7 +31726,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA17-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA17-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA17-2J" x="0" y="0"/>
@@ -31707,7 +31780,7 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA20-2J" prefix="SV" uservalue="yes">
+<deviceset name="MA20-2J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA20-2J" x="0" y="0"/>
@@ -32122,7 +32195,7 @@ Covers MAX5214 (14 bit), MAX5216 (16 bit)</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA02-1J">
+<deviceset name="MA02-1J" prefix="X">
 <gates>
 <gate name="G$1" symbol="MA02-1J" x="0" y="2.54"/>
 </gates>
@@ -32469,7 +32542,7 @@ Source: Mitsubishi M5218AL/P/FP</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA06-1J">
+<deviceset name="MA06-1J" prefix="X">
 <gates>
 <gate name="G$1" symbol="MA06-1J" x="2.54" y="0"/>
 </gates>
@@ -32502,7 +32575,7 @@ Source: Mitsubishi M5218AL/P/FP</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA07-1J">
+<deviceset name="MA07-1J" prefix="X">
 <gates>
 <gate name="G$1" symbol="MA07-1J" x="0" y="0"/>
 </gates>
@@ -32551,7 +32624,7 @@ Source: Mitsubishi M5218AL/P/FP</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA10-1J">
+<deviceset name="MA10-1J" prefix="X">
 <gates>
 <gate name="G$1" symbol="MA10-1J" x="2.54" y="0"/>
 </gates>
@@ -33467,7 +33540,7 @@ NS is without screw holes</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA14-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA14-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA14-1J" x="-2.54" y="2.54"/>
@@ -34207,7 +34280,7 @@ potentiometer, Alpha RV09</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA19-1J" prefix="SV" uservalue="yes">
+<deviceset name="MA19-1J" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA19-1J" x="-2.54" y="0"/>
@@ -34422,7 +34495,7 @@ potentiometer, Alpha RV09</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA14-1DJ">
+<deviceset name="MA14-1DJ" prefix="X">
 <gates>
 <gate name="G$1" symbol="MA14-DOT-1J" x="0" y="-2.54"/>
 </gates>
@@ -34471,7 +34544,7 @@ potentiometer, Alpha RV09</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA24-1DJ">
+<deviceset name="MA24-1DJ" prefix="X">
 <gates>
 <gate name="G$1" symbol="MA24-DOT-1J" x="0" y="0"/>
 </gates>
@@ -34540,7 +34613,7 @@ potentiometer, Alpha RV09</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA04-1DJ" prefix="SV" uservalue="yes">
+<deviceset name="MA04-1DJ" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA04-DOT-1J" x="0" y="0"/>
@@ -35539,7 +35612,7 @@ Pin compatible with PCF8574 but requires software changes&lt;br&gt;&lt;br&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA07-2WJ" prefix="SV" uservalue="yes">
+<deviceset name="MA07-2WJ" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA07-2J" x="0" y="0"/>
@@ -35577,7 +35650,7 @@ Pin compatible with PCF8574 but requires software changes&lt;br&gt;&lt;br&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="MA05-2WJ" prefix="SV" uservalue="yes">
+<deviceset name="MA05-2WJ" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="G$1" symbol="MA05-2J" x="0" y="0"/>
@@ -37289,7 +37362,7 @@ Output up to 100 mA&lt;br&gt;</description>
 </pinmapping>
 </spice>
 </deviceset>
-<deviceset name="MA16-2WJ" prefix="SV" uservalue="yes">
+<deviceset name="MA16-2WJ" prefix="X" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="MA16-2J" x="0" y="0"/>
@@ -37341,6 +37414,37 @@ Output up to 100 mA&lt;br&gt;</description>
 <attribute name="OC_NEWARK" value="unknown" constant="no"/>
 <attribute name="POPULARITY" value="0" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DG408D-J" prefix="IC">
+<description>&lt;b&gt;ANALOG MULTIPLEXER&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="DG408" x="0" y="0"/>
+</gates>
+<devices>
+<device name="D" package="DIL16J">
+<connects>
+<connect gate="G$1" pin="A0" pad="1"/>
+<connect gate="G$1" pin="A1" pad="16"/>
+<connect gate="G$1" pin="A2" pad="15"/>
+<connect gate="G$1" pin="D" pad="8"/>
+<connect gate="G$1" pin="EN" pad="2"/>
+<connect gate="G$1" pin="GND" pad="14"/>
+<connect gate="G$1" pin="S1" pad="4"/>
+<connect gate="G$1" pin="S2" pad="5"/>
+<connect gate="G$1" pin="S3" pad="6"/>
+<connect gate="G$1" pin="S4" pad="7"/>
+<connect gate="G$1" pin="S5" pad="12"/>
+<connect gate="G$1" pin="S6" pad="11"/>
+<connect gate="G$1" pin="S7" pad="10"/>
+<connect gate="G$1" pin="S8" pad="9"/>
+<connect gate="G$1" pin="V+" pad="13"/>
+<connect gate="G$1" pin="V-" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>

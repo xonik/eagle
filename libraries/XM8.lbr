@@ -1252,7 +1252,7 @@ match</text>
 <wire x1="-1.27" y1="5.3975" x2="34.29" y2="5.3975" width="0.127" layer="21"/>
 <wire x1="34.29" y1="5.3975" x2="34.29" y2="3.81" width="0.127" layer="21"/>
 </package>
-<package name="XM8-SVF-CELL-V1.0H">
+<package name="XM8-SVF-CELL-V1.XH">
 <description>Xonik SVF Cell, horizontal mount</description>
 <wire x1="-1.27" y1="-3.175" x2="52.07" y2="-3.175" width="0.127" layer="21"/>
 <wire x1="52.07" y1="-3.175" x2="52.07" y2="16.51" width="0.127" layer="21"/>
@@ -1309,7 +1309,7 @@ match</text>
 <pad name="13" x="30.48" y="0" drill="1.016" shape="offset" rot="R270"/>
 <text x="31.115" y="1.5875" size="1.27" layer="25" font="vector" rot="R90">Bias</text>
 </package>
-<package name="XM8-SVF-CELL-V1.0V">
+<package name="XM8-SVF-CELL-V1.XV">
 <description>Xonik SVF Cell, vertical mount</description>
 <wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.127" layer="21"/>
 <wire x1="1.27" y1="0" x2="52.07" y2="0" width="0.127" layer="21"/>
@@ -3072,7 +3072,7 @@ match</text>
 <gate name="P" symbol="XM8-PWR" x="25.4" y="27.94"/>
 </gates>
 <devices>
-<device name="H" package="XM8-SVF-CELL-V1.0H">
+<device name="H" package="XM8-SVF-CELL-V1.XH">
 <connects>
 <connect gate="G$1" pin="BP" pad="10"/>
 <connect gate="G$1" pin="CUTOFF" pad="8"/>
@@ -3100,7 +3100,7 @@ match</text>
 <technology name=""/>
 </technologies>
 </device>
-<device name="V" package="XM8-SVF-CELL-V1.0V">
+<device name="V" package="XM8-SVF-CELL-V1.XV">
 <connects>
 <connect gate="G$1" pin="BP" pad="10"/>
 <connect gate="G$1" pin="CUTOFF" pad="8"/>
@@ -3578,7 +3578,7 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <gate name="P" symbol="XM8-PWR" x="25.4" y="27.94"/>
 </gates>
 <devices>
-<device name="H" package="XM8-SVF-CELL-V1.0H">
+<device name="H" package="XM8-SVF-CELL-V1.XH">
 <connects>
 <connect gate="G$1" pin="BP" pad="10"/>
 <connect gate="G$1" pin="CUTOFF" pad="8"/>
@@ -3606,7 +3606,7 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="V" package="XM8-SVF-CELL-V1.0V">
+<device name="V" package="XM8-SVF-CELL-V1.XV">
 <connects>
 <connect gate="G$1" pin="BP" pad="10"/>
 <connect gate="G$1" pin="CUTOFF" pad="8"/>
