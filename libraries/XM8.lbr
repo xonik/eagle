@@ -2259,7 +2259,7 @@ Distortion
 <rectangle x1="-15.5575" y1="13.77" x2="-14.9225" y2="14.405" layer="51"/>
 </package>
 <package name="XM8-JUNO-VCF-V1.2H-BOTTOM-DUAL">
-<description>Xonik Juno filter, mounted upside down. Card uses a C2894959 female header, motherboard uses a dual row C18198031 with the card connected to the top row and nothing connected to the bottom (gives better space between card and motherboard)</description>
+<description>Xonik Juno filter, mounted upside down. Card uses a C2894959 female header, motherboard uses a dual row C18198031 with the card connected to the top row and nothing connected to the bottom (gives better space between card and motherboard) NB: Wrong number, reduced to 16p/32p</description>
 <pad name="1" x="-20.32" y="-2.54" drill="1.016" shape="octagon" rot="R90"/>
 <pad name="2" x="-17.78" y="-2.54" drill="1.016" shape="octagon" rot="R90"/>
 <pad name="3" x="-15.24" y="-2.54" drill="1.016" shape="octagon" rot="R90"/>
