@@ -2441,6 +2441,54 @@ Distortion
 <wire x1="-27.94" y1="1.905" x2="-27.94" y2="2.921" width="0.127" layer="21"/>
 <wire x1="27.94" y1="1.905" x2="27.94" y2="2.921" width="0.127" layer="21"/>
 </package>
+<package name="XM8-BUX-MIX-V1.3V">
+<description>Xonik pre filter bus mixer, DG412 version with filter chain feedback</description>
+<wire x1="-43.18" y1="-1.905" x2="-40.64" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-40.64" y1="-1.905" x2="43.18" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="43.18" y1="-1.905" x2="43.18" y2="1.905" width="0.127" layer="21"/>
+<wire x1="43.18" y1="1.905" x2="-40.64" y2="1.905" width="0.127" layer="21"/>
+<wire x1="-40.64" y1="1.905" x2="-43.18" y2="1.905" width="0.127" layer="21"/>
+<wire x1="-43.18" y1="1.905" x2="-43.18" y2="-1.905" width="0.127" layer="21"/>
+<pad name="1" x="-41.91" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="2" x="-39.37" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="3" x="-36.83" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="4" x="-34.29" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="5" x="-31.75" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="6" x="-29.21" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="7" x="-26.67" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="8" x="-24.13" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="9" x="-21.59" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="10" x="-19.05" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="11" x="-16.51" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="12" x="-13.97" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="13" x="-11.43" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="14" x="-8.89" y="0" drill="1.016" shape="long" rot="R270"/>
+<wire x1="-40.64" y1="1.905" x2="-40.64" y2="-1.905" width="0.127" layer="21"/>
+<text x="-44.7675" y="-0.635" size="1.27" layer="21">1</text>
+<text x="-43.18" y="3.81" size="1.27" layer="25">&gt;NAME</text>
+<wire x1="-43.18" y1="1.905" x2="-43.18" y2="3.4925" width="0.127" layer="21"/>
+<wire x1="-43.18" y1="3.4925" x2="43.18" y2="3.4925" width="0.127" layer="21"/>
+<wire x1="43.18" y1="3.4925" x2="43.18" y2="1.905" width="0.127" layer="21"/>
+<pad name="15" x="-6.35" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="16" x="-3.81" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="17" x="-1.27" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="18" x="3.81" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="19" x="6.35" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="20" x="8.89" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="21" x="11.43" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="22" x="13.97" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="23" x="16.51" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="24" x="19.05" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="25" x="21.59" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="26" x="24.13" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="27" x="26.67" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="28" x="29.21" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="29" x="31.75" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="30" x="34.29" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="31" x="36.83" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="32" x="39.37" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="33" x="41.91" y="0" drill="1.016" shape="long" rot="R270"/>
+</package>
 </packages>
 <symbols>
 <symbol name="XM8-DCO-V1.4">
@@ -3378,7 +3426,7 @@ Distortion
 <pin name="SAW" x="17.78" y="7.62" length="short" rot="R180"/>
 <pin name="TRIANGLE" x="17.78" y="5.08" length="short" rot="R180"/>
 <pin name="SINE" x="17.78" y="2.54" length="short" rot="R180"/>
-<pin name="-2.5V" x="-17.78" y="12.7" length="short" direction="pwr"/>
+<pin name="-5V" x="-17.78" y="12.7" length="short" direction="pwr"/>
 <text x="-14.605" y="18.415" size="1.778" layer="95">&gt;NAME</text>
 <pin name="SAW2MAT2" x="-17.78" y="-5.08" length="short" direction="in"/>
 <pin name="SAW2MAT1" x="-17.78" y="-2.54" length="short" swaplevel="1"/>
@@ -3390,6 +3438,48 @@ Distortion
 <pin name="SUBSAW1" x="17.78" y="-2.54" length="short" rot="R180"/>
 <text x="14.605" y="-15.875" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
 <wire x1="-15.24" y1="17.78" x2="15.24" y2="17.78" width="0.254" layer="94"/>
+</symbol>
+<symbol name="XM8-BUS-MIX-V1.3">
+<description>Xonik State variable filter v1.1</description>
+<wire x1="-20.32" y1="-20.32" x2="20.32" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-20.32" x2="20.32" y2="17.78" width="0.254" layer="94"/>
+<wire x1="-20.32" y1="-20.32" x2="-20.32" y2="17.78" width="0.254" layer="94"/>
+<pin name="CV_OUT_A" x="-22.86" y="-10.16" length="short"/>
+<pin name="IN_FX_1" x="-22.86" y="-2.54" length="short"/>
+<pin name="IN5" x="-22.86" y="5.08" length="short"/>
+<pin name="IN3" x="-22.86" y="10.16" length="short"/>
+<pin name="CV_OUT_A_FX" x="-22.86" y="-12.7" length="short"/>
+<pin name="CV6" x="22.86" y="2.54" length="short" rot="R180"/>
+<pin name="CV_FX_1" x="22.86" y="-2.54" length="short" rot="R180"/>
+<pin name="CV2" x="22.86" y="12.7" length="short" rot="R180"/>
+<pin name="OUT_B" x="22.86" y="-17.78" length="short" rot="R180"/>
+<pin name="CV5" x="22.86" y="5.08" length="short" rot="R180"/>
+<text x="-19.685" y="18.415" size="1.778" layer="95">&gt;NAME</text>
+<pin name="IN4" x="-22.86" y="7.62" length="short" direction="in"/>
+<pin name="IN2" x="-22.86" y="12.7" length="short" swaplevel="1"/>
+<pin name="IN_FX_2" x="-22.86" y="-5.08" length="short" swaplevel="1"/>
+<pin name="IN1" x="-22.86" y="15.24" length="short" swaplevel="1"/>
+<pin name="CV_OUT_B" x="-22.86" y="-15.24" length="short"/>
+<pin name="IN6" x="-22.86" y="2.54" length="short"/>
+<pin name="CV1" x="22.86" y="15.24" length="short" rot="R180"/>
+<pin name="CV3" x="22.86" y="10.16" length="short" rot="R180"/>
+<pin name="CV4" x="22.86" y="7.62" length="short" rot="R180"/>
+<text x="19.685" y="-20.955" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
+<wire x1="-20.32" y1="17.78" x2="20.32" y2="17.78" width="0.254" layer="94"/>
+<pin name="OUT_A" x="22.86" y="-15.24" length="short" rot="R180"/>
+<pin name="CV_FX_2" x="22.86" y="-5.08" length="short" rot="R180"/>
+<pin name="CV_OUT_B_FX" x="-22.86" y="-17.78" length="short"/>
+<pin name="-12V" x="-7.62" y="20.32" length="short" direction="pwr" swaplevel="1" rot="R270"/>
+<pin name="DGND" x="2.54" y="20.32" length="short" direction="pwr" swaplevel="1" rot="R270"/>
+<pin name="SCL" x="0" y="-22.86" length="short" swaplevel="1" rot="R90"/>
+<pin name="AGND" x="-5.08" y="20.32" length="short" direction="pwr" swaplevel="1" rot="R270"/>
+<pin name="+12V" x="-2.54" y="20.32" length="short" direction="pwr" swaplevel="1" rot="R270"/>
+<pin name="+3V3" x="5.08" y="20.32" length="short" direction="pwr" swaplevel="1" rot="R270"/>
+<pin name="SDA" x="2.54" y="-22.86" length="short" swaplevel="1" rot="R90"/>
+<pin name="!RST" x="5.08" y="-22.86" length="short" swaplevel="1" rot="R90"/>
+<pin name="SUM_A" x="22.86" y="-10.16" length="short" rot="R180"/>
+<pin name="SUM_B" x="22.86" y="-12.7" length="short" rot="R180"/>
+<pin name="SVF_CHAIN" x="22.86" y="-7.62" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4966,7 +5056,7 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <devices>
 <device name="HR" package="XM8-WAVESHAPER-V2.2HR">
 <connects>
-<connect gate="G" pin="-2.5V" pad="11"/>
+<connect gate="G" pin="-5V" pad="11"/>
 <connect gate="G" pin="CENTER" pad="6"/>
 <connect gate="G" pin="DCOIN" pad="5"/>
 <connect gate="G" pin="PULSE" pad="3"/>
@@ -4995,7 +5085,7 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 </device>
 <device name="V" package="XM8-WAVESHAPER-V2.2V">
 <connects>
-<connect gate="G" pin="-2.5V" pad="11"/>
+<connect gate="G" pin="-5V" pad="11"/>
 <connect gate="G" pin="CENTER" pad="6"/>
 <connect gate="G" pin="DCOIN" pad="5"/>
 <connect gate="G" pin="PULSE" pad="3"/>
@@ -5017,6 +5107,56 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connect gate="P" pin="+V" pad="20"/>
 <connect gate="P" pin="-V" pad="22"/>
 <connect gate="P" pin="AGND" pad="21"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BUS-MIXER-V1.3" prefix="IC">
+<description>Pre filter source/fx mixer
+
+6 channel input / two bus output + 2 fx in/out with separate wet/dry amps for both busses and filter chain input (NB: Inverted)</description>
+<gates>
+<gate name="G" symbol="XM8-BUS-MIX-V1.3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="XM8-BUX-MIX-V1.3V">
+<connects>
+<connect gate="G" pin="!RST" pad="5"/>
+<connect gate="G" pin="+12V" pad="23"/>
+<connect gate="G" pin="+3V3" pad="1"/>
+<connect gate="G" pin="-12V" pad="25"/>
+<connect gate="G" pin="AGND" pad="24"/>
+<connect gate="G" pin="CV1" pad="8"/>
+<connect gate="G" pin="CV2" pad="9"/>
+<connect gate="G" pin="CV3" pad="10"/>
+<connect gate="G" pin="CV4" pad="11"/>
+<connect gate="G" pin="CV5" pad="28"/>
+<connect gate="G" pin="CV6" pad="29"/>
+<connect gate="G" pin="CV_FX_1" pad="30"/>
+<connect gate="G" pin="CV_FX_2" pad="31"/>
+<connect gate="G" pin="CV_OUT_A" pad="16"/>
+<connect gate="G" pin="CV_OUT_A_FX" pad="21"/>
+<connect gate="G" pin="CV_OUT_B" pad="18"/>
+<connect gate="G" pin="CV_OUT_B_FX" pad="22"/>
+<connect gate="G" pin="DGND" pad="4"/>
+<connect gate="G" pin="IN1" pad="6"/>
+<connect gate="G" pin="IN2" pad="7"/>
+<connect gate="G" pin="IN3" pad="12"/>
+<connect gate="G" pin="IN4" pad="13"/>
+<connect gate="G" pin="IN5" pad="26"/>
+<connect gate="G" pin="IN6" pad="27"/>
+<connect gate="G" pin="IN_FX_1" pad="32"/>
+<connect gate="G" pin="IN_FX_2" pad="33"/>
+<connect gate="G" pin="OUT_A" pad="19"/>
+<connect gate="G" pin="OUT_B" pad="20"/>
+<connect gate="G" pin="SCL" pad="3"/>
+<connect gate="G" pin="SDA" pad="2"/>
+<connect gate="G" pin="SUM_A" pad="14"/>
+<connect gate="G" pin="SUM_B" pad="15"/>
+<connect gate="G" pin="SVF_CHAIN" pad="17"/>
 </connects>
 <technologies>
 <technology name=""/>
