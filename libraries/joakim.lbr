@@ -38065,7 +38065,7 @@ Output up to 100 mA&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="ADS1115">
+<deviceset name="ADS1115" prefix="IC">
 <description>Texas Instruments ADS1115 4 channel I2C ADC</description>
 <gates>
 <gate name="G$1" symbol="ADS1115" x="0" y="0"/>
