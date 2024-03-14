@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -33,7 +33,7 @@
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
@@ -343,6 +343,24 @@ HS</text>
 <wire x1="-3.96875" y1="-6.0325" x2="-3.96875" y2="-5.55625" width="0.127" layer="25"/>
 <text x="-12.54125" y="-6.35" size="0.8128" layer="25" font="vector">CPW</text>
 <text x="-9.525" y="-6.35" size="0.8128" layer="25" font="vector">CP</text>
+<wire x1="-17.78" y1="8.89" x2="-18.1102" y2="8.89" width="0.127" layer="48"/>
+<wire x1="-18.1102" y1="8.89" x2="-18.1102" y2="6.35" width="0.127" layer="48"/>
+<wire x1="-18.1102" y1="6.35" x2="18.1102" y2="6.35" width="0.127" layer="48"/>
+<wire x1="18.1102" y1="6.35" x2="18.1102" y2="8.89" width="0.127" layer="48"/>
+<wire x1="18.1102" y1="8.89" x2="17.78" y2="8.89" width="0.127" layer="48"/>
+<wire x1="-17.78" y1="-8.89" x2="-18.1102" y2="-8.89" width="0.127" layer="48"/>
+<wire x1="-18.1102" y1="-8.89" x2="-18.1102" y2="-6.35" width="0.127" layer="48"/>
+<wire x1="-18.1102" y1="-6.35" x2="18.1102" y2="-6.35" width="0.127" layer="48"/>
+<wire x1="18.1102" y1="-6.35" x2="18.1102" y2="-8.89" width="0.127" layer="48"/>
+<wire x1="18.1102" y1="-8.89" x2="17.78" y2="-8.89" width="0.127" layer="48"/>
+<wire x1="-18.1102" y1="8.89" x2="18.1102" y2="8.89" width="0.127" layer="39"/>
+<wire x1="18.1102" y1="8.89" x2="18.1102" y2="6.35" width="0.127" layer="39"/>
+<wire x1="18.1102" y1="6.35" x2="-18.1102" y2="6.35" width="0.127" layer="39"/>
+<wire x1="-18.1102" y1="6.35" x2="-18.1102" y2="8.89" width="0.127" layer="39"/>
+<wire x1="-18.1102" y1="-6.35" x2="18.1102" y2="-6.35" width="0.127" layer="39"/>
+<wire x1="18.1102" y1="-6.35" x2="18.1102" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="18.1102" y1="-8.89" x2="-18.1102" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="-18.1102" y1="-8.89" x2="-18.1102" y2="-6.35" width="0.127" layer="39"/>
 </package>
 <package name="XM8-DISTORTION-V1.0H">
 <description>Xonik Hard/Soft clipping distortion, horizontal mount</description>
@@ -1433,42 +1451,48 @@ match</text>
 </package>
 <package name="XM8-WAVEFORM-MIXER-3364-V">
 <description>Xonik 4 channel waveform mixer with CV generation (AS3364), vertical mount</description>
-<wire x1="-20.32" y1="-1.905" x2="-17.78" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-20.6502" y1="-1.905" x2="-17.78" y2="-1.905" width="0.1524" layer="21"/>
 <wire x1="-17.78" y1="-1.905" x2="-12.7" y2="-1.905" width="0.1524" layer="21"/>
 <wire x1="-12.7" y1="-1.905" x2="8.89" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="8.89" y1="-1.905" x2="20.32" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="20.32" y1="-1.905" x2="20.32" y2="1.905" width="0.1524" layer="21"/>
-<pad name="1" x="-19.05" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="2" x="-16.51" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="3" x="-13.97" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="4" x="-11.43" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="5" x="-8.89" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="6" x="-6.35" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="7" x="-3.81" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="8" x="-1.27" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="9" x="1.27" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="10" x="3.81" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="11" x="6.35" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="12" x="8.89" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="13" x="11.43" y="0" drill="1.016" shape="long" rot="R270"/>
-<wire x1="-20.32" y1="1.905" x2="-20.32" y2="-1.905" width="0.1524" layer="21"/>
-<wire x1="-20.32" y1="1.905" x2="-17.78" y2="1.905" width="0.1524" layer="21"/>
-<wire x1="-17.78" y1="1.905" x2="20.32" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="8.89" y1="-1.905" x2="20.6502" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="20.6502" y1="-1.905" x2="20.6502" y2="1.905" width="0.1524" layer="21"/>
+<pad name="1" x="-19.05" y="0" drill="1.016" rot="R270"/>
+<pad name="2" x="-16.51" y="0" drill="1.016" rot="R270"/>
+<pad name="3" x="-13.97" y="0" drill="1.016" rot="R270"/>
+<pad name="4" x="-11.43" y="0" drill="1.016" rot="R270"/>
+<pad name="5" x="-8.89" y="0" drill="1.016" rot="R270"/>
+<pad name="6" x="-6.35" y="0" drill="1.016" rot="R270"/>
+<pad name="7" x="-3.81" y="0" drill="1.016" rot="R270"/>
+<pad name="8" x="-1.27" y="0" drill="1.016" rot="R270"/>
+<pad name="9" x="1.27" y="0" drill="1.016" rot="R270"/>
+<pad name="10" x="3.81" y="0" drill="1.016" rot="R270"/>
+<pad name="11" x="6.35" y="0" drill="1.016" rot="R270"/>
+<pad name="12" x="8.89" y="0" drill="1.016" rot="R270"/>
+<pad name="13" x="11.43" y="0" drill="1.016" rot="R270"/>
+<wire x1="-20.6502" y1="1.905" x2="-20.6502" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-20.6502" y1="1.905" x2="-17.78" y2="1.905" width="0.1524" layer="21"/>
+<wire x1="-17.78" y1="1.905" x2="20.6502" y2="1.905" width="0.1524" layer="21"/>
 <wire x1="-17.78" y1="1.905" x2="-17.78" y2="-1.905" width="0.1524" layer="21"/>
 <text x="-22.225" y="-0.635" size="1.27" layer="21">1</text>
-<pad name="14" x="13.97" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="14" x="13.97" y="0" drill="1.016" rot="R270"/>
+<wire x1="-20.6502" y1="1.905" x2="-20.32" y2="1.905" width="0.1524" layer="21"/>
 <wire x1="-20.32" y1="1.905" x2="-20.32" y2="3.4925" width="0.1524" layer="21"/>
 <wire x1="-20.32" y1="3.4925" x2="20.32" y2="3.4925" width="0.127" layer="21"/>
 <wire x1="20.32" y1="3.4925" x2="20.32" y2="1.905" width="0.127" layer="21"/>
+<wire x1="20.32" y1="1.905" x2="20.6502" y2="1.905" width="0.127" layer="21"/>
 <wire x1="-12.7" y1="-1.905" x2="-12.7" y2="-6.6675" width="0.127" layer="21"/>
 <wire x1="-12.7" y1="-6.6675" x2="8.89" y2="-6.6675" width="0.127" layer="21"/>
 <wire x1="8.89" y1="-6.6675" x2="8.89" y2="-1.905" width="0.127" layer="21"/>
-<pad name="15" x="16.51" y="0" drill="1.016" shape="long" rot="R270"/>
-<pad name="16" x="19.05" y="0" drill="1.016" shape="long" rot="R270"/>
+<pad name="15" x="16.51" y="0" drill="1.016" rot="R270"/>
+<pad name="16" x="19.05" y="0" drill="1.016" rot="R270"/>
 <text x="-20.32" y="4.445" size="1.27" layer="25">&gt;NAME</text>
 <text x="0.635" y="1.905" size="1.27" layer="21">C</text>
 <text x="3.175" y="1.905" size="1.27" layer="21">C</text>
 <text x="8.255" y="1.905" size="1.27" layer="21">C</text>
+<wire x1="-20.6502" y1="1.905" x2="20.6502" y2="1.905" width="0.127" layer="39"/>
+<wire x1="20.6502" y1="1.905" x2="20.6502" y2="-1.905" width="0.127" layer="39"/>
+<wire x1="20.6502" y1="-1.905" x2="-20.6502" y2="-1.905" width="0.127" layer="39"/>
+<wire x1="-20.6502" y1="-1.905" x2="-20.6502" y2="1.905" width="0.127" layer="39"/>
 </package>
 <package name="XM8-QUAD_AMP-3364-V">
 <description>Xonik quad linear VCA (AS3364), vertical mount</description>
@@ -1603,6 +1627,25 @@ match</text>
 <pad name="28" x="-17.78" y="6.985" drill="1.016" shape="octagon"/>
 <text x="-5.715" y="8.89" size="1.27" layer="21">C</text>
 <text x="-8.255" y="8.89" size="1.27" layer="21">C</text>
+<wire x1="-19.3802" y1="5.715" x2="16.8402" y2="5.715" width="0.127" layer="48"/>
+<wire x1="16.8402" y1="5.715" x2="16.8402" y2="8.255" width="0.127" layer="48"/>
+<wire x1="16.8402" y1="8.255" x2="16.51" y2="8.255" width="0.127" layer="48"/>
+<wire x1="-19.3802" y1="5.715" x2="-19.3802" y2="8.255" width="0.127" layer="48"/>
+<wire x1="-19.3802" y1="8.255" x2="-19.05" y2="8.255" width="0.127" layer="48"/>
+<wire x1="-19.05" y1="-6.985" x2="-19.3802" y2="-6.985" width="0.127" layer="48"/>
+<wire x1="-19.3802" y1="-6.985" x2="-19.3802" y2="-9.525" width="0.127" layer="48"/>
+<wire x1="-19.3802" y1="-9.525" x2="-18.415" y2="-9.525" width="0.127" layer="48"/>
+<wire x1="-19.05" y1="-6.985" x2="16.8402" y2="-6.985" width="0.127" layer="48"/>
+<wire x1="16.8402" y1="-6.985" x2="16.8402" y2="-9.525" width="0.127" layer="48"/>
+<wire x1="16.8402" y1="-9.525" x2="16.51" y2="-9.525" width="0.127" layer="48"/>
+<wire x1="-19.3802" y1="-6.985" x2="-19.3802" y2="-9.525" width="0.127" layer="39"/>
+<wire x1="-19.3802" y1="-9.525" x2="16.8402" y2="-9.525" width="0.127" layer="39"/>
+<wire x1="16.8402" y1="-9.525" x2="16.8402" y2="-6.985" width="0.127" layer="39"/>
+<wire x1="16.8402" y1="-6.985" x2="-19.3802" y2="-6.985" width="0.127" layer="39"/>
+<wire x1="-19.3802" y1="5.715" x2="16.8402" y2="5.715" width="0.127" layer="39"/>
+<wire x1="16.8402" y1="5.715" x2="16.8402" y2="8.255" width="0.127" layer="39"/>
+<wire x1="16.8402" y1="8.255" x2="-19.3802" y2="8.255" width="0.127" layer="39"/>
+<wire x1="-19.3802" y1="8.255" x2="-19.3802" y2="5.715" width="0.127" layer="39"/>
 </package>
 <package name="XM8-WAVEFORM-MIXER-VCA-3364-V">
 <description>Xonik 4 channel waveform mixer with CV generation (AS3364) and two separate VCAs, vertical mount</description>
@@ -2102,6 +2145,20 @@ Distortion
 <text x="10.795" y="6.35" size="1.27" layer="25" font="vector" rot="R270">D Out</text>
 <text x="9.525" y="-6.35" size="1.27" layer="25" font="vector" rot="R90">D in</text>
 <text x="12.065" y="-6.35" size="1.27" layer="25" font="vector" rot="R90">D CV</text>
+<wire x1="-10.4902" y1="-6.35" x2="13.0302" y2="-6.35" width="0.127" layer="39"/>
+<wire x1="13.0302" y1="-6.35" x2="13.0302" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="13.0302" y1="-8.89" x2="-10.4902" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="-10.4902" y1="-8.89" x2="-10.4902" y2="-6.35" width="0.127" layer="39"/>
+<wire x1="-10.4902" y1="8.89" x2="-10.4902" y2="6.35" width="0.127" layer="39"/>
+<wire x1="-10.4902" y1="6.35" x2="13.0302" y2="6.35" width="0.127" layer="39"/>
+<wire x1="13.0302" y1="6.35" x2="13.0302" y2="8.89" width="0.127" layer="39"/>
+<wire x1="13.0302" y1="8.89" x2="-10.4902" y2="8.89" width="0.127" layer="39"/>
+<wire x1="-10.4902" y1="8.89" x2="-10.4902" y2="6.35" width="0.127" layer="48"/>
+<wire x1="-10.4902" y1="6.35" x2="13.0302" y2="6.35" width="0.127" layer="48"/>
+<wire x1="13.0302" y1="6.35" x2="13.0302" y2="8.89" width="0.127" layer="48"/>
+<wire x1="-10.4902" y1="-8.89" x2="-10.4902" y2="-6.35" width="0.127" layer="48"/>
+<wire x1="-10.4902" y1="-6.35" x2="13.0302" y2="-6.35" width="0.127" layer="48"/>
+<wire x1="13.0302" y1="-6.35" x2="13.0302" y2="-8.89" width="0.127" layer="48"/>
 </package>
 <package name="XM8-RM-NOISE-DIST-V1.0N">
 <description>Combined ring modulator, distortion and noise module</description>
@@ -2162,10 +2219,14 @@ Distortion
 <wire x1="27.305" y1="-1.27" x2="-32.0675" y2="-1.27" width="0.127" layer="48"/>
 <wire x1="-32.0675" y1="-1.27" x2="-32.0675" y2="27.78125" width="0.127" layer="48"/>
 <wire x1="-32.0675" y1="27.78125" x2="25.24125" y2="27.78125" width="0.127" layer="48"/>
-<wire x1="-21.59" y1="-1.27" x2="-21.59" y2="1.27" width="0.127" layer="21"/>
-<wire x1="-21.59" y1="1.27" x2="21.59" y2="1.27" width="0.127" layer="21"/>
-<wire x1="21.59" y1="1.27" x2="21.59" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="21.59" y1="-1.27" x2="-21.59" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-21.9202" y1="-1.27" x2="-21.9202" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-21.9202" y1="1.27" x2="21.9202" y2="1.27" width="0.127" layer="21"/>
+<wire x1="21.9202" y1="1.27" x2="21.9202" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="21.9202" y1="-1.27" x2="-21.9202" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-21.9202" y1="-1.27" x2="-21.9202" y2="1.27" width="0.127" layer="39"/>
+<wire x1="-21.9202" y1="1.27" x2="21.9202" y2="1.27" width="0.127" layer="39"/>
+<wire x1="21.9202" y1="1.27" x2="21.9202" y2="-1.27" width="0.127" layer="39"/>
+<wire x1="21.9202" y1="-1.27" x2="-21.9202" y2="-1.27" width="0.127" layer="39"/>
 </package>
 <package name="XM8-MOOG-VCF-V1.2H-TOP">
 <description>Xonik Moog filter, top mount, card is mounted upside down.</description>
@@ -2197,10 +2258,14 @@ Distortion
 <wire x1="-11.7475" y1="1.905" x2="32.0675" y2="1.905" width="0.1524" layer="22"/>
 <pad name="15" x="15.24" y="0" drill="1.016" rot="R90"/>
 <pad name="16" x="17.78" y="0" drill="1.016" rot="R90"/>
-<wire x1="-21.59" y1="1.905" x2="19.05" y2="1.905" width="0.127" layer="21"/>
-<wire x1="19.05" y1="1.905" x2="19.05" y2="-1.905" width="0.127" layer="21"/>
-<wire x1="19.05" y1="-1.905" x2="-21.59" y2="-1.905" width="0.127" layer="21"/>
-<wire x1="-21.59" y1="-1.905" x2="-21.59" y2="1.905" width="0.127" layer="21"/>
+<wire x1="-21.9202" y1="1.905" x2="19.3802" y2="1.905" width="0.127" layer="21"/>
+<wire x1="19.3802" y1="1.905" x2="19.3802" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="19.3802" y1="-1.905" x2="-21.9202" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-21.9202" y1="-1.905" x2="-21.9202" y2="1.905" width="0.127" layer="21"/>
+<wire x1="-21.9202" y1="1.905" x2="19.3802" y2="1.905" width="0.127" layer="39"/>
+<wire x1="19.3802" y1="1.905" x2="19.3802" y2="-1.905" width="0.127" layer="39"/>
+<wire x1="19.3802" y1="-1.905" x2="-21.9202" y2="-1.905" width="0.127" layer="39"/>
+<wire x1="-21.9202" y1="-1.905" x2="-21.9202" y2="1.905" width="0.127" layer="39"/>
 </package>
 <package name="XM8-JUNO-VCF-V1.2H-BOTTOM">
 <description>Xonik Juno filter, mounted upside down. Motherboard uses a C2894959 female header, card uses a C2894959</description>
@@ -2333,6 +2398,10 @@ Distortion
 <wire x1="-20.955" y1="1.27" x2="-21.59" y2="0.635" width="0.127" layer="21"/>
 <wire x1="-21.59" y1="0.635" x2="-21.59" y2="-3.175" width="0.127" layer="21"/>
 <wire x1="-21.59" y1="-3.175" x2="-20.955" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-21.59" y1="1.27" x2="-21.59" y2="-3.81" width="0.127" layer="39"/>
+<wire x1="-21.59" y1="-3.81" x2="19.05" y2="-3.81" width="0.127" layer="39"/>
+<wire x1="19.05" y1="-3.81" x2="19.05" y2="1.27" width="0.127" layer="39"/>
+<wire x1="19.05" y1="1.27" x2="-21.59" y2="1.27" width="0.127" layer="39"/>
 </package>
 <package name="XM8-JUNO-VCF-V1.2H-TOP">
 <description>Xonik Juno filter, top mount, card is mounted upside down.</description>
@@ -2405,6 +2474,16 @@ Distortion
 <wire x1="25.4" y1="-1.905" x2="-27.94" y2="-1.905" width="0.127" layer="21"/>
 <wire x1="-27.94" y1="-1.905" x2="-27.94" y2="1.905" width="0.127" layer="21"/>
 <wire x1="25.4" y1="1.905" x2="25.4" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-28.2702" y1="1.905" x2="-28.2702" y2="-1.905" width="0.127" layer="39"/>
+<wire x1="-28.2702" y1="-1.905" x2="28.2702" y2="-1.905" width="0.127" layer="39"/>
+<wire x1="28.2702" y1="-1.905" x2="28.2702" y2="1.905" width="0.127" layer="39"/>
+<wire x1="28.2702" y1="1.905" x2="-28.2702" y2="1.905" width="0.127" layer="39"/>
+<wire x1="27.94" y1="1.905" x2="28.2702" y2="1.905" width="0.127" layer="48"/>
+<wire x1="28.2702" y1="1.905" x2="28.2702" y2="-1.905" width="0.127" layer="48"/>
+<wire x1="28.2702" y1="-1.905" x2="27.94" y2="-1.905" width="0.127" layer="48"/>
+<wire x1="-27.94" y1="1.905" x2="-28.2702" y2="1.905" width="0.127" layer="48"/>
+<wire x1="-28.2702" y1="1.905" x2="-28.2702" y2="-1.905" width="0.127" layer="48"/>
+<wire x1="-28.2702" y1="-1.905" x2="-27.94" y2="-1.905" width="0.127" layer="48"/>
 </package>
 <package name="XM8-WAVESHAPER-V2.2V">
 <description>Xonik Waveshaper V2.2 vertical</description>
@@ -2491,6 +2570,16 @@ Distortion
 <wire x1="-40.64" y1="-6.6675" x2="40.64" y2="-6.6675" width="0.127" layer="51"/>
 <wire x1="-40.64" y1="-1.905" x2="-40.64" y2="-6.6675" width="0.127" layer="51"/>
 <wire x1="40.64" y1="-6.6675" x2="40.64" y2="-1.905" width="0.127" layer="51"/>
+<wire x1="-43.18" y1="-1.905" x2="-43.5102" y2="-1.905" width="0.127" layer="48"/>
+<wire x1="-43.5102" y1="-1.905" x2="-43.5102" y2="1.905" width="0.127" layer="48"/>
+<wire x1="-43.5102" y1="1.905" x2="-43.18" y2="1.905" width="0.127" layer="48"/>
+<wire x1="-43.5102" y1="1.905" x2="-43.5102" y2="-1.905" width="0.127" layer="39"/>
+<wire x1="-43.5102" y1="-1.905" x2="43.5102" y2="-1.905" width="0.127" layer="39"/>
+<wire x1="43.5102" y1="-1.905" x2="43.5102" y2="1.905" width="0.127" layer="39"/>
+<wire x1="43.5102" y1="1.905" x2="-43.5102" y2="1.905" width="0.127" layer="39"/>
+<wire x1="43.18" y1="1.905" x2="43.5102" y2="1.905" width="0.127" layer="48"/>
+<wire x1="43.5102" y1="1.905" x2="43.5102" y2="-1.905" width="0.127" layer="48"/>
+<wire x1="43.5102" y1="-1.905" x2="43.18" y2="-1.905" width="0.127" layer="48"/>
 </package>
 </packages>
 <symbols>
