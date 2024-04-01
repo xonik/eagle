@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -5233,7 +5233,41 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <gate name="G" symbol="XM8-BUS-MIX-V1.3" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="XM8-BUX-MIX-V1.3V">
+<connects>
+<connect gate="G" pin="+12V" pad="22"/>
+<connect gate="G" pin="+3V3" pad="1"/>
+<connect gate="G" pin="-12V" pad="24"/>
+<connect gate="G" pin="AGND" pad="23"/>
+<connect gate="G" pin="CV1" pad="7"/>
+<connect gate="G" pin="CV2" pad="8"/>
+<connect gate="G" pin="CV3" pad="9"/>
+<connect gate="G" pin="CV4" pad="10"/>
+<connect gate="G" pin="CV5" pad="27"/>
+<connect gate="G" pin="CV6" pad="28"/>
+<connect gate="G" pin="CV_FX_1" pad="29"/>
+<connect gate="G" pin="CV_FX_2" pad="30"/>
+<connect gate="G" pin="CV_OUT_A" pad="15"/>
+<connect gate="G" pin="CV_OUT_A_FX" pad="20"/>
+<connect gate="G" pin="CV_OUT_B" pad="17"/>
+<connect gate="G" pin="CV_OUT_B_FX" pad="21"/>
+<connect gate="G" pin="DGND" pad="4"/>
+<connect gate="G" pin="IN1" pad="5"/>
+<connect gate="G" pin="IN2" pad="6"/>
+<connect gate="G" pin="IN3" pad="11"/>
+<connect gate="G" pin="IN4" pad="12"/>
+<connect gate="G" pin="IN5" pad="25"/>
+<connect gate="G" pin="IN6" pad="26"/>
+<connect gate="G" pin="IN_FX_1" pad="31"/>
+<connect gate="G" pin="IN_FX_2" pad="32"/>
+<connect gate="G" pin="OUT_A" pad="18"/>
+<connect gate="G" pin="OUT_B" pad="19"/>
+<connect gate="G" pin="SCL" pad="3"/>
+<connect gate="G" pin="SDA" pad="2"/>
+<connect gate="G" pin="SUM_A" pad="13"/>
+<connect gate="G" pin="SUM_B" pad="14"/>
+<connect gate="G" pin="SVF_CHAIN" pad="16"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
