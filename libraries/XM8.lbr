@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -2267,10 +2267,10 @@ Distortion
 <text x="16.1925" y="1.5875" size="1.27" layer="25" font="vector">&gt;NAME</text>
 <wire x1="-19.05" y1="1.27" x2="-19.05" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="34.925" y1="-1.27" x2="-22.2125" y2="-1.27" width="0.1524" layer="51"/>
-<wire x1="-22.2125" y1="-1.27" x2="-22.2125" y2="32.7025" width="0.1524" layer="51"/>
-<wire x1="-22.2125" y1="32.7025" x2="30.48" y2="32.7025" width="0.1524" layer="51"/>
-<wire x1="30.48" y1="32.7025" x2="34.925" y2="28.2448" width="0.1524" layer="51"/>
-<wire x1="34.925" y1="28.2448" x2="34.925" y2="-1.27" width="0.1524" layer="51"/>
+<wire x1="-22.2125" y1="-1.27" x2="-22.2125" y2="49.53" width="0.1524" layer="51"/>
+<wire x1="-22.2125" y1="49.53" x2="32.7025" y2="49.53" width="0.1524" layer="51"/>
+<wire x1="32.7025" y1="49.53" x2="34.925" y2="47.2948" width="0.1524" layer="51"/>
+<wire x1="34.925" y1="47.2948" x2="34.925" y2="-1.27" width="0.1524" layer="51"/>
 <pad name="15" x="15.24" y="0" drill="1.016" rot="R90"/>
 <pad name="16" x="17.78" y="0" drill="1.016" rot="R90"/>
 <wire x1="-21.9202" y1="1.27" x2="19.3802" y2="1.27" width="0.127" layer="21"/>
@@ -2281,6 +2281,8 @@ Distortion
 <wire x1="19.3802" y1="1.27" x2="19.3802" y2="-1.27" width="0.127" layer="39"/>
 <wire x1="19.3802" y1="-1.27" x2="-21.9202" y2="-1.27" width="0.127" layer="39"/>
 <wire x1="-21.9202" y1="-1.27" x2="-21.9202" y2="1.27" width="0.127" layer="39"/>
+<circle x="-19.20875" y="46.0375" radius="3" width="0.127" layer="51"/>
+<circle x="31.90875" y="46.0375" radius="3" width="0.127" layer="51"/>
 </package>
 <package name="XM8-JUNO-VCF-V1.2H-BOTTOM">
 <description>Xonik Juno filter, mounted upside down. Motherboard uses a C2894959 female header, card uses a C2894959</description>
