@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -2423,6 +2423,7 @@ Distortion
 <wire x1="19.3675" y1="1.54" x2="-21.9075" y2="1.54" width="0.127" layer="39"/>
 <circle x="-19.20875" y="40.64" radius="3" width="0.127" layer="51"/>
 <circle x="31.90875" y="40.64" radius="3" width="0.127" layer="51"/>
+<circle x="-19.20875" y="40.64" radius="3" width="0.127" layer="51"/>
 </package>
 <package name="XM8-JUNO-VCF-V1.2H-TOP">
 <description>Xonik Juno filter, top mount, card is mounted upside down.</description>
