@@ -26941,6 +26941,28 @@ Source: Texas Instruments ADS1115</description>
 <rectangle x1="-0.6256" y1="1.5" x2="-0.3756" y2="2.5" layer="51" rot="R180"/>
 <rectangle x1="-1.1256" y1="1.5" x2="-0.8756" y2="2.5" layer="51" rot="R180"/>
 </package>
+<package name="MA03-2-127J">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;
+1.27mm pitch, for example JLCPCB C2935951</description>
+<wire x1="1.905" y1="1.7" x2="-1.905" y2="1.7" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.7" x2="1.905" y2="-1.7" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.7" x2="-1.905" y2="-1.7" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.7" x2="-1.905" y2="-1.7" width="0.1524" layer="21"/>
+<pad name="1" x="-1.27" y="-0.635" drill="0.6"/>
+<pad name="3" x="0" y="-0.635" drill="0.6"/>
+<pad name="5" x="1.27" y="-0.635" drill="0.6"/>
+<pad name="2" x="-1.27" y="0.635" drill="0.6"/>
+<pad name="4" x="0" y="0.635" drill="0.6"/>
+<pad name="6" x="1.27" y="0.635" drill="0.6"/>
+<text x="-3.175" y="1.9685" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.4925" y="-3.2385" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.889" x2="0.254" y2="-0.381" layer="51"/>
+<rectangle x1="-1.524" y1="-0.889" x2="-1.016" y2="-0.381" layer="51"/>
+<rectangle x1="1.016" y1="-0.889" x2="1.524" y2="-0.381" layer="51"/>
+<rectangle x1="-1.524" y1="0.381" x2="-1.016" y2="0.889" layer="51"/>
+<rectangle x1="-0.254" y1="0.381" x2="0.254" y2="0.889" layer="51"/>
+<rectangle x1="1.016" y1="0.381" x2="1.524" y2="0.889" layer="51"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="PAK100/2500-10" urn="urn:adsk.eagle:package:5571/1" type="box">
@@ -32026,6 +32048,19 @@ http://docs-europe.electrocomponents.com/webdocs/10ad/0900766b810adbed.pdf</desc
 </technology>
 </technologies>
 </device>
+<device name="MINI" package="MA03-2-127J">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+<connect gate="1" pin="3" pad="3"/>
+<connect gate="1" pin="4" pad="4"/>
+<connect gate="1" pin="5" pad="5"/>
+<connect gate="1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="MA06-2J" prefix="X" uservalue="yes">
@@ -32405,7 +32440,7 @@ high speed (Philips)</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="C-OR-R">
+<deviceset name="C-OR-R" prefix="C">
 <description>Combined part for resistors and capacitors</description>
 <gates>
 <gate name="G$1" symbol="C-OR-R-J" x="0" y="0"/>
@@ -32474,7 +32509,7 @@ high speed (Philips)</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="C-EU-J">
+<deviceset name="C-EU-J" prefix="C">
 <description>&lt;B&gt;CAPACITOR&lt;/B&gt;, European symbol</description>
 <gates>
 <gate name="G$1" symbol="C-EU" x="0" y="2.54"/>
@@ -32489,7 +32524,7 @@ high speed (Philips)</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="" package="C0402-J">
+<device name="0402" package="C0402-J">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
