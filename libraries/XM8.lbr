@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="12.5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -2358,15 +2358,15 @@ Distortion
 <pad name="14" x="12.7" y="-2.54" drill="1.016" shape="octagon" rot="R90"/>
 <text x="-23.1775" y="-3.175" size="1.27" layer="25" font="vector">1</text>
 <text x="19.3675" y="-0.3175" size="1.27" layer="25" font="vector">&gt;NAME</text>
-<wire x1="34.925" y1="1.665" x2="-22.2125" y2="1.665" width="0.1524" layer="51"/>
+<wire x1="19.3675" y1="1.665" x2="-22.2125" y2="1.665" width="0.1524" layer="51"/>
 <wire x1="-22.2125" y1="1.665" x2="-22.2125" y2="44.1325" width="0.1524" layer="51"/>
 <wire x1="-22.2125" y1="44.1325" x2="32.7025" y2="44.1325" width="0.1524" layer="51"/>
 <wire x1="32.7025" y1="44.1325" x2="34.925" y2="41.98" width="0.1524" layer="51"/>
-<wire x1="34.925" y1="41.98" x2="34.925" y2="1.665" width="0.1524" layer="51"/>
+<wire x1="34.925" y1="41.98" x2="34.925" y2="13.4112" width="0.1524" layer="51"/>
 <wire x1="19.3675" y1="1.54" x2="-21.9075" y2="1.54" width="0.127" layer="51"/>
 <wire x1="-21.9075" y1="1.54" x2="-21.9075" y2="4.04" width="0.127" layer="51"/>
 <wire x1="-21.9075" y1="4.04" x2="-21.9075" y2="12.34" width="0.127" layer="51"/>
-<wire x1="19.3675" y1="1.54" x2="19.3675" y2="4.04" width="0.127" layer="51"/>
+<wire x1="19.3675" y1="1.54" x2="19.3675" y2="1.665" width="0.127" layer="51"/>
 <rectangle x1="-13.0175" y1="13.73" x2="-12.3825" y2="14.365" layer="51"/>
 <rectangle x1="-13.0175" y1="13.73" x2="-12.3825" y2="14.365" layer="51"/>
 <rectangle x1="-10.4775" y1="13.73" x2="-9.8425" y2="14.365" layer="51"/>
@@ -2389,7 +2389,9 @@ Distortion
 <rectangle x1="-20.6375" y1="13.73" x2="-20.0025" y2="14.365" layer="51"/>
 <rectangle x1="-18.0975" y1="13.73" x2="-17.4625" y2="14.365" layer="51"/>
 <rectangle x1="-15.5575" y1="13.73" x2="-14.9225" y2="14.365" layer="51"/>
-<wire x1="19.3675" y1="4.04" x2="19.3675" y2="12.34" width="0.127" layer="51"/>
+<wire x1="19.3675" y1="1.665" x2="19.3675" y2="4.04" width="0.127" layer="51"/>
+<wire x1="19.3675" y1="4.04" x2="19.3675" y2="12.1412" width="0.127" layer="51"/>
+<wire x1="19.3675" y1="12.1412" x2="19.3675" y2="12.34" width="0.127" layer="51"/>
 <wire x1="19.3675" y1="4.04" x2="-21.9075" y2="4.04" width="0.127" layer="51"/>
 <wire x1="19.3675" y1="12.34" x2="-21.9075" y2="12.34" width="0.127" layer="51"/>
 <pad name="18" x="-17.78" y="0" drill="1.016" shape="octagon" rot="R90"/>
@@ -2426,6 +2428,9 @@ Distortion
 <circle x="-19.20875" y="40.64" radius="3" width="0.127" layer="51"/>
 <circle x="31.90875" y="40.64" radius="3" width="0.127" layer="51"/>
 <circle x="-19.20875" y="40.64" radius="3" width="0.127" layer="51"/>
+<wire x1="19.3675" y1="1.665" x2="19.3675" y2="12.1412" width="0.127" layer="51"/>
+<wire x1="20.6375" y1="13.4112" x2="34.925" y2="13.4112" width="0.127" layer="51"/>
+<wire x1="19.3675" y1="12.1412" x2="20.6375" y2="13.4112" width="0.127" layer="51" curve="-90"/>
 </package>
 <package name="XM8-JUNO-VCF-V1.2H-TOP">
 <description>Xonik Juno filter, top mount, card is mounted upside down.</description>
