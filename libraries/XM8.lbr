@@ -2181,22 +2181,20 @@ Distortion
 </package>
 <package name="XM8-RM-NOISE-DIST-V1.1N">
 <description>Combined ring modulator, distortion and noise module</description>
-<pad name="1" x="-3.81" y="-7.62" drill="1.016" shape="octagon"/>
-<pad name="2" x="-1.27" y="-7.62" drill="1.016" shape="octagon"/>
-<pad name="3" x="1.27" y="-7.62" drill="1.016" shape="octagon"/>
-<pad name="4" x="3.81" y="-7.62" drill="1.016" shape="octagon"/>
-<pad name="5" x="6.35" y="-7.62" drill="1.016" shape="octagon"/>
-<pad name="6" x="8.89" y="-7.62" drill="1.016" shape="octagon"/>
-<pad name="7" x="11.43" y="-7.62" drill="1.016" shape="octagon"/>
-<pad name="8" x="11.43" y="7.62" drill="1.016" shape="octagon"/>
-<pad name="9" x="8.89" y="7.62" drill="1.016" shape="octagon"/>
-<pad name="10" x="6.35" y="7.62" drill="1.016" shape="octagon"/>
-<pad name="11" x="3.81" y="7.62" drill="1.016" shape="octagon"/>
-<pad name="12" x="1.27" y="7.62" drill="1.016" shape="octagon"/>
-<pad name="13" x="-1.27" y="7.62" drill="1.016" shape="octagon"/>
-<pad name="14" x="-3.81" y="7.62" drill="1.016" shape="octagon"/>
-<wire x1="-16.51" y1="8.89" x2="-5.08" y2="8.89" width="0.127" layer="51"/>
-<wire x1="-5.4102" y1="8.89" x2="13.0302" y2="8.89" width="0.127" layer="21"/>
+<pad name="1" x="-1.27" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="2" x="1.27" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="3" x="3.81" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="4" x="6.35" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="5" x="8.89" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="6" x="11.43" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="7" x="11.43" y="7.62" drill="1.016" shape="octagon"/>
+<pad name="8" x="8.89" y="7.62" drill="1.016" shape="octagon"/>
+<pad name="9" x="6.35" y="7.62" drill="1.016" shape="octagon"/>
+<pad name="10" x="3.81" y="7.62" drill="1.016" shape="octagon"/>
+<pad name="11" x="1.27" y="7.62" drill="1.016" shape="octagon"/>
+<pad name="12" x="-1.27" y="7.62" drill="1.016" shape="octagon"/>
+<wire x1="-16.51" y1="8.89" x2="-2.54" y2="8.89" width="0.127" layer="51"/>
+<wire x1="-2.8702" y1="8.89" x2="13.0302" y2="8.89" width="0.127" layer="21"/>
 <wire x1="2.54" y1="8.89" x2="5.715" y2="12.065" width="0.127" layer="51"/>
 <wire x1="5.715" y1="12.065" x2="22.225" y2="12.065" width="0.127" layer="51"/>
 <wire x1="22.225" y1="12.065" x2="25.4" y2="8.89" width="0.127" layer="51"/>
@@ -2206,23 +2204,23 @@ Distortion
 <wire x1="25.4" y1="-8.89" x2="22.225" y2="-12.065" width="0.127" layer="51"/>
 <wire x1="22.225" y1="-12.065" x2="5.715" y2="-12.065" width="0.127" layer="51"/>
 <wire x1="5.715" y1="-12.065" x2="2.54" y2="-8.89" width="0.127" layer="51"/>
-<wire x1="13.0302" y1="-8.89" x2="-5.4102" y2="-8.89" width="0.127" layer="21"/>
-<wire x1="-5.08" y1="-8.89" x2="-16.51" y2="-8.89" width="0.127" layer="51"/>
+<wire x1="13.0302" y1="-8.89" x2="-2.8702" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="-2.54" y1="-8.89" x2="-16.51" y2="-8.89" width="0.127" layer="51"/>
 <wire x1="-16.51" y1="-8.89" x2="-16.51" y2="8.89" width="0.127" layer="51"/>
-<wire x1="-5.4102" y1="8.89" x2="-5.4102" y2="6.35" width="0.127" layer="21"/>
-<wire x1="-5.4102" y1="6.35" x2="13.0302" y2="6.35" width="0.127" layer="21"/>
-<wire x1="-5.4102" y1="-8.89" x2="-5.4102" y2="-6.35" width="0.127" layer="21"/>
-<wire x1="-5.4102" y1="-6.35" x2="13.0302" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="-2.8702" y1="8.89" x2="-2.8702" y2="6.35" width="0.127" layer="21"/>
+<wire x1="-2.8702" y1="6.35" x2="13.0302" y2="6.35" width="0.127" layer="21"/>
+<wire x1="-2.8702" y1="-8.89" x2="-2.8702" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="-2.8702" y1="-6.35" x2="13.0302" y2="-6.35" width="0.127" layer="21"/>
 <wire x1="13.0302" y1="-6.35" x2="13.0302" y2="-8.89" width="0.127" layer="21"/>
 <wire x1="13.0302" y1="8.89" x2="13.0302" y2="6.35" width="0.127" layer="21"/>
-<wire x1="-5.4102" y1="8.89" x2="13.0302" y2="8.89" width="0.127" layer="39"/>
+<wire x1="-2.8702" y1="8.89" x2="13.0302" y2="8.89" width="0.127" layer="39"/>
 <wire x1="13.0302" y1="8.89" x2="13.0302" y2="6.35" width="0.127" layer="39"/>
-<wire x1="13.0302" y1="6.35" x2="-5.4102" y2="6.35" width="0.127" layer="39"/>
-<wire x1="-5.4102" y1="6.35" x2="-5.4102" y2="8.89" width="0.127" layer="39"/>
-<wire x1="-5.4102" y1="-6.35" x2="13.0302" y2="-6.35" width="0.127" layer="39"/>
+<wire x1="13.0302" y1="6.35" x2="-2.8702" y2="6.35" width="0.127" layer="39"/>
+<wire x1="-2.8702" y1="6.35" x2="-2.8702" y2="8.89" width="0.127" layer="39"/>
+<wire x1="-2.8702" y1="-6.35" x2="13.0302" y2="-6.35" width="0.127" layer="39"/>
 <wire x1="13.0302" y1="-6.35" x2="13.0302" y2="-8.89" width="0.127" layer="39"/>
-<wire x1="13.0302" y1="-8.89" x2="-5.4102" y2="-8.89" width="0.127" layer="39"/>
-<wire x1="-5.4102" y1="-8.89" x2="-5.4102" y2="-6.35" width="0.127" layer="39"/>
+<wire x1="13.0302" y1="-8.89" x2="-2.8702" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="-2.8702" y1="-8.89" x2="-2.8702" y2="-6.35" width="0.127" layer="39"/>
 </package>
 <package name="XM8-SVF-V2.0R">
 <description>Xonik State variable filter v2.0, components downward mount</description>
@@ -3673,6 +3671,19 @@ Distortion
 <wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
 <wire x1="5.08" y1="5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
 <pin name="OUT" x="-7.62" y="-2.54" length="short"/>
+</symbol>
+<symbol name="XM8-NOISE-V2.2">
+<description>Xonik Triple Noise</description>
+<wire x1="-5.08" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
+<pin name="WHITE" x="-7.62" y="2.54" length="short"/>
+<pin name="PINK" x="-7.62" y="0" length="short"/>
+<pin name="RED" x="-7.62" y="-2.54" length="short"/>
+<text x="-4.445" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="4.445" y="-5.715" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
+<wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5358,28 +5369,26 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 </deviceset>
 <deviceset name="RM-NOISE-DIST-V1.1" prefix="IC">
 <gates>
-<gate name="NOISE" symbol="XM8-NOISE-V2.1" x="-40.64" y="15.24"/>
 <gate name="P" symbol="XM8-PWR" x="-2.54" y="17.78"/>
 <gate name="DIST" symbol="XM8-DISTORTION-V1.3" x="7.62" y="22.86"/>
 <gate name="RM" symbol="XM8-RING-MOD-V2.1" x="-17.78" y="22.86"/>
+<gate name="G$1" symbol="XM8-NOISE-V2.2" x="-40.64" y="22.86"/>
 </gates>
 <devices>
 <device name="" package="XM8-RM-NOISE-DIST-V1.1N">
 <connects>
-<connect gate="DIST" pin="DISTCV" pad="7"/>
-<connect gate="DIST" pin="IN" pad="6"/>
-<connect gate="DIST" pin="OUT" pad="8"/>
-<connect gate="NOISE" pin="PINK" pad="12"/>
-<connect gate="NOISE" pin="RED" pad="4"/>
-<connect gate="NOISE" pin="TRIM1" pad="3"/>
-<connect gate="NOISE" pin="TRIM2" pad="2"/>
-<connect gate="NOISE" pin="WHITE" pad="13"/>
-<connect gate="P" pin="+V" pad="14"/>
+<connect gate="DIST" pin="DISTCV" pad="6"/>
+<connect gate="DIST" pin="IN" pad="5"/>
+<connect gate="DIST" pin="OUT" pad="7"/>
+<connect gate="G$1" pin="PINK" pad="2"/>
+<connect gate="G$1" pin="RED" pad="3"/>
+<connect gate="G$1" pin="WHITE" pad="11"/>
+<connect gate="P" pin="+V" pad="12"/>
 <connect gate="P" pin="-V" pad="1"/>
-<connect gate="P" pin="AGND" pad="11"/>
-<connect gate="RM" pin="CARRIER" pad="10"/>
-<connect gate="RM" pin="OUT" pad="9"/>
-<connect gate="RM" pin="SIGNAL" pad="5"/>
+<connect gate="P" pin="AGND" pad="10"/>
+<connect gate="RM" pin="CARRIER" pad="9"/>
+<connect gate="RM" pin="OUT" pad="8"/>
+<connect gate="RM" pin="SIGNAL" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
