@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -3548,9 +3548,9 @@ Distortion
 </symbol>
 <symbol name="XM8-JUNO-VCF-V1.2">
 <description>Xonik Swappable Filter</description>
-<wire x1="-15.24" y1="-12.7" x2="15.24" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-12.7" x2="15.24" y2="20.32" width="0.254" layer="94"/>
-<wire x1="-15.24" y1="-12.7" x2="-15.24" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-10.16" x2="15.24" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-10.16" x2="15.24" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-10.16" x2="-15.24" y2="20.32" width="0.254" layer="94"/>
 <pin name="INPUT" x="-17.78" y="17.78" length="short"/>
 <pin name="RESOCV" x="-17.78" y="7.62" length="short"/>
 <pin name="LINFM" x="-17.78" y="10.16" length="short"/>
@@ -3560,11 +3560,10 @@ Distortion
 <pin name="VCABAL-" x="-17.78" y="-7.62" length="short"/>
 <text x="-14.605" y="20.955" size="1.778" layer="95">&gt;NAME</text>
 <pin name="POLES" x="17.78" y="12.7" length="short" rot="R180"/>
-<text x="14.605" y="-13.335" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
+<text x="14.605" y="-10.795" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
 <wire x1="-15.24" y1="20.32" x2="15.24" y2="20.32" width="0.254" layer="94"/>
 <pin name="TS_VDD" x="17.78" y="-5.08" length="short" rot="R180"/>
 <pin name="TS_SENSE" x="17.78" y="-7.62" length="short" rot="R180"/>
-<pin name="TS_GND" x="17.78" y="-10.16" length="short" rot="R180"/>
 <pin name="VCA_OUT" x="17.78" y="0" length="short" rot="R180"/>
 <pin name="VCA_IN" x="-17.78" y="0" length="short"/>
 </symbol>
@@ -5157,9 +5156,8 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connect gate="C" pin="OUTPUT" pad="9"/>
 <connect gate="C" pin="POLES" pad="1"/>
 <connect gate="C" pin="RESOCV" pad="10"/>
-<connect gate="C" pin="TS_GND" pad="15"/>
 <connect gate="C" pin="TS_SENSE" pad="14"/>
-<connect gate="C" pin="TS_VDD" pad="16"/>
+<connect gate="C" pin="TS_VDD" pad="15"/>
 <connect gate="C" pin="VCABAL-" pad="7"/>
 <connect gate="C" pin="VCACV" pad="5"/>
 <connect gate="C" pin="VCA_IN" pad="8"/>
@@ -5179,10 +5177,9 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connect gate="C" pin="LINFM" pad="13"/>
 <connect gate="C" pin="OUTPUT" pad="9"/>
 <connect gate="C" pin="POLES" pad="1"/>
-<connect gate="C" pin="RESOCV" pad="10 26"/>
-<connect gate="C" pin="TS_GND" pad="15"/>
+<connect gate="C" pin="RESOCV" pad="10"/>
 <connect gate="C" pin="TS_SENSE" pad="14"/>
-<connect gate="C" pin="TS_VDD" pad="16"/>
+<connect gate="C" pin="TS_VDD" pad="15"/>
 <connect gate="C" pin="VCABAL-" pad="7 23"/>
 <connect gate="C" pin="VCACV" pad="5"/>
 <connect gate="C" pin="VCA_IN" pad="8 24"/>
@@ -5203,9 +5200,8 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connect gate="C" pin="OUTPUT" pad="9"/>
 <connect gate="C" pin="POLES" pad="1"/>
 <connect gate="C" pin="RESOCV" pad="10"/>
-<connect gate="C" pin="TS_GND" pad="15"/>
 <connect gate="C" pin="TS_SENSE" pad="14"/>
-<connect gate="C" pin="TS_VDD" pad="16"/>
+<connect gate="C" pin="TS_VDD" pad="15"/>
 <connect gate="C" pin="VCABAL-" pad="7"/>
 <connect gate="C" pin="VCACV" pad="5"/>
 <connect gate="C" pin="VCA_IN" pad="8"/>
