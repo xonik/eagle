@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -2224,36 +2224,35 @@ Distortion
 </package>
 <package name="XM8-SVF-V2.0R">
 <description>Xonik State variable filter v2.0, components downward mount</description>
-<pad name="1" x="20.32" y="0" drill="1.016" shape="octagon"/>
-<pad name="2" x="17.78" y="0" drill="1.016" shape="octagon"/>
-<pad name="3" x="15.24" y="0" drill="1.016" shape="octagon"/>
-<pad name="4" x="12.7" y="0" drill="1.016" shape="octagon"/>
-<pad name="5" x="10.16" y="0" drill="1.016" shape="octagon"/>
-<pad name="6" x="7.62" y="0" drill="1.016" shape="octagon"/>
-<pad name="7" x="5.08" y="0" drill="1.016" shape="octagon"/>
-<pad name="8" x="2.54" y="0" drill="1.016" shape="octagon"/>
-<pad name="9" x="0" y="0" drill="1.016" shape="octagon"/>
-<pad name="10" x="-2.54" y="0" drill="1.016" shape="octagon"/>
-<pad name="11" x="-5.08" y="0" drill="1.016" shape="octagon"/>
-<pad name="12" x="-7.62" y="0" drill="1.016" shape="octagon"/>
-<pad name="13" x="-10.16" y="0" drill="1.016" shape="octagon"/>
-<pad name="14" x="-12.7" y="0" drill="1.016" shape="octagon"/>
-<pad name="15" x="-15.24" y="0" drill="1.016" shape="octagon"/>
-<pad name="16" x="-17.78" y="0" drill="1.016" shape="octagon"/>
-<pad name="17" x="-20.32" y="0" drill="1.016" shape="octagon"/>
+<pad name="1" x="17.78" y="0" drill="1.016" shape="octagon"/>
+<pad name="2" x="15.24" y="0" drill="1.016" shape="octagon"/>
+<pad name="3" x="12.7" y="0" drill="1.016" shape="octagon"/>
+<pad name="4" x="10.16" y="0" drill="1.016" shape="octagon"/>
+<pad name="5" x="7.62" y="0" drill="1.016" shape="octagon"/>
+<pad name="6" x="5.08" y="0" drill="1.016" shape="octagon"/>
+<pad name="7" x="2.54" y="0" drill="1.016" shape="octagon"/>
+<pad name="8" x="0" y="0" drill="1.016" shape="octagon"/>
+<pad name="9" x="-2.54" y="0" drill="1.016" shape="octagon"/>
+<pad name="10" x="-5.08" y="0" drill="1.016" shape="octagon"/>
+<pad name="11" x="-7.62" y="0" drill="1.016" shape="octagon"/>
+<pad name="12" x="-10.16" y="0" drill="1.016" shape="octagon"/>
+<pad name="13" x="-12.7" y="0" drill="1.016" shape="octagon"/>
+<pad name="14" x="-15.24" y="0" drill="1.016" shape="octagon"/>
+<pad name="15" x="-17.78" y="0" drill="1.016" shape="octagon"/>
+<pad name="16" x="-20.32" y="0" drill="1.016" shape="octagon"/>
 <wire x1="25.24125" y1="27.78125" x2="27.305" y2="25.7175" width="0.127" layer="51"/>
 <wire x1="27.305" y1="25.7175" x2="27.305" y2="-1.27" width="0.127" layer="51"/>
 <wire x1="27.305" y1="-1.27" x2="-32.0675" y2="-1.27" width="0.127" layer="51"/>
 <wire x1="-32.0675" y1="-1.27" x2="-32.0675" y2="27.78125" width="0.127" layer="51"/>
 <wire x1="-32.0675" y1="27.78125" x2="25.24125" y2="27.78125" width="0.127" layer="51"/>
 <wire x1="-21.9202" y1="-1.27" x2="-21.9202" y2="1.27" width="0.127" layer="21"/>
-<wire x1="-21.9202" y1="1.27" x2="21.9202" y2="1.27" width="0.127" layer="21"/>
-<wire x1="21.9202" y1="1.27" x2="21.9202" y2="-1.27" width="0.127" layer="21"/>
-<wire x1="21.9202" y1="-1.27" x2="-21.9202" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="-21.9202" y1="1.27" x2="19.3802" y2="1.27" width="0.127" layer="21"/>
+<wire x1="19.3802" y1="1.27" x2="19.3802" y2="-1.27" width="0.127" layer="21"/>
+<wire x1="19.3802" y1="-1.27" x2="-21.9202" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="-21.9202" y1="-1.27" x2="-21.9202" y2="1.27" width="0.127" layer="39"/>
-<wire x1="-21.9202" y1="1.27" x2="21.9202" y2="1.27" width="0.127" layer="39"/>
-<wire x1="21.9202" y1="1.27" x2="21.9202" y2="-1.27" width="0.127" layer="39"/>
-<wire x1="21.9202" y1="-1.27" x2="-21.9202" y2="-1.27" width="0.127" layer="39"/>
+<wire x1="-21.9202" y1="1.27" x2="19.3802" y2="1.27" width="0.127" layer="39"/>
+<wire x1="19.3802" y1="1.27" x2="19.3802" y2="-1.27" width="0.127" layer="39"/>
+<wire x1="19.3802" y1="-1.27" x2="-21.9202" y2="-1.27" width="0.127" layer="39"/>
 </package>
 <package name="XM8-MOOG-VCF-V1.2H-TOP">
 <description>Xonik Moog filter, top mount, card is mounted upside down.</description>
@@ -2477,11 +2476,11 @@ Distortion
 </package>
 <package name="XM8-WAVESHAPER-V2.2HR">
 <description>Xonik Waveshaper V2.2 with component side down</description>
-<wire x1="27.94" y1="-3.4925" x2="-27.94" y2="-3.4925" width="0.127" layer="51"/>
-<wire x1="-27.94" y1="-3.4925" x2="-27.94" y2="19.685" width="0.127" layer="51"/>
+<wire x1="27.94" y1="-1.27" x2="-27.94" y2="-1.27" width="0.127" layer="51"/>
+<wire x1="-27.94" y1="-1.27" x2="-27.94" y2="19.685" width="0.127" layer="51"/>
 <wire x1="-27.94" y1="19.685" x2="26.035" y2="19.685" width="0.127" layer="51"/>
 <wire x1="26.035" y1="19.685" x2="27.94" y2="17.78" width="0.127" layer="51"/>
-<wire x1="27.94" y1="17.78" x2="27.94" y2="-3.4925" width="0.127" layer="51"/>
+<wire x1="27.94" y1="17.78" x2="27.94" y2="-1.27" width="0.127" layer="51"/>
 <pad name="1" x="26.67" y="0" drill="1.016" rot="R90"/>
 <pad name="2" x="24.13" y="0" drill="1.016" rot="R90"/>
 <pad name="3" x="21.59" y="0" drill="1.016" rot="R90"/>
@@ -3539,7 +3538,6 @@ Distortion
 <pin name="HP1" x="17.78" y="12.7" length="short" swaplevel="1" rot="R180"/>
 <pin name="LP2" x="17.78" y="-2.54" length="short" swaplevel="1" rot="R180"/>
 <pin name="IN1" x="-17.78" y="12.7" length="short" swaplevel="1"/>
-<pin name="TS_GND" x="17.78" y="-12.7" length="short" rot="R180"/>
 <pin name="HP2" x="17.78" y="2.54" length="short" rot="R180"/>
 <pin name="RESO_CV" x="-17.78" y="-12.7" length="short"/>
 <text x="14.605" y="-15.875" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
@@ -5117,23 +5115,22 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <devices>
 <device name="" package="XM8-SVF-V2.0R">
 <connects>
-<connect gate="C" pin="BP1" pad="7"/>
-<connect gate="C" pin="BP2" pad="13"/>
-<connect gate="C" pin="CUTOFF_CV" pad="9"/>
-<connect gate="C" pin="HP1" pad="6"/>
-<connect gate="C" pin="HP2" pad="12"/>
+<connect gate="C" pin="BP1" pad="6"/>
+<connect gate="C" pin="BP2" pad="12"/>
+<connect gate="C" pin="CUTOFF_CV" pad="8"/>
+<connect gate="C" pin="HP1" pad="5"/>
+<connect gate="C" pin="HP2" pad="11"/>
 <connect gate="C" pin="IN1" pad="1"/>
-<connect gate="C" pin="IN2" pad="11"/>
-<connect gate="C" pin="LIN_FM" pad="5"/>
-<connect gate="C" pin="LP1" pad="8"/>
-<connect gate="C" pin="LP2" pad="14"/>
-<connect gate="C" pin="RESO_CV" pad="10"/>
-<connect gate="C" pin="TS_GND" pad="4"/>
+<connect gate="C" pin="IN2" pad="10"/>
+<connect gate="C" pin="LIN_FM" pad="4"/>
+<connect gate="C" pin="LP1" pad="7"/>
+<connect gate="C" pin="LP2" pad="13"/>
+<connect gate="C" pin="RESO_CV" pad="9"/>
 <connect gate="C" pin="TS_VDD" pad="3"/>
 <connect gate="C" pin="T_SENSE" pad="2"/>
-<connect gate="P" pin="+V" pad="15"/>
-<connect gate="P" pin="-V" pad="17"/>
-<connect gate="P" pin="AGND" pad="16"/>
+<connect gate="P" pin="+V" pad="14"/>
+<connect gate="P" pin="-V" pad="16"/>
+<connect gate="P" pin="AGND" pad="15"/>
 </connects>
 <technologies>
 <technology name=""/>
