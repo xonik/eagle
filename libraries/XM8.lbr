@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="25" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -2680,6 +2680,45 @@ Distortion
 <wire x1="13.0302" y1="-8.89" x2="-10.4902" y2="-8.89" width="0.127" layer="39"/>
 <wire x1="-10.4902" y1="-8.89" x2="-10.4902" y2="-6.35" width="0.127" layer="39"/>
 </package>
+<package name="XM8-CEM3340-V2.0">
+<description>Xonik VCO v2.0</description>
+<wire x1="-18.0975" y1="-8.89" x2="18.0975" y2="-8.89" width="0.1524" layer="21"/>
+<wire x1="-18.0975" y1="-8.89" x2="-18.0975" y2="-5.08" width="0.1524" layer="21"/>
+<wire x1="-18.0975" y1="-5.08" x2="-18.0975" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="-18.0975" y1="-2.54" x2="-18.0975" y2="2.54" width="0.1524" layer="21"/>
+<wire x1="-18.0975" y1="2.54" x2="-18.0975" y2="8.89" width="0.1524" layer="21"/>
+<wire x1="18.0975" y1="8.89" x2="18.0975" y2="-5.08" width="0.1524" layer="21"/>
+<wire x1="18.0975" y1="-5.08" x2="18.0975" y2="-8.89" width="0.1524" layer="21"/>
+<wire x1="-18.0975" y1="8.89" x2="18.0975" y2="8.89" width="0.1524" layer="21"/>
+<pad name="1" x="-8.89" y="-7.62" drill="1.016" shape="square"/>
+<pad name="2" x="-6.35" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="3" x="-3.81" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="4" x="-1.27" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="5" x="1.27" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="6" x="3.81" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="7" x="3.81" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="8" x="1.27" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="9" x="-1.27" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="10" x="-3.81" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="11" x="-6.35" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="12" x="-8.89" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<wire x1="-18.0975" y1="2.54" x2="-18.0975" y2="-2.54" width="0.127" layer="21" curve="-180"/>
+<text x="-19.05" y="-8.89" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
+<wire x1="-10.4902" y1="8.89" x2="-10.4902" y2="6.35" width="0.127" layer="48"/>
+<wire x1="-10.4902" y1="6.35" x2="5.4102" y2="6.35" width="0.127" layer="48"/>
+<wire x1="5.4102" y1="6.35" x2="5.4102" y2="8.89" width="0.127" layer="48"/>
+<wire x1="-10.4902" y1="-8.89" x2="-10.4902" y2="-6.35" width="0.127" layer="48"/>
+<wire x1="-10.4902" y1="-6.35" x2="5.4102" y2="-6.35" width="0.127" layer="48"/>
+<wire x1="5.4102" y1="-6.35" x2="5.4102" y2="-8.89" width="0.127" layer="48"/>
+<wire x1="-10.4902" y1="8.89" x2="5.4102" y2="8.89" width="0.127" layer="39"/>
+<wire x1="5.4102" y1="8.89" x2="5.4102" y2="6.35" width="0.127" layer="39"/>
+<wire x1="5.4102" y1="6.35" x2="-10.4902" y2="6.35" width="0.127" layer="39"/>
+<wire x1="-10.4902" y1="6.35" x2="-10.4902" y2="8.89" width="0.127" layer="39"/>
+<wire x1="-10.4902" y1="-6.35" x2="5.4102" y2="-6.35" width="0.127" layer="39"/>
+<wire x1="5.4102" y1="-6.35" x2="5.4102" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="5.4102" y1="-8.89" x2="-10.4902" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="-10.4902" y1="-8.89" x2="-10.4902" y2="-6.35" width="0.127" layer="39"/>
+</package>
 </packages>
 <symbols>
 <symbol name="XM8-DCO-V1.4">
@@ -3693,6 +3732,26 @@ Distortion
 <text x="4.445" y="-5.715" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
 <wire x1="-5.08" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
 <wire x1="5.08" y1="5.08" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="XM8-CEM3340-V2.0">
+<description>Xonik CEM3340 based VCO v2.0</description>
+<wire x1="-15.24" y1="-15.24" x2="15.24" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-15.24" x2="15.24" y2="17.78" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-15.24" x2="-15.24" y2="17.78" width="0.254" layer="94"/>
+<wire x1="15.24" y1="17.78" x2="0.635" y2="17.78" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="17.78" x2="-15.24" y2="17.78" width="0.254" layer="94"/>
+<wire x1="-0.635" y1="17.78" x2="0.635" y2="17.78" width="0.254" layer="94" curve="180"/>
+<pin name="CEMHSYNC" x="-17.78" y="5.08" length="short"/>
+<pin name="HSYNC" x="-17.78" y="2.54" length="short"/>
+<pin name="PW" x="-17.78" y="-5.08" length="short"/>
+<pin name="SAW" x="-17.78" y="-7.62" length="short"/>
+<pin name="TRI" x="-17.78" y="-12.7" length="short"/>
+<pin name="PULSE" x="17.78" y="-12.7" length="short" rot="R180"/>
+<pin name="PULSEAMP" x="17.78" y="-10.16" length="short" rot="R180"/>
+<text x="-14.605" y="18.415" size="1.778" layer="95">&gt;NAME</text>
+<pin name="LINFM" x="17.78" y="5.08" length="short" rot="R180"/>
+<pin name="EXPFM" x="17.78" y="10.16" length="short" rot="R180"/>
+<text x="14.605" y="-15.875" size="1.778" layer="95" rot="R180">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -5393,6 +5452,33 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connect gate="RM" pin="CARRIER" pad="9"/>
 <connect gate="RM" pin="OUT" pad="8"/>
 <connect gate="RM" pin="SIGNAL" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VCO-V2.0" prefix="IC">
+<gates>
+<gate name="C" symbol="XM8-CEM3340-V2.0" x="0" y="0"/>
+<gate name="P" symbol="XM8-PWR" x="27.94" y="0"/>
+</gates>
+<devices>
+<device name="" package="XM8-CEM3340-V2.0">
+<connects>
+<connect gate="C" pin="CEMHSYNC" pad="3"/>
+<connect gate="C" pin="EXPFM" pad="12"/>
+<connect gate="C" pin="HSYNC" pad="2"/>
+<connect gate="C" pin="LINFM" pad="10"/>
+<connect gate="C" pin="PULSE" pad="7"/>
+<connect gate="C" pin="PULSEAMP" pad="8"/>
+<connect gate="C" pin="PW" pad="9"/>
+<connect gate="C" pin="SAW" pad="5"/>
+<connect gate="C" pin="TRI" pad="6"/>
+<connect gate="P" pin="+V" pad="11"/>
+<connect gate="P" pin="-V" pad="1"/>
+<connect gate="P" pin="AGND" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
