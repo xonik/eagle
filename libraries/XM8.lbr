@@ -5325,7 +5325,7 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connects>
 <connect gate="G" pin="-5V" pad="11"/>
 <connect gate="G" pin="CENTER" pad="6"/>
-<connect gate="G" pin="DCOIN" pad="5"/>
+<connect gate="G" pin="DCOIN" pad="4"/>
 <connect gate="G" pin="PULSE" pad="3"/>
 <connect gate="G" pin="PULSEVCA" pad="1"/>
 <connect gate="G" pin="PWCW" pad="2"/>
@@ -5340,7 +5340,7 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connect gate="G" pin="SUBSAW2" pad="12"/>
 <connect gate="G" pin="SUBSQR1" pad="18"/>
 <connect gate="G" pin="SUBSQR2" pad="19"/>
-<connect gate="G" pin="SYMMETRY" pad="4"/>
+<connect gate="G" pin="SYMMETRY" pad="5"/>
 <connect gate="G" pin="TRIANGLE" pad="7"/>
 <connect gate="P" pin="+V" pad="20"/>
 <connect gate="P" pin="-V" pad="22"/>
@@ -5354,7 +5354,7 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connects>
 <connect gate="G" pin="-5V" pad="11"/>
 <connect gate="G" pin="CENTER" pad="6"/>
-<connect gate="G" pin="DCOIN" pad="5"/>
+<connect gate="G" pin="DCOIN" pad="4"/>
 <connect gate="G" pin="PULSE" pad="3"/>
 <connect gate="G" pin="PULSEVCA" pad="1"/>
 <connect gate="G" pin="PWCW" pad="2"/>
@@ -5369,7 +5369,7 @@ Is designed for +/-12V but runs from +/-15V as well</description>
 <connect gate="G" pin="SUBSAW2" pad="12"/>
 <connect gate="G" pin="SUBSQR1" pad="18"/>
 <connect gate="G" pin="SUBSQR2" pad="19"/>
-<connect gate="G" pin="SYMMETRY" pad="4"/>
+<connect gate="G" pin="SYMMETRY" pad="5"/>
 <connect gate="G" pin="TRIANGLE" pad="7"/>
 <connect gate="P" pin="+V" pad="20"/>
 <connect gate="P" pin="-V" pad="22"/>
