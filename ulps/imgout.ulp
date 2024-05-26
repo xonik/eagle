@@ -1,0 +1,228 @@
+// dlgMessageBox("Start this ULP in a SCH, BRD, DEV, PAC or SYM:", "OK");
+// Put script in Documents/eagle/ulps
+//
+// To add shortcut to image generation (must be done from both schematic and board editors):
+//   Options->Assign Command-I, RUN imgout
+// For buttons
+//   Edit Documents/eagle/scripts/eagle.scr
+//   Under BRD and SCH MENU, add aline saying
+//     'IMG Out : Run imgout.ulp;'\
+//
+// Usage:
+// Generate images from current board or schematic
+//   RUN imgout
+// Generate images from current board or schematic and commit them to git if git.ulp is present
+//   RUN imgout git
+string file_name;
+string file_name_short;
+
+string brd_top_suffix = "-brd-top";
+string brd_bottom_suffix = "-brd-bottom";
+string sch_suffix = "-sch";
+
+string actualsheet;
+
+int layerVisible[];
+int useLayer[];
+
+// Accumulated command to execute
+string cmd = "";
+
+// String used for string templating
+string s;
+
+// *** functions ***
+void commandPrint(string name_suffix, int dpi) {
+  string h;
+  sprintf(h, "EXPORT IMAGE '%s%s%s' %s %d;\n", file_name, name_suffix, ".png", "", dpi);
+  cmd += h;
+  return;
+}
+
+string replaceSpace(string in) {
+  string joined = "";
+  string splits[];
+
+  int parts = strsplit(splits, in, ' ');
+
+  for(int i=0; i<parts; i++) {
+    joined += splits[i];
+    if(i< parts-1){
+      joined += "%20";
+    }
+  }
+  return joined;
+}
+
+void saveBoardView(){
+  board(B) {
+    file_name = filesetext(B.name, "");
+    file_name_short = filename(file_name);
+    B.layers(L) {
+      layerVisible[L.number] = L.visible;
+      useLayer[L.number] = L.used;
+    }
+  }
+}
+
+void exportBoard(int boardView, string suffix) {
+  // arrays cannot be passed as function parameters so we do it this way instead
+  // arbitrary number of elements just to make room for whatever we copy
+  cmd += "SET DISPLAY_MODE REAL;\n";
+  cmd += "RATSNEST;\n";
+  cmd += "DISPLAY NONE ";
+
+  if(boardView == 0) {
+    cmd += "21 -23 -25 -27 -51 17 18 20 25 51 1;\n";
+  } else {
+    cmd += "17 18 20 26 16;\n";
+  }
+  commandPrint(suffix, 600);
+}
+
+void generateBoardMarkdown() {
+  sprintf(s, "%s-brd.md", file_name);
+  output(s, "wt") {
+    printf("# %s\n\n", file_name_short);
+
+    printf("### Board top\n");
+    printf("![Top side](./%s%s.png)\n", replaceSpace(file_name_short), brd_top_suffix);
+
+    printf("### Board bottom\n");
+    printf("![Bottom side](./%s%s.png)\n", replaceSpace(file_name_short), brd_bottom_suffix);
+  }
+}
+
+void restoreBoardView() {
+  cmd += "DISPLAY ";
+  for(int l = 1; l < 90; l++) {
+    if (useLayer[l]) {
+      if (layerVisible[l]) {
+        sprintf(s, " %d", l);
+        cmd += s;
+      }
+      else {
+        sprintf(s, " -%d", l);
+        cmd += s;
+      }
+    }
+  }
+  for(l = 100; l < 256; l++) {
+    if (useLayer[l]) {
+      if (layerVisible[l]) {
+        sprintf(s, " %d", l);
+        cmd += s;
+      }
+      else {
+        sprintf(s, " -%d", l);
+        cmd += s;
+      }
+    }
+  }
+  cmd += ";\n";
+}
+
+void saveSchematicView(){
+  schematic(S) {
+    file_name = filesetext(S.name, "");
+    file_name_short = filename(file_name);
+    if (sheet) sheet(SH) sprintf(actualsheet, "%d", SH.number);
+    S.layers(L) {
+      layerVisible[L.number] = L.visible;
+      useLayer[L.number] = L.used;
+    }
+  }
+}
+
+void exportSchematic() {
+  cmd += "DISPLAY NONE 91 94 95 96 97;\n";
+
+  string sh;
+  string shn;
+  schematic(S) {
+    S.sheets(SH) {
+      sprintf(sh, "EDIT '.s%d';\n", SH.number);
+      cmd += sh;
+      sprintf(shn, "%s-%d", sch_suffix, SH.number);
+      commandPrint(shn, 150);
+    }
+  }
+}
+
+void generateSchematicMarkdown() {
+  sprintf(s, "%s-sch.md", file_name);
+  output(s, "wt") {
+    sprintf(s, "# %s", file_name_short);
+    printf(s);
+    printf("\n\n");
+
+    schematic(S) {
+      S.sheets(SH) {
+        printf("### Sheet %d\n\n", SH.number);
+        printf("![Top side](./%s%s-%d.png)\n", replaceSpace(file_name_short), sch_suffix, SH.number);
+      }
+    }
+  }
+}
+
+void restoreSchematicView(){
+  cmd += "DISPLAY ";
+  for(int l = 91; l < 256; l++) {
+    if (useLayer[l]) {
+      if (layerVisible[l]) {
+        sprintf(s, " %d", l);
+        cmd += s;
+      }
+      else {
+        sprintf(s, " -%d", l);
+        cmd += s;
+      }
+    }
+  }
+  cmd += ";\n";
+  if(schematic) {
+    sprintf(s, "EDIT '.s%s';\n", actualsheet);
+    cmd += s;
+  }
+}
+
+// main
+if (schematic) {
+  saveSchematicView();
+
+  // remove all current images to prevent "overwrite" dialog
+  schematic(S) {
+    S.sheets(SH) {
+      sprintf(s, "rm -f \"%s%s-%d.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, sch_suffix, SH.number);
+      system(s);
+    }
+  }
+  exportSchematic();
+
+  generateSchematicMarkdown();
+
+  restoreSchematicView();
+} else if (board) {
+  saveBoardView();
+
+  // remove all current images to prevent "overwrite" dialog
+  sprintf(s, "rm -f \"%s%s.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, brd_top_suffix);
+  system(s);
+  sprintf(s, "rm -f \"%s%s.png\" > /tmp/out.txt 2> /tmp/err.txt", file_name, brd_bottom_suffix);
+  system(s);
+
+  exportBoard(0, brd_top_suffix);
+  cmd += "WINDOW FLIP;\n";
+  exportBoard(1, brd_bottom_suffix);
+  cmd += "WINDOW FLIP;\n";
+
+  generateBoardMarkdown();
+  restoreBoardView();
+}
+
+// Commit images and board/schem to git afterwards
+if(argv[1] == "git") {
+  cmd += "RUN git;\n";
+}
+
+exit (cmd);
