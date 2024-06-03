@@ -1616,10 +1616,10 @@ match</text>
 <text x="-1.905" y="-6.35" size="1.27" layer="51" font="vector" rot="MR90">In</text>
 <wire x1="6.6675" y1="-2.54" x2="-5.55625" y2="-2.54" width="0.127" layer="51"/>
 <wire x1="17.78" y1="8.89" x2="-17.78" y2="8.89" width="0.127" layer="21"/>
-<wire x1="-17.78" y1="8.89" x2="-17.78" y2="-8.255" width="0.127" layer="21"/>
+<wire x1="-17.78" y1="8.89" x2="-17.78" y2="-8.255" width="0.127" layer="51"/>
 <wire x1="-17.78" y1="-8.255" x2="-17.145" y2="-8.89" width="0.127" layer="21"/>
 <wire x1="-17.145" y1="-8.89" x2="17.78" y2="-8.89" width="0.127" layer="21"/>
-<wire x1="17.78" y1="-8.89" x2="17.78" y2="8.89" width="0.127" layer="21"/>
+<wire x1="17.78" y1="-8.89" x2="17.78" y2="8.89" width="0.127" layer="51"/>
 <pad name="1" x="-16.51" y="-7.62" drill="1.016" shape="octagon"/>
 <pad name="2" x="-13.97" y="-7.62" drill="1.016" shape="octagon"/>
 <pad name="3" x="-11.43" y="-7.62" drill="1.016" shape="octagon"/>
@@ -1648,8 +1648,6 @@ match</text>
 <pad name="26" x="-11.43" y="7.62" drill="1.016" shape="octagon"/>
 <pad name="27" x="-13.97" y="7.62" drill="1.016" shape="octagon"/>
 <pad name="28" x="-16.51" y="7.62" drill="1.016" shape="octagon"/>
-<text x="-4.445" y="9.525" size="1.27" layer="21">C</text>
-<text x="-6.985" y="9.525" size="1.27" layer="21">C</text>
 <wire x1="-18.1102" y1="6.35" x2="18.1102" y2="6.35" width="0.127" layer="48"/>
 <wire x1="18.1102" y1="6.35" x2="18.1102" y2="8.89" width="0.127" layer="48"/>
 <wire x1="18.1102" y1="8.89" x2="17.78" y2="8.89" width="0.127" layer="48"/>
@@ -2687,9 +2685,9 @@ Distortion
 <wire x1="-15.5575" y1="-5.08" x2="-15.5575" y2="-2.54" width="0.1524" layer="21"/>
 <wire x1="-15.5575" y1="-2.54" x2="-15.5575" y2="2.54" width="0.1524" layer="21"/>
 <wire x1="-15.5575" y1="2.54" x2="-15.5575" y2="8.89" width="0.1524" layer="21"/>
-<wire x1="20.6375" y1="8.89" x2="20.6375" y2="-5.08" width="0.1524" layer="21"/>
+<wire x1="20.6375" y1="8.89" x2="20.6375" y2="-5.08" width="0.1524" layer="51"/>
 <wire x1="20.6375" y1="-5.08" x2="20.6375" y2="-8.89" width="0.1524" layer="21"/>
-<wire x1="-15.5575" y1="8.89" x2="20.6375" y2="8.89" width="0.1524" layer="21"/>
+<wire x1="-15.5575" y1="8.89" x2="20.6375" y2="8.89" width="0.1524" layer="51"/>
 <pad name="1" x="-6.35" y="-7.62" drill="1.016" shape="square"/>
 <pad name="2" x="-3.81" y="-7.62" drill="1.016" shape="octagon"/>
 <pad name="3" x="-1.27" y="-7.62" drill="1.016" shape="octagon"/>
