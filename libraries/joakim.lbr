@@ -36957,7 +36957,7 @@ Pin compatible with PCF8574 but requires software changes&lt;br&gt;&lt;br&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="DAC8586" prefix="IC">
+<deviceset name="DAC8565" prefix="IC">
 <description>Texas Instruments DAC8565&lt;br/&gt;
 4 channel 16 bit DAC, SPI
 &lt;p&gt;
