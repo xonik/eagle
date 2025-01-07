@@ -27551,22 +27551,63 @@ chip</description>
 </package>
 <package name="VSSOP8J">
 <description>&lt;b&gt;VSSOP-8&lt;/b&gt;
-Source: https://www.diodes.com/assets/Package-Files/VSSOP-8.pdf</description>
-<wire x1="1.25" y1="1.5" x2="1.25" y2="-1.5" width="0.2032" layer="21"/>
-<wire x1="1.25" y1="-1.5" x2="-1.25" y2="-1.5" width="0.2032" layer="51"/>
-<wire x1="-1.25" y1="-1.5" x2="-1.25" y2="1.5" width="0.2032" layer="21"/>
-<wire x1="-1.25" y1="1.5" x2="1.25" y2="1.5" width="0.2032" layer="51"/>
-<circle x="-0.55" y="-0.8" radius="0.3" width="0" layer="21"/>
-<smd name="2" x="-0.25" y="-2.2" dx="0.3" dy="1.45" layer="1"/>
-<smd name="5" x="0.75" y="2.2" dx="0.3" dy="1.45" layer="1"/>
-<smd name="1" x="-0.75" y="-2.2" dx="0.3" dy="1.45" layer="1"/>
-<smd name="3" x="0.25" y="-2.2" dx="0.3" dy="1.45" layer="1"/>
-<smd name="4" x="0.75" y="-2.2" dx="0.3" dy="1.45" layer="1"/>
-<smd name="6" x="0.25" y="2.2" dx="0.3" dy="1.45" layer="1"/>
+Source: https://www.ti.com/lit/ml/mpds050e/mpds050e.pdf (TI VSSOP, DCU0008A)</description>
+<wire x1="1.15" y1="1.2" x2="1.15" y2="-1.2" width="0.2032" layer="21"/>
+<wire x1="1.15" y1="-1.2" x2="-1.15" y2="-1.2" width="0.2032" layer="51"/>
+<wire x1="-1.15" y1="-1.2" x2="-1.15" y2="1.2" width="0.2032" layer="21"/>
+<wire x1="-1.15" y1="1.2" x2="1.15" y2="1.2" width="0.2032" layer="51"/>
+<circle x="-0.55" y="-0.6" radius="0.3" width="0" layer="21"/>
+<smd name="2" x="-0.25" y="-1.55" dx="0.3" dy="0.85" layer="1"/>
+<smd name="5" x="0.75" y="1.55" dx="0.3" dy="0.85" layer="1"/>
+<smd name="1" x="-0.75" y="-1.55" dx="0.3" dy="0.85" layer="1"/>
+<smd name="3" x="0.25" y="-1.55" dx="0.3" dy="0.85" layer="1"/>
+<smd name="4" x="0.75" y="-1.55" dx="0.3" dy="0.85" layer="1"/>
+<smd name="6" x="0.25" y="1.55" dx="0.3" dy="0.85" layer="1"/>
 <text x="-1.782" y="-3.175" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="2.9845" y="-3.175" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<smd name="7" x="-0.25" y="2.2" dx="0.3" dy="1.45" layer="1"/>
-<smd name="8" x="-0.75" y="2.2" dx="0.3" dy="1.45" layer="1"/>
+<smd name="7" x="-0.25" y="1.55" dx="0.3" dy="0.85" layer="1"/>
+<smd name="8" x="-0.75" y="1.55" dx="0.3" dy="0.85" layer="1"/>
+</package>
+<package name="CONN-IDC10P-SMD">
+<description>&lt;b&gt;10p IDC Header&lt;/b&gt; Straight, SMD&lt;p&gt;
+
+&lt;b&gt;Sources:&lt;/b&gt;&lt;br&gt;
+https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_XFCN-BH254VS-10P_C492446.pdf&lt;br&gt;&lt;br&gt;
+https://www.lcsc.com/datasheet/lcsc_datasheet_2108191430_Ckmtw-Shenzhen-Cankemeng-B-3000N10P-0110_C383605.pdf
+&lt;br&gt;
+&lt;br&gt;
+C492446: BH254VS-10P&lt;br&gt;
+C383605: B-3000N10P-0110,</description>
+<wire x1="-10.35" y1="4.5" x2="10.35" y2="4.5" width="0.2032" layer="21"/>
+<wire x1="10.35" y1="4.5" x2="10.35" y2="-4.5" width="0.2032" layer="21"/>
+<wire x1="10.35" y1="-4.5" x2="5.938" y2="-4.5" width="0.2032" layer="21"/>
+<wire x1="5.938" y1="-4.5" x2="5.938" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="5.938" y1="-3.9" x2="4.459" y2="-3.9" width="0.2032" layer="21"/>
+<wire x1="4.459" y1="-3.9" x2="4.459" y2="-4.5" width="0.2032" layer="21"/>
+<wire x1="4.459" y1="-4.5" x2="1.883" y2="-4.5" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="-4.5" x2="1.883" y2="-2.65" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="-2.65" x2="-1.883" y2="-2.65" width="0.2032" layer="21"/>
+<wire x1="-1.883" y1="-2.65" x2="-1.883" y2="-4.5" width="0.2032" layer="21"/>
+<wire x1="1.883" y1="-4.5" x2="-1.883" y2="-4.5" width="0.2032" layer="21"/>
+<wire x1="-1.883" y1="-4.5" x2="-10.35" y2="-4.5" width="0.2032" layer="21"/>
+<wire x1="-10.35" y1="-4.5" x2="-10.35" y2="4.5" width="0.2032" layer="21"/>
+<wire x1="-8.875" y1="3.275" x2="8.875" y2="3.275" width="0.2032" layer="21"/>
+<wire x1="8.875" y1="3.275" x2="8.875" y2="-3.275" width="0.2032" layer="21"/>
+<wire x1="8.875" y1="-3.275" x2="1.883" y2="-3.275" width="0.2032" layer="21"/>
+<wire x1="-1.883" y1="-3.275" x2="-8.875" y2="-3.275" width="0.2032" layer="21"/>
+<wire x1="-8.875" y1="-3.275" x2="-8.875" y2="3.275" width="0.2032" layer="21"/>
+<text x="-10.16" y="4.572" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="4.572" size="1.27" layer="27">&gt;VALUE</text>
+<smd name="P$1" x="-5.08" y="-3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$2" x="-5.08" y="3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$3" x="-2.54" y="-3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$4" x="-2.54" y="3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$5" x="0" y="-3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$6" x="0" y="3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$7" x="2.54" y="-3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$8" x="2.54" y="3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$9" x="5.08" y="-3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
+<smd name="P$10" x="5.08" y="3.3" dx="1.02" dy="4.2" layer="1" rot="R180"/>
 </package>
 </packages>
 <packages3d>
@@ -35264,6 +35305,23 @@ NS is without screw holes</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="SMD" package="CONN-IDC10P-SMD">
+<connects>
+<connect gate="-1" pin="KL" pad="P$1"/>
+<connect gate="-10" pin="KL" pad="P$10"/>
+<connect gate="-2" pin="KL" pad="P$2"/>
+<connect gate="-3" pin="KL" pad="P$3"/>
+<connect gate="-4" pin="KL" pad="P$4"/>
+<connect gate="-5" pin="KL" pad="P$5"/>
+<connect gate="-6" pin="KL" pad="P$6"/>
+<connect gate="-7" pin="KL" pad="P$7"/>
+<connect gate="-8" pin="KL" pad="P$8"/>
+<connect gate="-9" pin="KL" pad="P$9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="POT-ENDLESS">
@@ -39129,7 +39187,7 @@ Output up to 100 mA&lt;br&gt;</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="SN74LVC2T45">
+<deviceset name="SN74LVC2T45" prefix="IC">
 <description>&lt;b&gt;SN74LVC2T45&lt;/b&gt;
 &lt;br&gt;
 &lt;br&gt;
