@@ -39674,7 +39674,7 @@ Source: http://www.fairchildsemi.com/ds/H1/H11L2-M.pdf</description>
 <gate name="G$1" symbol="STEREO_JACK_J" x="-2.54" y="0"/>
 </gates>
 <devices>
-<device name="A" package="PJ-3200-JACK">
+<device name="" package="PJ-3200-JACK">
 <connects>
 <connect gate="G$1" pin="1" pad="S"/>
 <connect gate="G$1" pin="2" pad="R"/>
