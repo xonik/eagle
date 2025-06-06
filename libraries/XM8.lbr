@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="12.5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -46,7 +46,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -2702,6 +2702,45 @@ Distortion
 <pad name="12" x="-6.35" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
 <wire x1="-15.5575" y1="2.54" x2="-15.5575" y2="-2.54" width="0.127" layer="51" curve="-180"/>
 <text x="-16.51" y="-8.89" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
+<wire x1="-7.9502" y1="8.89" x2="-7.9502" y2="6.35" width="0.127" layer="21"/>
+<wire x1="-7.9502" y1="6.35" x2="7.9502" y2="6.35" width="0.127" layer="21"/>
+<wire x1="7.9502" y1="6.35" x2="7.9502" y2="8.89" width="0.127" layer="21"/>
+<wire x1="-7.9502" y1="-8.89" x2="-7.9502" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="-7.9502" y1="-6.35" x2="7.9502" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="7.9502" y1="-6.35" x2="7.9502" y2="-8.89" width="0.127" layer="21"/>
+<wire x1="-7.9502" y1="8.89" x2="7.9502" y2="8.89" width="0.127" layer="39"/>
+<wire x1="7.9502" y1="8.89" x2="7.9502" y2="6.35" width="0.127" layer="39"/>
+<wire x1="7.9502" y1="6.35" x2="-7.9502" y2="6.35" width="0.127" layer="39"/>
+<wire x1="-7.9502" y1="6.35" x2="-7.9502" y2="8.89" width="0.127" layer="39"/>
+<wire x1="-7.9502" y1="-6.35" x2="7.9502" y2="-6.35" width="0.127" layer="39"/>
+<wire x1="7.9502" y1="-6.35" x2="7.9502" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="7.9502" y1="-8.89" x2="-7.9502" y2="-8.89" width="0.127" layer="39"/>
+<wire x1="-7.9502" y1="-8.89" x2="-7.9502" y2="-6.35" width="0.127" layer="39"/>
+<wire x1="-7.9502" y1="8.89" x2="7.9502" y2="8.89" width="0.127" layer="21"/>
+<wire x1="-7.9502" y1="-8.89" x2="7.9502" y2="-8.89" width="0.127" layer="21"/>
+</package>
+<package name="XM8-CEM3340-V2.2">
+<description>Xonik VCO v2.0</description>
+<wire x1="-21.2725" y1="-8.89" x2="20.6375" y2="-8.89" width="0.1524" layer="51"/>
+<wire x1="-21.2725" y1="-8.89" x2="-21.2725" y2="-2.54" width="0.1524" layer="51"/>
+<wire x1="-21.2725" y1="-2.54" x2="-21.2725" y2="2.54" width="0.1524" layer="51"/>
+<wire x1="-21.2725" y1="2.54" x2="-21.2725" y2="8.89" width="0.1524" layer="51"/>
+<wire x1="20.6375" y1="8.89" x2="20.6375" y2="-8.89" width="0.1524" layer="51"/>
+<wire x1="-21.2725" y1="8.89" x2="20.6375" y2="8.89" width="0.1524" layer="51"/>
+<pad name="1" x="-6.35" y="-7.62" drill="1.016" shape="square"/>
+<pad name="2" x="-3.81" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="3" x="-1.27" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="4" x="1.27" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="5" x="3.81" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="6" x="6.35" y="-7.62" drill="1.016" shape="octagon"/>
+<pad name="7" x="6.35" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="8" x="3.81" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="9" x="1.27" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="10" x="-1.27" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="11" x="-3.81" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<pad name="12" x="-6.35" y="7.62" drill="1.016" shape="octagon" rot="R180"/>
+<wire x1="-21.2725" y1="2.54" x2="-21.2725" y2="-2.54" width="0.127" layer="51" curve="-180"/>
+<text x="-21.74875" y="-8.89" size="1.27" layer="25" font="vector" rot="R90">&gt;NAME</text>
 <wire x1="-7.9502" y1="8.89" x2="-7.9502" y2="6.35" width="0.127" layer="21"/>
 <wire x1="-7.9502" y1="6.35" x2="7.9502" y2="6.35" width="0.127" layer="21"/>
 <wire x1="7.9502" y1="6.35" x2="7.9502" y2="8.89" width="0.127" layer="21"/>
