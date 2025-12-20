@@ -14,6 +14,7 @@
 //  RUN git all
 
 string file_name;
+string file_name_no_path;
 string project_path;
 
 string brd_top_suffix = "-brd-top";
@@ -88,6 +89,7 @@ void addSchematicToGit() {
 
 void getNamesFromBoard(){
   board(B) {
+    file_name_no_path = filename(B.name);
     file_name = filesetext(B.name, "");
     project_path = filedir(B.name);
   }
@@ -95,6 +97,7 @@ void getNamesFromBoard(){
 
 void getNamesFromSchematic(){
   schematic(S) {
+    file_name_no_path = filename(S.name);
     file_name = filesetext(S.name, "");
     project_path = filedir(S.name);
   }
@@ -102,17 +105,37 @@ void getNamesFromSchematic(){
 
 void getNamesFromLibrary(){
   library(L) {
+    file_name_no_path = filename(L.name);
     file_name = L.name;
     project_path = filedir(L.name);
   }
 }
 
+
 // main
+
+if (schematic) {
+  getNamesFromSchematic();
+} else if (board) {
+  getNamesFromBoard();
+} else if (library) {
+  getNamesFromLibrary();
+}
 
 // Accumulated command to execute
 if(argv[1] != "saved") {
-  string cmd = "";
-  cmd += "WRITE;\n";
+
+  // Export to version 7.7 format
+  sprintf(s, "cd %s && mkdir -p export-v7.7", project_path);
+  system(s);
+
+  string writeCmd;
+  sprintf(writeCmd, "WRITE 7 %sexport-v7.7/%s;\n", project_path, file_name_no_path);
+
+  string cmd = "set confirm yes;";
+  cmd += writeCmd;
+  cmd += "set confirm off;\n";
+
   cmd += "RUN git saved ";
   if(argv[1]) {
     cmd += argv[1];
@@ -124,10 +147,7 @@ if(argv[1] != "saved") {
 
 string commitMessage = "Another commit from Eagle";
 
-string heading = "Commit and push to Git";
-if(argv[2] == "all") {
-  heading = "Commit all and push to Git";
-}
+string heading = "Commit all and push to Git";
 
 int result = dlgDialog(heading){
   dlgHBoxLayout {
@@ -149,24 +169,16 @@ if(!result){
   exit (0);
 }
 
-if (schematic) {
-  getNamesFromSchematic();
-} else if (board) {
-  getNamesFromBoard();
-} else if (library) {
-  getNamesFromLibrary();
-}
-
-if(argv[1] == "all") {
+//if(argv[2] == "all") {
   gitAdd("*");
-} else {
+/*} else {
   if(library){
     gitAdd(file_name);
   } else {
     addBoardToGit();
     addSchematicToGit();
   }
-}
+}*/
 gitCommit(commitMessage);
 gitPush();
 moveTmpFiles();
