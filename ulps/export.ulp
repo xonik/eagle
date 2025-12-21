@@ -1,0 +1,202 @@
+// Put script in Documents/eagle/ulps
+//
+// To add shortcut to git commit (must be done from both schematic and board editors):
+//   Options->Assign Command-T, RUN imgout
+// For buttons
+//   Edit Documents/eagle/scripts/eagle.scr
+//   Under BRD and SCH MENU, add aline saying
+//     'Git : Run git.ulp;'\
+
+// Usage:
+// Commit and push only images and files with the same name as the current
+//  RUN git
+// Commit and push all files in current directory
+//  RUN git all
+
+string file_name;
+string file_name_no_path;
+string project_path;
+
+string brd_top_suffix = "-brd-top";
+string brd_bottom_suffix = "-brd-bottom";
+string sch_suffix = "-sch";
+
+// String used for string templating
+string s;
+string history[] = {""};
+
+void gitAdd(string file) {
+  sprintf(s, "cd %s && git add \"%s\" > /tmp/out.txt 2> /tmp/err.txt", project_path, file);
+  system(s);
+}
+
+void gitCommit(string commitMessage) {
+  sprintf(s, "cd %s && git commit -m \"%s\" > /tmp/out.txt 2> /tmp/err.txt", project_path, commitMessage);
+  int result = system(s);
+  if(result) {
+    dlgMessageBox("Git commit failed, perhaps file is unchanged?", "OK");
+//    exit(0);
+  }
+}
+
+void gitPush() {
+  sprintf(s, "cd %s && git push > /tmp/out.txt 2> /tmp/err.txt", project_path);
+  int result = system(s);
+  if(!result) {
+    dlgMessageBox("Git push succeeded", "OK");
+    exit(0);
+  } else {
+    dlgMessageBox("Git push failed, check /tmp/err.txt", "OK");
+    exit(0);
+  }
+}
+
+void moveTmpFiles() {
+  sprintf(s, "cd %s && mkdir -p backup", project_path);
+  system(s);
+  sprintf(s, "cd %s && mv *.s#* *.b#* backup", project_path);
+  system(s);
+}
+
+void addBoardToGit() {
+  sprintf(s, "%s.brd", file_name);
+  gitAdd(s);
+
+  sprintf(s, "%s%s.png", file_name, brd_top_suffix);
+  gitAdd(s);
+
+  sprintf(s, "%s%s.png", file_name, brd_bottom_suffix);
+  gitAdd(s);
+
+  sprintf(s, "%s-brd.md", file_name);
+  gitAdd(s);
+}
+
+void addSchematicToGit() {
+  sprintf(s, "%s.sch", file_name);
+  gitAdd(s);
+
+  project.schematic(S) {
+    S.sheets(SH) {
+      sprintf(s, "%s%s-%d.png", file_name, sch_suffix, SH.number);
+      gitAdd(s);
+    }
+  }
+
+  sprintf(s, "%s-sch.md", file_name);
+  gitAdd(s);
+}
+
+void getNamesFromBoard(){
+  board(B) {
+    file_name_no_path = filename(B.name);
+    file_name = filesetext(B.name, "");
+    project_path = filedir(B.name);
+  }
+}
+
+void getNamesFromSchematic(){
+  schematic(S) {
+    file_name_no_path = filename(S.name);
+    file_name = filesetext(S.name, "");
+    project_path = filedir(S.name);
+  }
+}
+
+void getNamesFromLibrary(){
+  library(L) {
+    file_name_no_path = filename(L.name);
+    file_name = L.name;
+    project_path = filedir(L.name);
+  }
+}
+
+// Custom function to replace all occurrences of 'toReplace' with 'replaceWith' in 'original'
+string strreplace(string original, string toReplace, string replaceWith) {
+    string ret = "";
+    string left = original;
+    // Loop as long as the substring 'toReplace' is found in the remaining 'left' string
+    while (strstr(left, toReplace) >= 0) {
+        // Append the part of 'left' before the first occurrence of 'toReplace'
+        ret += strsub(left, 0, strstr(left, toReplace));
+        // Append the replacement string
+        ret += replaceWith;
+        // Update 'left' to the remainder of the string after the occurrence of 'toReplace'
+        left = strsub(left, strstr(left, toReplace) + strlen(toReplace));
+    }
+    // Append any remaining part of the original string that did not contain 'toReplace'
+    ret += left;
+    return ret;
+}
+
+// main
+
+if (schematic) {
+  getNamesFromSchematic();
+} else if (board) {
+  getNamesFromBoard();
+} else if (library) {
+  getNamesFromLibrary();
+}
+
+// Accumulated command to execute
+if(argv[1] != "saved") {
+
+  // Export to version 7.7 format
+  sprintf(s, "cd %s && mkdir -p export-v7.7", project_path);
+  system(s);
+
+  string writeCmd;
+  string file_name_escaped = strreplace(file_name_no_path, " ", "_");
+  sprintf(writeCmd, "WRITE 7 %sexport-v7.7/%s;\n", project_path, file_name_escaped);
+
+  string cmd = "set confirm yes;";
+  cmd += writeCmd;
+  cmd += "set confirm off;\n";
+
+  cmd += "RUN git saved ";
+  if(argv[1]) {
+    cmd += argv[1];
+  }
+  cmd += ";\n";
+
+  exit (cmd);
+}
+
+string commitMessage = "export v7";
+
+string heading = "Commit all and push to Git";
+
+int result = dlgDialog(heading){
+  dlgHBoxLayout {
+    dlgLabel("Commit message");
+    dlgSpacing(200); // makes this box wider to let text field below get bigger
+  }
+  dlgHBoxLayout {
+    dlgStringEdit(commitMessage);
+  }
+  dlgHBoxLayout {
+    dlgStretch(1);
+    dlgPushButton("+OK") dlgAccept();
+    dlgPushButton("-Cancel") dlgReject();
+    dlgStretch(0);
+  }
+};
+
+if(!result){
+  exit (0);
+}
+
+//if(argv[2] == "all") {
+  gitAdd("*");
+/*} else {
+  if(library){
+    gitAdd(file_name);
+  } else {
+    addBoardToGit();
+    addSchematicToGit();
+  }
+}*/
+gitCommit(commitMessage);
+gitPush();
+moveTmpFiles();
